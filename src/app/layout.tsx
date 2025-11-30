@@ -36,9 +36,9 @@ export default function RootLayout({
   return (
     <html lang="es">
       <head>
-        <link 
-          rel="stylesheet" 
-          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" 
+        <link
+          rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
           crossOrigin="anonymous"
         />
       </head>
@@ -46,8 +46,7 @@ export default function RootLayout({
         <Navigation />
         {children}
         <Footer />
-        <Script src="/js/nav.js" strategy="afterInteractive" />
-        <Script src="/js/input-mobile-fix.js" strategy="afterInteractive" />
+        <Script src="https://cdn.vinonuevo.com/vercel/nav.js" strategy="afterInteractive" />
       </body>
     </html>
   );
