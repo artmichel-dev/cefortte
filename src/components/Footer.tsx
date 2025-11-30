@@ -96,7 +96,7 @@ export default function Footer() {
         <div className="container grid grid-cols-1 items-center justify-items-center gap-2 lg:grid-cols-[auto_1fr_auto] lg:justify-items-start">
           {/* Copyright (Tercero en móvil, Izquierda en desktop) */}
           <div className="order-3 lg:order-1">
-            <small className="text-stone-100">&copy; 2026 CERFORTTE - INDUSTRIAL TRAINING</small>
+            <small className="text-stone-100">&copy; 2026 CEFORTTE - INDUSTRIAL TRAINING</small>
           </div>
           {/* Enlaces Legales (Segundo en móvil, Centro en desktop) */}
           <nav className="order-2 lg:order-2 lg:justify-self-center" aria-label="Legal">
