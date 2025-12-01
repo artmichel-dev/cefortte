@@ -95,9 +95,9 @@ export function useSEO(): UseSEOReturn {
   };
 
   // Memoizar valores calculados
-  const canonicalUrl = useMemo(() => generateCanonicalUrl(), [pathname]);
+  const canonicalUrl = useMemo(() => generateCanonicalUrl(), [pathname, generateCanonicalUrl]);
 
-  const breadcrumbs = useMemo(() => generateBreadcrumbs(), [pathname]);
+  const breadcrumbs = useMemo(() => generateBreadcrumbs(), [pathname, generateBreadcrumbs]);
 
   return {
     pathname,

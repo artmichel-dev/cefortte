@@ -1,5 +1,5 @@
 /**
- * Constantes SEO para Cerfortte
+ * Constantes SEO para Cefortte
  * Configuración centralizada de datos SEO del sitio
  */
 
@@ -8,14 +8,14 @@
 // ============================================================================
 
 export const SITE_CONFIG = {
-  name: "Cerfortte",
-  title: "Cerfortte - Centro de Capacitación en Seguridad Industrial",
+  name: "Cefortte",
+  title: "Cefortte - Centro de Capacitación en Seguridad Industrial",
   description:
     "Centro especializado en capacitación en seguridad industrial. Cursos certificados NOM-STPS, OSHA, NFPA e ISO 45001. Formación premium para empresas en México.",
   url: "https://cefforte.com.mx",
   ogImage: "https://cefforte.com.mx/og-image.jpg",
   logo: "https://cefforte.com.mx/logo.png",
-  author: "Cerfortte",
+  author: "Cefortte",
   locale: "es_MX",
   type: "website",
 } as const;
@@ -218,7 +218,7 @@ export const OG_IMAGE_CONFIG = {
   width: 1200,
   height: 630,
   type: "image/jpeg",
-  alt: "Cerfortte - Capacitación en Seguridad Industrial",
+  alt: "Cefortte - Capacitación en Seguridad Industrial",
 } as const;
 
 // ============================================================================

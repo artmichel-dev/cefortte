@@ -8,11 +8,11 @@ import { SITE_CONFIG, OG_IMAGE_CONFIG, MAIN_ROUTES, COURSE_CATEGORIES } from "@/
 export const metadata: Metadata = {
   title: "Mapa del Sitio - Navegación Completa",
   description:
-    "Mapa del sitio de Cerfortte. Encuentra fácilmente todas las páginas, cursos y categorías de capacitación en seguridad industrial. Navegación completa del sitio web.",
+    "Mapa del sitio de Cefortte. Encuentra fácilmente todas las páginas, cursos y categorías de capacitación en seguridad industrial. Navegación completa del sitio web.",
   keywords: ["mapa sitio cerfortte", "navegación sitio web", "índice páginas", "estructura sitio"],
   openGraph: {
-    title: "Mapa del Sitio | Cerfortte",
-    description: "Navegación completa del sitio web de Cerfortte.",
+    title: "Mapa del Sitio | Cefortte",
+    description: "Navegación completa del sitio web de Cefortte.",
     url: `${SITE_CONFIG.url}/mapa-sitio`,
     siteName: SITE_CONFIG.name,
     images: [
@@ -20,7 +20,7 @@ export const metadata: Metadata = {
         url: SITE_CONFIG.ogImage,
         width: OG_IMAGE_CONFIG.width,
         height: OG_IMAGE_CONFIG.height,
-        alt: "Mapa del Sitio - Cerfortte",
+        alt: "Mapa del Sitio - Cefortte",
       },
     ],
     locale: SITE_CONFIG.locale,

@@ -16,7 +16,7 @@ export const metadata: Metadata = {
     "NOM-006-STPS",
   ],
   openGraph: {
-    title: "Cursos de Maquinaria y Equipos Críticos | Cerfortte",
+    title: "Cursos de Maquinaria y Equipos Críticos | Cefortte",
     description:
       "Certificación en operación segura de montacargas, grúas, plataformas elevadoras y equipo pesado.",
     url: `${SITE_CONFIG.url}/cursos/maquinaria-equipos`,
@@ -26,7 +26,7 @@ export const metadata: Metadata = {
         url: `${SITE_CONFIG.url}/og-maquinaria-equipos.jpg`,
         width: OG_IMAGE_CONFIG.width,
         height: OG_IMAGE_CONFIG.height,
-        alt: "Cursos de Maquinaria y Equipos - Cerfortte",
+        alt: "Cursos de Maquinaria y Equipos - Cefortte",
       },
     ],
     locale: SITE_CONFIG.locale,
@@ -34,7 +34,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Cursos de Maquinaria y Equipos Críticos | Cerfortte",
+    title: "Cursos de Maquinaria y Equipos Críticos | Cefortte",
     description: "Certificación en operación segura de maquinaria industrial y equipo pesado.",
     images: [`${SITE_CONFIG.url}/og-maquinaria-equipos.jpg`],
   },

@@ -18,7 +18,7 @@ export const metadata: Metadata = {
     "diagnóstico seguridad",
   ],
   openGraph: {
-    title: "Soluciones de Capacitación para Empresas | Cerfortte",
+    title: "Soluciones de Capacitación para Empresas | Cefortte",
     description:
       "Programas de capacitación personalizados para empresas. Mejora la seguridad y cumplimiento normativo de tu organización.",
     url: `${SITE_CONFIG.url}/soluciones`,
@@ -28,7 +28,7 @@ export const metadata: Metadata = {
         url: `${SITE_CONFIG.url}/og-soluciones.jpg`,
         width: OG_IMAGE_CONFIG.width,
         height: OG_IMAGE_CONFIG.height,
-        alt: "Soluciones para Empresas - Cerfortte",
+        alt: "Soluciones para Empresas - Cefortte",
       },
     ],
     locale: SITE_CONFIG.locale,
@@ -36,7 +36,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Soluciones de Capacitación para Empresas | Cerfortte",
+    title: "Soluciones de Capacitación para Empresas | Cefortte",
     description: "Programas personalizados de capacitación en seguridad industrial para empresas.",
     images: [`${SITE_CONFIG.url}/og-soluciones.jpg`],
   },

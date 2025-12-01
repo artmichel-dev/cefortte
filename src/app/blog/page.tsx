@@ -18,7 +18,7 @@ export const metadata: Metadata = {
     "actualidad industrial",
   ],
   openGraph: {
-    title: "Blog de Seguridad Industrial | Cerfortte",
+    title: "Blog de Seguridad Industrial | Cefortte",
     description:
       "Artículos, guías y consejos de expertos en seguridad industrial. Mantente actualizado con las mejores prácticas.",
     url: `${SITE_CONFIG.url}/blog`,
@@ -28,7 +28,7 @@ export const metadata: Metadata = {
         url: `${SITE_CONFIG.url}/og-blog.jpg`,
         width: OG_IMAGE_CONFIG.width,
         height: OG_IMAGE_CONFIG.height,
-        alt: "Blog de Seguridad Industrial - Cerfortte",
+        alt: "Blog de Seguridad Industrial - Cefortte",
       },
     ],
     locale: SITE_CONFIG.locale,
@@ -36,7 +36,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Blog de Seguridad Industrial | Cerfortte",
+    title: "Blog de Seguridad Industrial | Cefortte",
     description: "Artículos y guías de expertos en seguridad industrial y prevención de riesgos.",
     images: [`${SITE_CONFIG.url}/og-blog.jpg`],
   },

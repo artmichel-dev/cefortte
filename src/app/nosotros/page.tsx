@@ -7,7 +7,7 @@ import { SITE_CONFIG, OG_IMAGE_CONFIG } from "@/lib/seo-constants";
 export const metadata: Metadata = {
   title: "Nosotros - Centro de Capacitación en Seguridad Industrial",
   description:
-    "Conoce Cerfortte, centro líder en capacitación en seguridad industrial en México. Más de X años formando profesionales con cursos certificados NOM-STPS, OSHA e ISO 45001. Instructores expertos y metodología práctica.",
+    "Conoce Cefortte, centro líder en capacitación en seguridad industrial en México. Más de X años formando profesionales con cursos certificados NOM-STPS, OSHA e ISO 45001. Instructores expertos y metodología práctica.",
   keywords: [
     "cerfortte",
     "centro capacitación seguridad",
@@ -17,7 +17,7 @@ export const metadata: Metadata = {
     "misión visión valores",
   ],
   openGraph: {
-    title: "Nosotros - Cerfortte Centro de Capacitación",
+    title: "Nosotros - Cefortte Centro de Capacitación",
     description:
       "Centro líder en capacitación en seguridad industrial en México. Instructores expertos y cursos certificados.",
     url: `${SITE_CONFIG.url}/nosotros`,
@@ -27,7 +27,7 @@ export const metadata: Metadata = {
         url: `${SITE_CONFIG.url}/og-nosotros.jpg`,
         width: OG_IMAGE_CONFIG.width,
         height: OG_IMAGE_CONFIG.height,
-        alt: "Cerfortte - Centro de Capacitación",
+        alt: "Cefortte - Centro de Capacitación",
       },
     ],
     locale: SITE_CONFIG.locale,
@@ -35,7 +35,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Nosotros - Cerfortte Centro de Capacitación",
+    title: "Nosotros - Cefortte Centro de Capacitación",
     description: "Centro líder en capacitación en seguridad industrial en México.",
     images: [`${SITE_CONFIG.url}/og-nosotros.jpg`],
   },

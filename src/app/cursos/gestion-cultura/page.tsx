@@ -16,7 +16,7 @@ export const metadata: Metadata = {
     "SST México",
   ],
   openGraph: {
-    title: "Cursos de Gestión y Cultura de Seguridad | Cerfortte",
+    title: "Cursos de Gestión y Cultura de Seguridad | Cefortte",
     description:
       "Desarrollo de sistemas de gestión y cultura de seguridad organizacional ISO 45001.",
     url: `${SITE_CONFIG.url}/cursos/gestion-cultura`,
@@ -26,7 +26,7 @@ export const metadata: Metadata = {
         url: `${SITE_CONFIG.url}/og-gestion-cultura.jpg`,
         width: OG_IMAGE_CONFIG.width,
         height: OG_IMAGE_CONFIG.height,
-        alt: "Cursos de Gestión y Cultura de Seguridad - Cerfortte",
+        alt: "Cursos de Gestión y Cultura de Seguridad - Cefortte",
       },
     ],
     locale: SITE_CONFIG.locale,
@@ -34,7 +34,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Cursos de Gestión y Cultura de Seguridad | Cerfortte",
+    title: "Cursos de Gestión y Cultura de Seguridad | Cefortte",
     description: "Desarrollo de sistemas de gestión y cultura de seguridad organizacional.",
     images: [`${SITE_CONFIG.url}/og-gestion-cultura.jpg`],
   },

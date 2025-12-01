@@ -1,7 +1,7 @@
 import { MetadataRoute } from "next";
 
 /**
- * Configuración de robots.txt para Cerfortte
+ * Configuración de robots.txt para Cefortte
  * Define qué rutas pueden ser indexadas por los motores de búsqueda
  */
 export default function robots(): MetadataRoute.Robots {

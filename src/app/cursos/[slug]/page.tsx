@@ -113,7 +113,7 @@ export async function generateMetadata({
       "NOM-STPS",
     ],
     openGraph: {
-      title: `${course.title} | Cerfortte`,
+      title: `${course.title} | Cefortte`,
       description: course.description,
       url: courseUrl,
       siteName: SITE_CONFIG.name,
@@ -130,7 +130,7 @@ export async function generateMetadata({
     },
     twitter: {
       card: "summary_large_image",
-      title: `${course.title} | Cerfortte`,
+      title: `${course.title} | Cefortte`,
       description: course.description,
       images: [`${SITE_CONFIG.url}${course.image}`],
     },
@@ -177,7 +177,7 @@ export default async function CursoPage({ params }: { params: { slug: string } }
     description: course.description,
     provider: {
       "@type": "Organization",
-      name: "Cerfortte",
+      name: "Cefortte",
       sameAs: SITE_CONFIG.url,
     },
     offers: {

@@ -16,7 +16,7 @@ export const metadata: Metadata = {
     "NOM-018-STPS",
   ],
   openGraph: {
-    title: "Cursos de Sustancias Químicas y Atmósferas Peligrosas | Cerfortte",
+    title: "Cursos de Sustancias Químicas y Atmósferas Peligrosas | Cefortte",
     description:
       "Capacitación especializada en manejo seguro de sustancias peligrosas y prevención de riesgos químicos.",
     url: `${SITE_CONFIG.url}/cursos/sustancias-quimicas`,
@@ -26,7 +26,7 @@ export const metadata: Metadata = {
         url: `${SITE_CONFIG.url}/og-sustancias-quimicas.jpg`,
         width: OG_IMAGE_CONFIG.width,
         height: OG_IMAGE_CONFIG.height,
-        alt: "Cursos de Sustancias Químicas - Cerfortte",
+        alt: "Cursos de Sustancias Químicas - Cefortte",
       },
     ],
     locale: SITE_CONFIG.locale,
@@ -34,7 +34,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Cursos de Sustancias Químicas y Atmósferas Peligrosas | Cerfortte",
+    title: "Cursos de Sustancias Químicas y Atmósferas Peligrosas | Cefortte",
     description: "Manejo seguro de sustancias peligrosas y prevención de riesgos químicos.",
     images: [`${SITE_CONFIG.url}/og-sustancias-quimicas.jpg`],
   },

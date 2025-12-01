@@ -7,7 +7,7 @@ import { SITE_CONFIG, OG_IMAGE_CONFIG } from "@/lib/seo-constants";
 export const metadata: Metadata = {
   title: "Aviso de Privacidad - Protección de Datos Personales",
   description:
-    "Aviso de privacidad de Cerfortte. Conoce cómo protegemos y utilizamos tus datos personales conforme a la Ley Federal de Protección de Datos Personales en Posesión de los Particulares (LFPDPPP).",
+    "Aviso de privacidad de Cefortte. Conoce cómo protegemos y utilizamos tus datos personales conforme a la Ley Federal de Protección de Datos Personales en Posesión de los Particulares (LFPDPPP).",
   keywords: [
     "aviso privacidad cerfortte",
     "protección datos personales",
@@ -15,8 +15,8 @@ export const metadata: Metadata = {
     "política privacidad México",
   ],
   openGraph: {
-    title: "Aviso de Privacidad | Cerfortte",
-    description: "Aviso de privacidad y protección de datos personales de Cerfortte.",
+    title: "Aviso de Privacidad | Cefortte",
+    description: "Aviso de privacidad y protección de datos personales de Cefortte.",
     url: `${SITE_CONFIG.url}/privacidad`,
     siteName: SITE_CONFIG.name,
     images: [
@@ -24,7 +24,7 @@ export const metadata: Metadata = {
         url: SITE_CONFIG.ogImage,
         width: OG_IMAGE_CONFIG.width,
         height: OG_IMAGE_CONFIG.height,
-        alt: "Aviso de Privacidad - Cerfortte",
+        alt: "Aviso de Privacidad - Cefortte",
       },
     ],
     locale: SITE_CONFIG.locale,
@@ -57,7 +57,7 @@ export default function PrivacidadPage() {
             <div>
               <h2 className="mb-3">Responsable de la Protección de Datos</h2>
               <p>
-                Cerfortte, con domicilio en [Dirección completa], es responsable del tratamiento de
+                Cefortte, con domicilio en [Dirección completa], es responsable del tratamiento de
                 sus datos personales conforme a la Ley Federal de Protección de Datos Personales en
                 Posesión de los Particulares (LFPDPPP).
               </p>

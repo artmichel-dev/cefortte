@@ -17,7 +17,7 @@ export const metadata: Metadata = {
     "formación presencial",
   ],
   openGraph: {
-    title: "Cursos de Seguridad Industrial Certificados | Cerfortte",
+    title: "Cursos de Seguridad Industrial Certificados | Cefortte",
     description:
       "Descubre nuestro catálogo completo de cursos certificados en seguridad industrial. Capacitación especializada para empresas en México.",
     url: `${SITE_CONFIG.url}/cursos`,
@@ -27,7 +27,7 @@ export const metadata: Metadata = {
         url: `${SITE_CONFIG.url}/og-cursos.jpg`,
         width: OG_IMAGE_CONFIG.width,
         height: OG_IMAGE_CONFIG.height,
-        alt: "Cursos de Seguridad Industrial - Cerfortte",
+        alt: "Cursos de Seguridad Industrial - Cefortte",
       },
     ],
     locale: SITE_CONFIG.locale,
@@ -35,7 +35,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Cursos de Seguridad Industrial Certificados | Cerfortte",
+    title: "Cursos de Seguridad Industrial Certificados | Cefortte",
     description: "Catálogo completo de cursos certificados en seguridad industrial para empresas.",
     images: [`${SITE_CONFIG.url}/og-cursos.jpg`],
   },

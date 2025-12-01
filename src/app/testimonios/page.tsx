@@ -7,7 +7,7 @@ import { SITE_CONFIG, OG_IMAGE_CONFIG } from "@/lib/seo-constants";
 export const metadata: Metadata = {
   title: "Testimonios - Opiniones de Nuestros Clientes",
   description:
-    "Lee testimonios reales de empresas y profesionales capacitados en Cerfortte. Conoce la experiencia de nuestros clientes con cursos de seguridad industrial certificados. Casos de éxito y opiniones verificadas.",
+    "Lee testimonios reales de empresas y profesionales capacitados en Cefortte. Conoce la experiencia de nuestros clientes con cursos de seguridad industrial certificados. Casos de éxito y opiniones verificadas.",
   keywords: [
     "testimonios cerfortte",
     "opiniones clientes",
@@ -18,7 +18,7 @@ export const metadata: Metadata = {
     "satisfacción clientes",
   ],
   openGraph: {
-    title: "Testimonios - Opiniones de Nuestros Clientes | Cerfortte",
+    title: "Testimonios - Opiniones de Nuestros Clientes | Cefortte",
     description:
       "Descubre lo que dicen nuestros clientes sobre la capacitación en seguridad industrial. Testimonios reales y casos de éxito.",
     url: `${SITE_CONFIG.url}/testimonios`,
@@ -28,7 +28,7 @@ export const metadata: Metadata = {
         url: `${SITE_CONFIG.url}/og-testimonios.jpg`,
         width: OG_IMAGE_CONFIG.width,
         height: OG_IMAGE_CONFIG.height,
-        alt: "Testimonios - Cerfortte",
+        alt: "Testimonios - Cefortte",
       },
     ],
     locale: SITE_CONFIG.locale,
@@ -36,9 +36,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Testimonios - Opiniones de Nuestros Clientes | Cerfortte",
+    title: "Testimonios - Opiniones de Nuestros Clientes | Cefortte",
     description:
-      "Lee testimonios reales de empresas capacitadas en seguridad industrial con Cerfortte.",
+      "Lee testimonios reales de empresas capacitadas en seguridad industrial con Cefortte.",
     images: [`${SITE_CONFIG.url}/og-testimonios.jpg`],
   },
   alternates: {

@@ -16,7 +16,7 @@ export const metadata: Metadata = {
     "estibado seguro",
   ],
   openGraph: {
-    title: "Cursos de Logística y Almacenes | Cerfortte",
+    title: "Cursos de Logística y Almacenes | Cefortte",
     description: "Operaciones seguras en logística, almacenamiento y manejo de materiales.",
     url: `${SITE_CONFIG.url}/cursos/logistica-almacenes`,
     siteName: SITE_CONFIG.name,
@@ -25,7 +25,7 @@ export const metadata: Metadata = {
         url: `${SITE_CONFIG.url}/og-logistica-almacenes.jpg`,
         width: OG_IMAGE_CONFIG.width,
         height: OG_IMAGE_CONFIG.height,
-        alt: "Cursos de Logística y Almacenes - Cerfortte",
+        alt: "Cursos de Logística y Almacenes - Cefortte",
       },
     ],
     locale: SITE_CONFIG.locale,
@@ -33,7 +33,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Cursos de Logística y Almacenes | Cerfortte",
+    title: "Cursos de Logística y Almacenes | Cefortte",
     description: "Operaciones seguras en logística, almacenamiento y manejo de materiales.",
     images: [`${SITE_CONFIG.url}/og-logistica-almacenes.jpg`],
   },

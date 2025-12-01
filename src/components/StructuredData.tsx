@@ -17,7 +17,7 @@ interface OrganizationSchemaProps {
 }
 
 export function OrganizationSchema({
-  name = "Cerfortte",
+  name = "Cefortte",
   url = "https://cefforte.com.mx",
   logo = "https://cefforte.com.mx/logo.png",
   description = "Centro especializado en capacitación en seguridad industrial con cursos certificados NOM-STPS, OSHA, NFPA e ISO 45001",
@@ -87,7 +87,7 @@ interface CourseSchemaProps {
 export function CourseSchema({
   name,
   description,
-  provider = "Cerfortte",
+  provider = "Cefortte",
   url,
   image = "https://cefforte.com.mx/og-image.jpg",
   price,
@@ -150,7 +150,7 @@ interface LocalBusinessSchemaProps {
 }
 
 export function LocalBusinessSchema({
-  name = "Cerfortte - Centro de Capacitación en Seguridad Industrial",
+  name = "Cefortte - Centro de Capacitación en Seguridad Industrial",
   description = "Centro especializado en capacitación en seguridad industrial con cursos certificados",
   telephone = "+52-XX-XXXX-XXXX",
   priceRange = "$$",
@@ -292,7 +292,7 @@ export function ArticleSchema({
   image,
   datePublished,
   dateModified,
-  author = "Cerfortte",
+  author = "Cefortte",
   url,
 }: ArticleSchemaProps) {
   const schema = {
@@ -310,7 +310,7 @@ export function ArticleSchema({
     },
     publisher: {
       "@type": "Organization",
-      name: "Cerfortte",
+      name: "Cefortte",
       logo: {
         "@type": "ImageObject",
         url: "https://cefforte.com.mx/logo.png",
@@ -342,7 +342,7 @@ interface WebsiteSchemaProps {
 }
 
 export function WebsiteSchema({
-  name = "Cerfortte",
+  name = "Cefortte",
   url = "https://cefforte.com.mx",
   description = "Centro de Capacitación en Seguridad Industrial",
 }: WebsiteSchemaProps) {

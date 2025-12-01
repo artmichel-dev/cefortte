@@ -16,7 +16,7 @@ export const metadata: Metadata = {
     "comisiones seguridad",
   ],
   openGraph: {
-    title: "Cursos Basados en Normas NOM-STPS | Cerfortte",
+    title: "Cursos Basados en Normas NOM-STPS | Cefortte",
     description:
       "Capacitación en cumplimiento de normas oficiales mexicanas de seguridad e higiene.",
     url: `${SITE_CONFIG.url}/cursos/normas-stps`,
@@ -26,7 +26,7 @@ export const metadata: Metadata = {
         url: `${SITE_CONFIG.url}/og-normas-stps.jpg`,
         width: OG_IMAGE_CONFIG.width,
         height: OG_IMAGE_CONFIG.height,
-        alt: "Cursos Normas NOM-STPS - Cerfortte",
+        alt: "Cursos Normas NOM-STPS - Cefortte",
       },
     ],
     locale: SITE_CONFIG.locale,
@@ -34,7 +34,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Cursos Basados en Normas NOM-STPS | Cerfortte",
+    title: "Cursos Basados en Normas NOM-STPS | Cefortte",
     description: "Capacitación en cumplimiento de normas oficiales mexicanas de seguridad.",
     images: [`${SITE_CONFIG.url}/og-normas-stps.jpg`],
   },

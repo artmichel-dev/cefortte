@@ -63,7 +63,7 @@ export default function Navigation() {
           <ul className="encabezado border-b border-white/10">
             <li className="elemento brand relative">
               <Link href="/" className="enlace enlace-brand" aria-label="Ir a inicio">
-                <span className="enlace-text">Cerfortte</span>
+                <span className="enlace-text">Cefortte</span>
               </Link>
             </li>
             <li className="elemento iconomenu">

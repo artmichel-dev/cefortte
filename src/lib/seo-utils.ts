@@ -1,5 +1,5 @@
 /**
- * Utilidades SEO para Cerfortte
+ * Utilidades SEO para Cefortte
  * Funciones helper para optimización SEO
  */
 
@@ -298,16 +298,16 @@ export function generateCanonicalUrl(
 /**
  * Formatea un título para SEO manteniendo longitud óptima
  * @param title - Título a formatear
- * @param siteName - Nombre del sitio (default: Cerfortte)
+ * @param siteName - Nombre del sitio (default: Cefortte)
  * @param maxLength - Longitud máxima (default: 60)
  * @returns Título formateado
  *
  * @example
- * formatTitle("Cursos de Seguridad") // "Cursos de Seguridad | Cerfortte"
+ * formatTitle("Cursos de Seguridad") // "Cursos de Seguridad | Cefortte"
  */
 export function formatTitle(
   title: string,
-  siteName: string = "Cerfortte",
+  siteName: string = "Cefortte",
   maxLength: number = 60
 ): string {
   const separator = " | ";

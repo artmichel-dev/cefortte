@@ -1,7 +1,7 @@
 import { MetadataRoute } from "next";
 
 /**
- * Sitemap dinámico para Cerfortte
+ * Sitemap dinámico para Cefortte
  * Genera el sitemap.xml con todas las rutas del sitio
  */
 export default function sitemap(): MetadataRoute.Sitemap {

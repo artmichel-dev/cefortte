@@ -8,8 +8,8 @@ import DisableContextMenu from "./disable-context-menu";
 
 // Configuración base del sitio
 const siteConfig = {
-  name: "Cerfortte",
-  title: "Cerfortte - Centro de Capacitación en Seguridad Industrial",
+  name: "Cefortte",
+  title: "Cefortte - Centro de Capacitación en Seguridad Industrial",
   description:
     "Centro especializado en capacitación en seguridad industrial. Cursos certificados NOM-STPS, OSHA, NFPA e ISO 45001. Formación premium para empresas en México.",
   url: "https://cefforte.com.mx",
@@ -29,7 +29,7 @@ const siteConfig = {
     "brigadas emergencia",
     "protección civil empresas",
   ],
-  author: "Cerfortte",
+  author: "Cefortte",
   locale: "es_MX",
   type: "website",
 };
@@ -40,7 +40,7 @@ export const metadata: Metadata = {
 
   title: {
     default: siteConfig.title,
-    template: "%s | Cerfortte", // Para páginas internas: "Cursos | Cerfortte"
+    template: "%s | Cefortte", // Para páginas internas: "Cursos | Cefortte"
   },
 
   description: siteConfig.description,
@@ -72,7 +72,7 @@ export const metadata: Metadata = {
         url: siteConfig.ogImage,
         width: 1200,
         height: 630,
-        alt: "Cerfortte - Capacitación en Seguridad Industrial",
+        alt: "Cefortte - Capacitación en Seguridad Industrial",
         type: "image/jpeg",
       },
     ],

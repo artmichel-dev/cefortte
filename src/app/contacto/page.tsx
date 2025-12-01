@@ -17,7 +17,7 @@ export const metadata: Metadata = {
     "agendar curso",
   ],
   openGraph: {
-    title: "Contacto - Solicita Información | Cerfortte",
+    title: "Contacto - Solicita Información | Cefortte",
     description:
       "¿Necesitas capacitación en seguridad industrial? Contáctanos para cotizaciones personalizadas y más información.",
     url: `${SITE_CONFIG.url}/contacto`,
@@ -27,7 +27,7 @@ export const metadata: Metadata = {
         url: `${SITE_CONFIG.url}/og-contacto.jpg`,
         width: OG_IMAGE_CONFIG.width,
         height: OG_IMAGE_CONFIG.height,
-        alt: "Contacto - Cerfortte",
+        alt: "Contacto - Cefortte",
       },
     ],
     locale: SITE_CONFIG.locale,
@@ -35,7 +35,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Contacto - Solicita Información | Cerfortte",
+    title: "Contacto - Solicita Información | Cefortte",
     description:
       "Contáctanos para cotizaciones personalizadas en capacitación de seguridad industrial.",
     images: [`${SITE_CONFIG.url}/og-contacto.jpg`],

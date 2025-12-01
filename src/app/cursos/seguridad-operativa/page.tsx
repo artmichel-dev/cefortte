@@ -16,7 +16,7 @@ export const metadata: Metadata = {
     "certificación trabajo alturas",
   ],
   openGraph: {
-    title: "Cursos de Seguridad Operativa | Cerfortte",
+    title: "Cursos de Seguridad Operativa | Cefortte",
     description:
       "Capacitación especializada en trabajo en alturas, espacios confinados, LOTO y más. Cursos certificados para operaciones de alto riesgo.",
     url: `${SITE_CONFIG.url}/cursos/seguridad-operativa`,
@@ -26,7 +26,7 @@ export const metadata: Metadata = {
         url: `${SITE_CONFIG.url}/og-seguridad-operativa.jpg`,
         width: OG_IMAGE_CONFIG.width,
         height: OG_IMAGE_CONFIG.height,
-        alt: "Cursos de Seguridad Operativa - Cerfortte",
+        alt: "Cursos de Seguridad Operativa - Cefortte",
       },
     ],
     locale: SITE_CONFIG.locale,
@@ -34,7 +34,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Cursos de Seguridad Operativa | Cerfortte",
+    title: "Cursos de Seguridad Operativa | Cefortte",
     description:
       "Capacitación en trabajo en alturas, espacios confinados y procedimientos seguros de alto riesgo.",
     images: [`${SITE_CONFIG.url}/og-seguridad-operativa.jpg`],

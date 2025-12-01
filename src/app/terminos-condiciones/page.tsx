@@ -7,7 +7,7 @@ import { SITE_CONFIG, OG_IMAGE_CONFIG } from "@/lib/seo-constants";
 export const metadata: Metadata = {
   title: "Términos y Condiciones - Políticas de Uso",
   description:
-    "Términos y condiciones de uso de los servicios de Cerfortte. Políticas de capacitación, certificación, inscripción y uso del sitio web. Lee nuestros términos antes de contratar nuestros servicios.",
+    "Términos y condiciones de uso de los servicios de Cefortte. Políticas de capacitación, certificación, inscripción y uso del sitio web. Lee nuestros términos antes de contratar nuestros servicios.",
   keywords: [
     "términos condiciones cerfortte",
     "políticas uso",
@@ -15,8 +15,8 @@ export const metadata: Metadata = {
     "condiciones inscripción",
   ],
   openGraph: {
-    title: "Términos y Condiciones | Cerfortte",
-    description: "Términos y condiciones de uso de los servicios de Cerfortte.",
+    title: "Términos y Condiciones | Cefortte",
+    description: "Términos y condiciones de uso de los servicios de Cefortte.",
     url: `${SITE_CONFIG.url}/terminos-condiciones`,
     siteName: SITE_CONFIG.name,
     images: [
@@ -24,7 +24,7 @@ export const metadata: Metadata = {
         url: SITE_CONFIG.ogImage,
         width: OG_IMAGE_CONFIG.width,
         height: OG_IMAGE_CONFIG.height,
-        alt: "Términos y Condiciones - Cerfortte",
+        alt: "Términos y Condiciones - Cefortte",
       },
     ],
     locale: SITE_CONFIG.locale,
@@ -57,7 +57,7 @@ export default function TerminosCondicionesPage() {
             <div>
               <h2 className="mb-3">1. Aceptación de los Términos</h2>
               <p>
-                Al acceder y utilizar los servicios de Cerfortte, usted acepta estar sujeto a estos
+                Al acceder y utilizar los servicios de Cefortte, usted acepta estar sujeto a estos
                 términos y condiciones. Si no está de acuerdo con alguna parte de estos términos, no
                 debe utilizar nuestros servicios.
               </p>
@@ -66,7 +66,7 @@ export default function TerminosCondicionesPage() {
             <div>
               <h2 className="mb-3">2. Servicios de Capacitación</h2>
               <p>
-                Cerfortte ofrece servicios de capacitación en seguridad industrial. Los cursos,
+                Cefortte ofrece servicios de capacitación en seguridad industrial. Los cursos,
                 horarios, precios y contenidos están sujetos a cambios sin previo aviso. Nos
                 reservamos el derecho de cancelar o reprogramar cursos por causas de fuerza mayor.
               </p>
@@ -77,7 +77,7 @@ export default function TerminosCondicionesPage() {
               <p>
                 La inscripción a nuestros cursos requiere el pago anticipado según las condiciones
                 establecidas. Los pagos son no reembolsables excepto en caso de cancelación por
-                parte de Cerfortte. Las políticas de cancelación y reprogramación se informarán al
+                parte de Cefortte. Las políticas de cancelación y reprogramación se informarán al
                 momento de la inscripción.
               </p>
             </div>
@@ -87,7 +87,7 @@ export default function TerminosCondicionesPage() {
               <p>
                 Las certificaciones se otorgan únicamente a participantes que cumplan con los
                 requisitos de asistencia, evaluación y participación establecidos para cada curso.
-                Cerfortte no se hace responsable del uso indebido de las certificaciones otorgadas.
+                Cefortte no se hace responsable del uso indebido de las certificaciones otorgadas.
               </p>
             </div>
 
@@ -95,7 +95,7 @@ export default function TerminosCondicionesPage() {
               <h2 className="mb-3">5. Propiedad Intelectual</h2>
               <p>
                 Todo el contenido del sitio web, incluyendo textos, imágenes, logos, materiales de
-                curso y diseño, es propiedad de Cerfortte y está protegido por las leyes de
+                curso y diseño, es propiedad de Cefortte y está protegido por las leyes de
                 propiedad intelectual. Queda prohibida su reproducción sin autorización expresa.
               </p>
             </div>
@@ -103,7 +103,7 @@ export default function TerminosCondicionesPage() {
             <div>
               <h2 className="mb-3">6. Limitación de Responsabilidad</h2>
               <p>
-                Cerfortte no será responsable por daños directos, indirectos, incidentales o
+                Cefortte no será responsable por daños directos, indirectos, incidentales o
                 consecuentes derivados del uso de nuestros servicios o la imposibilidad de
                 utilizarlos. La capacitación proporcionada es de carácter educativo y no sustituye
                 las responsabilidades legales de las empresas en materia de seguridad.

@@ -16,7 +16,7 @@ export const metadata: Metadata = {
     "combate incendios industrial",
   ],
   openGraph: {
-    title: "Cursos de Brigadas y Protección Civil | Cerfortte",
+    title: "Cursos de Brigadas y Protección Civil | Cefortte",
     description:
       "Formación de brigadas de emergencia y protocolos de protección civil para empresas.",
     url: `${SITE_CONFIG.url}/cursos/brigadas-proteccion-civil`,
@@ -26,7 +26,7 @@ export const metadata: Metadata = {
         url: `${SITE_CONFIG.url}/og-brigadas-proteccion.jpg`,
         width: OG_IMAGE_CONFIG.width,
         height: OG_IMAGE_CONFIG.height,
-        alt: "Cursos de Brigadas y Protección Civil - Cerfortte",
+        alt: "Cursos de Brigadas y Protección Civil - Cefortte",
       },
     ],
     locale: SITE_CONFIG.locale,
@@ -34,7 +34,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Cursos de Brigadas y Protección Civil | Cerfortte",
+    title: "Cursos de Brigadas y Protección Civil | Cefortte",
     description: "Formación de brigadas de emergencia y protocolos de protección civil.",
     images: [`${SITE_CONFIG.url}/og-brigadas-proteccion.jpg`],
   },

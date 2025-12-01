@@ -62,7 +62,7 @@ export default function NotFound() {
             >
               <i className="fas fa-users text-brand-700 mb-2 text-2xl"></i>
               <h4 className="text-base font-semibold text-stone-800">Nosotros</h4>
-              <p className="mt-1 text-sm text-stone-600">Conoce más sobre Cerfortte</p>
+              <p className="mt-1 text-sm text-stone-600">Conoce más sobre Cefortte</p>
             </Link>
 
             <Link

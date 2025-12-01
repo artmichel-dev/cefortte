@@ -16,7 +16,7 @@ export const metadata: Metadata = {
     "andamios certificación",
   ],
   openGraph: {
-    title: "Cursos de Seguridad en Construcción | Cerfortte",
+    title: "Cursos de Seguridad en Construcción | Cefortte",
     description: "Seguridad específica para la industria de la construcción y obras civiles.",
     url: `${SITE_CONFIG.url}/cursos/construccion`,
     siteName: SITE_CONFIG.name,
@@ -25,7 +25,7 @@ export const metadata: Metadata = {
         url: `${SITE_CONFIG.url}/og-construccion.jpg`,
         width: OG_IMAGE_CONFIG.width,
         height: OG_IMAGE_CONFIG.height,
-        alt: "Cursos de Seguridad en Construcción - Cerfortte",
+        alt: "Cursos de Seguridad en Construcción - Cefortte",
       },
     ],
     locale: SITE_CONFIG.locale,
@@ -33,7 +33,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Cursos de Seguridad en Construcción | Cerfortte",
+    title: "Cursos de Seguridad en Construcción | Cefortte",
     description: "Seguridad específica para la industria de la construcción y obras civiles.",
     images: [`${SITE_CONFIG.url}/og-construccion.jpg`],
   },

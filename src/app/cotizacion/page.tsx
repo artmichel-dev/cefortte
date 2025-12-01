@@ -16,7 +16,7 @@ export const metadata: Metadata = {
     "cotización corporativa",
   ],
   openGraph: {
-    title: "Solicitar Cotización | Cerfortte",
+    title: "Solicitar Cotización | Cefortte",
     description: "Solicita una cotización personalizada para capacitación en seguridad industrial.",
     url: `${SITE_CONFIG.url}/cotizacion`,
     siteName: SITE_CONFIG.name,
@@ -25,7 +25,7 @@ export const metadata: Metadata = {
         url: `${SITE_CONFIG.url}/og-cotizacion.jpg`,
         width: OG_IMAGE_CONFIG.width,
         height: OG_IMAGE_CONFIG.height,
-        alt: "Solicitar Cotización - Cerfortte",
+        alt: "Solicitar Cotización - Cefortte",
       },
     ],
     locale: SITE_CONFIG.locale,
@@ -33,7 +33,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Solicitar Cotización | Cerfortte",
+    title: "Solicitar Cotización | Cefortte",
     description: "Solicita una cotización personalizada para capacitación empresarial.",
     images: [`${SITE_CONFIG.url}/og-cotizacion.jpg`],
   },
