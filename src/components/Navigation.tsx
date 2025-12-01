@@ -23,15 +23,33 @@ export default function Navigation() {
       }
     };
 
+    // Función para cerrar el menú
+    const closeMenu = () => {
+      if (checkbox) {
+        checkbox.checked = false;
+        document.documentElement.classList.remove("noscroll", "noscroll-long");
+      }
+    };
+
+    // Agregar event listeners
     if (checkbox) {
       checkbox.addEventListener("change", handleMenuToggle);
     }
+
+    // Cerrar menú al hacer clic en cualquier enlace dentro del menú
+    const menuLinks = document.querySelectorAll("#navegacionglobal a");
+    menuLinks.forEach((link) => {
+      link.addEventListener("click", closeMenu);
+    });
 
     // Cleanup
     return () => {
       if (checkbox) {
         checkbox.removeEventListener("change", handleMenuToggle);
       }
+      menuLinks.forEach((link) => {
+        link.removeEventListener("click", closeMenu);
+      });
       document.documentElement.classList.remove("noscroll", "noscroll-long");
     };
   }, []);
