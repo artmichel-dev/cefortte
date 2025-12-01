@@ -5,18 +5,20 @@
 /* Clases para bloquear scroll cuando el menú está abierto */
 html.noscroll {
   margin-top: 0 !important;
-  height: 100dvh;
-  height: 100vh;
+  overflow-y: scroll !important;
 }
 
-html.noscroll,
 html.noscroll body {
   overflow: hidden !important;
-  height: 100% !important;
+  height: 100vh !important;
+  height: 100dvh !important;
+  padding-right: 0 !important;
 }
 
-html.noscroll-long {
+/* Para páginas con scroll (contenido largo) */
+html.noscroll.noscroll-long {
   overflow-y: scroll !important;
+  height: auto !important;
 }
 
 /* Variables del menú de navegación */
@@ -93,7 +95,10 @@ html {
   background-color: #fafaf9;
 }
 
-@supports ((-webkit-backdrop-filter: saturate(180%) blur(20px)) or (backdrop-filter: saturate(180%) blur(20px))) {
+@supports (
+  (-webkit-backdrop-filter: saturate(180%) blur(20px)) or
+    (backdrop-filter: saturate(180%) blur(20px))
+) {
   #navegacionglobal {
     backdrop-filter: none;
     -webkit-backdrop-filter: none;
@@ -243,8 +248,10 @@ html {
   -webkit-overflow-scrolling: touch;
   opacity: 0;
   visibility: hidden;
-  -webkit-transition: opacity 0.16s cubic-bezier(0.545, 0.03, 0.395, 0.965), visibility 0.16s cubic-bezier(0.545, 0.03, 0.395, 0.965);
-  transition: opacity 0.16s cubic-bezier(0.545, 0.03, 0.395, 0.965), visibility 0.16s cubic-bezier(0.545, 0.03, 0.395, 0.965);
+  -webkit-transition: opacity 0.16s cubic-bezier(0.545, 0.03, 0.395, 0.965),
+    visibility 0.16s cubic-bezier(0.545, 0.03, 0.395, 0.965);
+  transition: opacity 0.16s cubic-bezier(0.545, 0.03, 0.395, 0.965),
+    visibility 0.16s cubic-bezier(0.545, 0.03, 0.395, 0.965);
 }
 
 #navegacionglobal.menu-opening .lista,
@@ -256,8 +263,10 @@ html {
 #estadomenu:target ~ #navegacionglobal .lista {
   opacity: 1;
   visibility: visible;
-  -webkit-transition: opacity 0.16s cubic-bezier(0.545, 0.03, 0.395, 0.965), visibility 0.16s cubic-bezier(0.545, 0.03, 0.395, 0.965);
-  transition: opacity 0.16s cubic-bezier(0.545, 0.03, 0.395, 0.965), visibility 0.16s cubic-bezier(0.545, 0.03, 0.395, 0.965);
+  -webkit-transition: opacity 0.16s cubic-bezier(0.545, 0.03, 0.395, 0.965),
+    visibility 0.16s cubic-bezier(0.545, 0.03, 0.395, 0.965);
+  transition: opacity 0.16s cubic-bezier(0.545, 0.03, 0.395, 0.965),
+    visibility 0.16s cubic-bezier(0.545, 0.03, 0.395, 0.965);
 }
 
 /* ============================================
@@ -278,8 +287,10 @@ html {
 #navegacionglobal .elemento-menu {
   opacity: 0;
   pointer-events: none;
-  -webkit-transition: opacity 0.16s cubic-bezier(0.545, 0.03, 0.395, 0.965), visibility 0.16s cubic-bezier(0.545, 0.03, 0.395, 0.965);
-  transition: opacity 0.16s cubic-bezier(0.545, 0.03, 0.395, 0.965), visibility 0.16s cubic-bezier(0.545, 0.03, 0.395, 0.965);
+  -webkit-transition: opacity 0.16s cubic-bezier(0.545, 0.03, 0.395, 0.965),
+    visibility 0.16s cubic-bezier(0.545, 0.03, 0.395, 0.965);
+  transition: opacity 0.16s cubic-bezier(0.545, 0.03, 0.395, 0.965),
+    visibility 0.16s cubic-bezier(0.545, 0.03, 0.395, 0.965);
 }
 
 #navegacionglobal .elemento-menu:nth-child(1) {
@@ -296,8 +307,10 @@ html {
 #estadomenu:target ~ #navegacionglobal .elemento-menu {
   opacity: 1;
   pointer-events: auto;
-  -webkit-transition: opacity 0.16s cubic-bezier(0.545, 0.03, 0.395, 0.965), visibility 0.16s cubic-bezier(0.545, 0.03, 0.395, 0.965);
-  transition: opacity 0.16s cubic-bezier(0.545, 0.03, 0.395, 0.965), visibility 0.16s cubic-bezier(0.545, 0.03, 0.395, 0.965);
+  -webkit-transition: opacity 0.16s cubic-bezier(0.545, 0.03, 0.395, 0.965),
+    visibility 0.16s cubic-bezier(0.545, 0.03, 0.395, 0.965);
+  transition: opacity 0.16s cubic-bezier(0.545, 0.03, 0.395, 0.965),
+    visibility 0.16s cubic-bezier(0.545, 0.03, 0.395, 0.965);
 }
 
 /* ============================================
@@ -422,7 +435,8 @@ html {
   -webkit-transition: -webkit-transform 0.1806s cubic-bezier(0.04, 0.04, 0.12, 0.96);
   transition: -webkit-transform 0.1806s cubic-bezier(0.04, 0.04, 0.12, 0.96);
   transition: transform 0.1806s cubic-bezier(0.04, 0.04, 0.12, 0.96);
-  transition: transform 0.1806s cubic-bezier(0.04, 0.04, 0.12, 0.96), -webkit-transform 0.1806s cubic-bezier(0.04, 0.04, 0.12, 0.96);
+  transition: transform 0.1806s cubic-bezier(0.04, 0.04, 0.12, 0.96),
+    -webkit-transform 0.1806s cubic-bezier(0.04, 0.04, 0.12, 0.96);
   -webkit-transform: none;
   transform: none;
   z-index: 4;
@@ -433,7 +447,8 @@ html {
   -webkit-transition: -webkit-transform 0.3192s cubic-bezier(0.04, 0.04, 0.12, 0.96) 0.1008s;
   transition: -webkit-transform 0.3192s cubic-bezier(0.04, 0.04, 0.12, 0.96) 0.1008s;
   transition: transform 0.3192s cubic-bezier(0.04, 0.04, 0.12, 0.96) 0.1008s;
-  transition: transform 0.3192s cubic-bezier(0.04, 0.04, 0.12, 0.96) 0.1008s, -webkit-transform 0.3192s cubic-bezier(0.04, 0.04, 0.12, 0.96) 0.1008s;
+  transition: transform 0.3192s cubic-bezier(0.04, 0.04, 0.12, 0.96) 0.1008s,
+    -webkit-transform 0.3192s cubic-bezier(0.04, 0.04, 0.12, 0.96) 0.1008s;
   -webkit-transform: rotate(45deg);
   transform: rotate(45deg);
 }
@@ -446,7 +461,8 @@ html {
   -webkit-transition: -webkit-transform 0.1806s cubic-bezier(0.04, 0.04, 0.12, 0.96);
   transition: -webkit-transform 0.1806s cubic-bezier(0.04, 0.04, 0.12, 0.96);
   transition: transform 0.1806s cubic-bezier(0.04, 0.04, 0.12, 0.96);
-  transition: transform 0.1806s cubic-bezier(0.04, 0.04, 0.12, 0.96), -webkit-transform 0.1806s cubic-bezier(0.04, 0.04, 0.12, 0.96);
+  transition: transform 0.1806s cubic-bezier(0.04, 0.04, 0.12, 0.96),
+    -webkit-transform 0.1806s cubic-bezier(0.04, 0.04, 0.12, 0.96);
   -webkit-transform: none;
   transform: none;
   z-index: 4;
@@ -457,7 +473,8 @@ html {
   -webkit-transition: -webkit-transform 0.3192s cubic-bezier(0.04, 0.04, 0.12, 0.96) 0.1008s;
   transition: -webkit-transform 0.3192s cubic-bezier(0.04, 0.04, 0.12, 0.96) 0.1008s;
   transition: transform 0.3192s cubic-bezier(0.04, 0.04, 0.12, 0.96) 0.1008s;
-  transition: transform 0.3192s cubic-bezier(0.04, 0.04, 0.12, 0.96) 0.1008s, -webkit-transform 0.3192s cubic-bezier(0.04, 0.04, 0.12, 0.96) 0.1008s;
+  transition: transform 0.3192s cubic-bezier(0.04, 0.04, 0.12, 0.96) 0.1008s,
+    -webkit-transform 0.3192s cubic-bezier(0.04, 0.04, 0.12, 0.96) 0.1008s;
   -webkit-transform: rotate(-45deg);
   transform: rotate(-45deg);
 }
@@ -495,7 +512,8 @@ html {
   -webkit-transition: -webkit-transform 0.1596s cubic-bezier(0.52, 0.16, 0.52, 0.84) 0.1008s;
   transition: -webkit-transform 0.1596s cubic-bezier(0.52, 0.16, 0.52, 0.84) 0.1008s;
   transition: transform 0.1596s cubic-bezier(0.52, 0.16, 0.52, 0.84) 0.1008s;
-  transition: transform 0.1596s cubic-bezier(0.52, 0.16, 0.52, 0.84) 0.1008s, -webkit-transform 0.1596s cubic-bezier(0.52, 0.16, 0.52, 0.84) 0.1008s;
+  transition: transform 0.1596s cubic-bezier(0.52, 0.16, 0.52, 0.84) 0.1008s,
+    -webkit-transform 0.1596s cubic-bezier(0.52, 0.16, 0.52, 0.84) 0.1008s;
 }
 
 #estadomenu:checked ~ #navegacionglobal .iconomenu-bread-crust-top,
@@ -503,7 +521,8 @@ html {
   -webkit-transition: -webkit-transform 0.1806s cubic-bezier(0.04, 0.04, 0.12, 0.96);
   transition: -webkit-transform 0.1806s cubic-bezier(0.04, 0.04, 0.12, 0.96);
   transition: transform 0.1806s cubic-bezier(0.04, 0.04, 0.12, 0.96);
-  transition: transform 0.1806s cubic-bezier(0.04, 0.04, 0.12, 0.96), -webkit-transform 0.1806s cubic-bezier(0.04, 0.04, 0.12, 0.96);
+  transition: transform 0.1806s cubic-bezier(0.04, 0.04, 0.12, 0.96),
+    -webkit-transform 0.1806s cubic-bezier(0.04, 0.04, 0.12, 0.96);
   -webkit-transform: none;
   transform: none;
 }
@@ -519,7 +538,8 @@ html {
   -webkit-transition: -webkit-transform 0.1596s cubic-bezier(0.52, 0.16, 0.52, 0.84) 0.1008s;
   transition: -webkit-transform 0.1596s cubic-bezier(0.52, 0.16, 0.52, 0.84) 0.1008s;
   transition: transform 0.1596s cubic-bezier(0.52, 0.16, 0.52, 0.84) 0.1008s;
-  transition: transform 0.1596s cubic-bezier(0.52, 0.16, 0.52, 0.84) 0.1008s, -webkit-transform 0.1596s cubic-bezier(0.52, 0.16, 0.52, 0.84) 0.1008s;
+  transition: transform 0.1596s cubic-bezier(0.52, 0.16, 0.52, 0.84) 0.1008s,
+    -webkit-transform 0.1596s cubic-bezier(0.52, 0.16, 0.52, 0.84) 0.1008s;
 }
 
 #estadomenu:checked ~ #navegacionglobal .iconomenu-bread-crust-bottom,
@@ -527,7 +547,8 @@ html {
   -webkit-transition: -webkit-transform 0.1806s cubic-bezier(0.04, 0.04, 0.12, 0.96);
   transition: -webkit-transform 0.1806s cubic-bezier(0.04, 0.04, 0.12, 0.96);
   transition: transform 0.1806s cubic-bezier(0.04, 0.04, 0.12, 0.96);
-  transition: transform 0.1806s cubic-bezier(0.04, 0.04, 0.12, 0.96), -webkit-transform 0.1806s cubic-bezier(0.04, 0.04, 0.12, 0.96);
+  transition: transform 0.1806s cubic-bezier(0.04, 0.04, 0.12, 0.96),
+    -webkit-transform 0.1806s cubic-bezier(0.04, 0.04, 0.12, 0.96);
   -webkit-transform: none;
   transform: none;
 }
@@ -589,14 +610,16 @@ html {
 .desktop-nav-menu {
   opacity: 1;
   visibility: visible;
-  transition: opacity 0.3s cubic-bezier(0.25, 0.1, 0.25, 1), visibility 0.3s cubic-bezier(0.25, 0.1, 0.25, 1);
+  transition: opacity 0.3s cubic-bezier(0.25, 0.1, 0.25, 1),
+    visibility 0.3s cubic-bezier(0.25, 0.1, 0.25, 1);
 }
 
 #estadomenu:checked ~ #navegacionglobal .desktop-nav-menu,
 #estadomenu:target ~ #navegacionglobal .desktop-nav-menu {
   opacity: 0;
   visibility: hidden;
-  transition: opacity 0.3s cubic-bezier(0.25, 0.1, 0.25, 1), visibility 0.3s cubic-bezier(0.25, 0.1, 0.25, 1);
+  transition: opacity 0.3s cubic-bezier(0.25, 0.1, 0.25, 1),
+    visibility 0.3s cubic-bezier(0.25, 0.1, 0.25, 1);
 }
 
 /* CSS - Prevenir zoom en iOS: */
