@@ -6,20 +6,55 @@ import { useEffect } from "react";
 export default function Navigation() {
   useEffect(() => {
     const checkbox = document.getElementById("estadomenu") as HTMLInputElement;
+    let scrollPosition = 0;
 
     const handleMenuToggle = () => {
       if (checkbox && checkbox.checked) {
-        // Menú abierto - bloquear scroll pero mantener scrollbar visible
-        document.documentElement.classList.add("noscroll");
-        // Detectar si la página tiene scroll
-        const hasScroll =
-          document.documentElement.scrollHeight > document.documentElement.clientHeight;
-        if (hasScroll) {
-          document.documentElement.classList.add("noscroll-long");
-        }
+        // Menú abierto - bloquear scroll
+
+        // Guardar posición actual del scroll
+        scrollPosition = window.pageYOffset || document.documentElement.scrollTop;
+
+        // Primero, remover cualquier clase previa para limpiar el estado
+        document.documentElement.classList.remove("noscroll", "noscroll-long");
+        document.body.classList.remove("menu-open");
+
+        // Forzar reflow para que el navegador reconozca la limpieza
+        void document.documentElement.offsetHeight;
+        void document.body.offsetHeight;
+
+        // Usar setTimeout corto en lugar de requestAnimationFrame para mejor compatibilidad
+        setTimeout(() => {
+          // Verificar si la página tiene scroll ANTES de aplicar las clases
+          const hasScroll =
+            document.documentElement.scrollHeight > document.documentElement.clientHeight;
+
+          // Aplicar las clases necesarias
+          document.documentElement.classList.add("noscroll");
+          document.body.classList.add("menu-open");
+
+          if (hasScroll) {
+            document.documentElement.classList.add("noscroll-long");
+          }
+
+          // Forzar otro reflow después de aplicar las clases
+          void document.documentElement.offsetHeight;
+        }, 10);
       } else {
         // Menú cerrado - restaurar scroll
+
+        // Remover todas las clases relacionadas con el menú
         document.documentElement.classList.remove("noscroll", "noscroll-long");
+        document.body.classList.remove("menu-open");
+
+        // Forzar reflow
+        void document.documentElement.offsetHeight;
+        void document.body.offsetHeight;
+
+        // Restaurar posición de scroll con un pequeño delay
+        setTimeout(() => {
+          window.scrollTo(0, scrollPosition);
+        }, 0);
       }
     };
 
@@ -27,7 +62,10 @@ export default function Navigation() {
     const closeMenu = () => {
       if (checkbox) {
         checkbox.checked = false;
-        document.documentElement.classList.remove("noscroll", "noscroll-long");
+
+        // Trigger manual del evento de cambio para asegurar que se ejecuta handleMenuToggle
+        const event = new Event("change", { bubbles: true });
+        checkbox.dispatchEvent(event);
       }
     };
 
@@ -50,7 +88,9 @@ export default function Navigation() {
       menuLinks.forEach((link) => {
         link.removeEventListener("click", closeMenu);
       });
+      // Limpiar completamente al desmontar
       document.documentElement.classList.remove("noscroll", "noscroll-long");
+      document.body.classList.remove("menu-open");
     };
   }, []);
 
