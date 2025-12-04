@@ -95,8 +95,8 @@ export default function TerminosCondicionesPage() {
               <h2 className="mb-3">5. Propiedad Intelectual</h2>
               <p>
                 Todo el contenido del sitio web, incluyendo textos, imágenes, logos, materiales de
-                curso y diseño, es propiedad de Cefortte y está protegido por las leyes de
-                propiedad intelectual. Queda prohibida su reproducción sin autorización expresa.
+                curso y diseño, es propiedad de Cefortte y está protegido por las leyes de propiedad
+                intelectual. Queda prohibida su reproducción sin autorización expresa.
               </p>
             </div>
 

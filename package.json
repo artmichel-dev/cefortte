@@ -11,6 +11,7 @@
   "dependencies": {
     "@tailwindcss/forms": "^0.5.10",
     "@tailwindcss/typography": "^0.5.19",
+    "hls.js": "^1.6.15",
     "next": "16.0.5",
     "react": "19.2.0",
     "react-dom": "19.2.0"
