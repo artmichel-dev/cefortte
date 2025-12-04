@@ -52,7 +52,8 @@ export default function MapaSitioPage() {
               Mapa del Sitio
             </p>
             <p className="mt-6 text-lg/8 text-stone-600">
-              Encuentra fácilmente todas las secciones y páginas de nuestro sitio web de capacitación en seguridad industrial.
+              Encuentra fácilmente todas las secciones y páginas de nuestro sitio web de
+              capacitación en seguridad industrial.
             </p>
           </div>
         </div>
@@ -61,7 +62,6 @@ export default function MapaSitioPage() {
       {/* Content Sections */}
       <div className="bg-stone-50 px-6 py-16 lg:px-8">
         <div className="mx-auto max-w-7xl">
-          
           {/* Páginas Principales */}
           <section className="mb-16">
             <div className="mb-8">
