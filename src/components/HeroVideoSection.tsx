@@ -1,7 +1,8 @@
-'use client';
+"use client";
 
-import { useEffect, useRef } from 'react';
-import Hls from 'hls.js';
+import { useEffect, useRef } from "react";
+import Link from "next/link";
+import Hls from "hls.js";
 
 export default function HeroVideoSection() {
   const videoRef = useRef<HTMLVideoElement>(null);
@@ -16,9 +17,9 @@ export default function HeroVideoSection() {
       const hls = new Hls();
       hls.loadSource(videoSrc);
       hls.attachMedia(video);
-      
+
       hls.on(Hls.Events.MANIFEST_PARSED, () => {
-        video.play().catch(error => {
+        video.play().catch((error) => {
           console.log("Autoplay prevented:", error);
         });
       });
@@ -27,11 +28,11 @@ export default function HeroVideoSection() {
       return () => {
         hls.destroy();
       };
-    } else if (video.canPlayType('application/vnd.apple.mpegurl')) {
+    } else if (video.canPlayType("application/vnd.apple.mpegurl")) {
       // Safari nativo
       video.src = videoSrc;
-      video.addEventListener('loadedmetadata', () => {
-        video.play().catch(error => {
+      video.addEventListener("loadedmetadata", () => {
+        video.play().catch((error) => {
           console.log("Autoplay prevented:", error);
         });
       });
@@ -39,44 +40,52 @@ export default function HeroVideoSection() {
   }, []);
 
   return (
-    <section className="relative flex flex-col h-screen justify-end bg-cover">
-      <div className="absolute w-full h-full max-w-full pointer-events-none overflow-hidden bg-cover top-0 left-0 bg-top bg-center z-0 bg-black">
-        {/* Video con soporte para M3U8 */}
+    <section className="relative grid min-h-screen">
+      {/* Video de fondo */}
+      <div className="absolute w-full h-full max-w-full pointer-events-none overflow-hidden top-0 left-0 z-0 bg-stone-100">
         <video
           ref={videoRef}
-          className="object-cover w-full h-full"
+          className="h-full w-full object-cover"
           autoPlay
           muted
           loop
           playsInline
         />
+        {/* Overlay para mejorar legibilidad */}
+        <div className="absolute inset-0 bg-white/50" />
       </div>
-      
-      <div className="min-h-screen w-full mr-auto ml-auto flex flex-wrap items-stretch h-full max-w-screen-lg px-6 content-stretch min-h-auto bg-black">
-        <div className="row flex-grow flex-shrink flex-auto flex -ml-3 -mr-3 flex-wrap w-full items-end">
-          <div className="w-full max-w-full flex flex-row border-solid relative pl-3 pr-3 overflow-wrap-normal break-word pt-0 my-auto">
-            <div className="text-left">
-              <h2 className="text-white">Titulo</h2>
-              <p className="w-64 sm:w-72 md:w-80 lg:w-80 xl:w-96 py-0.5 md:py-0 text-white">
-                Subtitulo
-              </p>
-              <div className="space-y-3 sm:space-y-2 md:space-y-4 lg:space-y-4 sm:space-x-1 md:space-x-3 lg:space-x-3">
-                <a
-                  href="#"
-                  aria-label="texto"
-                  className="btn-rounded-full-green shadow-border mt-2 inline-block"
-                >
-                  boton 1
-                  <div className="b fa-regular fa-circle-check ml-2"></div>
-                </a>
-                <a
-                  href="#"
-                  aria-label="texto"
-                  className="btn-rounded-full-border inline-block"
-                >
-                  boton 2
-                </a>
-              </div>
+
+      {/* Contenedor principal con grid */}
+      <div className="relative z-10 grid place-items-center min-h-screen w-full mx-auto max-w-screen-lg px-6 py-20">
+        <div className="mx-auto max-w-2xl">
+          <div className="text-center">
+            {/* Título principal */}
+            <h2>
+              Capacitación en Seguridad Industrial{" "}
+              <span className="text-brand-700">para Empresas</span> de Alto Desempeño
+            </h2>
+            {/* Subtítulo */}
+            <p className="mt-8 text-pretty font-medium text-stone-800 mx-auto px-4 max-w-xl">
+              Formación y certificaciones alineadas con NOM-STPS, OSHA, NFPA, ANSI e ISO 45001 para
+              impulsar la seguridad y productividad de tu organización.
+            </p>
+
+            {/* Botones de CTA */}
+            <div className="mt-10 flex items-center justify-center gap-x-6 flex-wrap">
+              <Link
+                href="/cotizacion"
+                className="bg-brand-700 hover:bg-brand-600 active:bg-brand-700 rounded-xs inline-block inline-flex w-max items-center justify-center my-2 px-4 py-2 text-sm font-bold tracking-wide text-stone-50 transition-colors"
+              >
+                <span className="text-base font-medium">Cotizar ahora</span>
+                <i className="fas fa-arrow-right ml-1 h-4 w-4"></i>
+              </Link>
+              <Link
+                href="/cursos"
+                className="rounded-xs inline-block inline-flex w-max items-center justify-center my-2 px-4 py-2 text-sm font-bold tracking-wide text-stone-900 transition-colors"
+              >
+                <span className="text-base font-medium">Ver cursos</span>
+                <i className="fas fa-graduation-cap ml-2 h-4 w-4"></i>
+              </Link>
             </div>
           </div>
         </div>
@@ -84,4 +93,3 @@ export default function HeroVideoSection() {
     </section>
   );
 }
-

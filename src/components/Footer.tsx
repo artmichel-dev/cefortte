@@ -142,7 +142,7 @@ export default function Footer() {
                 </p>
                 <Link
                   href="/cotizacion"
-                  className="rounded-xs inline-flex w-max items-center justify-center bg-stone-100 px-4 py-2.5 text-sm font-bold tracking-wide transition-colors transition-transform hover:translate-x-1 hover:bg-stone-50 active:bg-white"
+                  className="rounded-xs inline-flex w-max items-center justify-center bg-stone-100 px-4 py-2 text-sm font-bold tracking-wide transition-colors transition-transform hover:translate-x-1 hover:bg-stone-50 active:bg-white"
                 >
                   <span className="text-brand-700 uppercase">Cotizar ahora</span>
                   <i className="fas fa-arrow-right text-brand-700 ml-1 h-4 w-4"></i>

@@ -135,9 +135,9 @@ export default function Navigation() {
                     <li className="flex h-full items-center">
                       <Link
                         href="/cotizacion"
-                        className="bg-brand-700 hover:bg-brand-600 active:bg-brand-700 rounded-xs inline-block inline-flex w-max items-center justify-center px-4 py-2.5 text-sm font-bold tracking-wide text-stone-50 transition-colors"
+                        className="bg-brand-700 hover:bg-brand-600 active:bg-brand-700 rounded-xs inline-block inline-flex w-max items-center justify-center px-4 py-2 text-sm font-bold tracking-wide text-stone-50 transition-colors"
                       >
-                        <h6 className="text-base font-medium uppercase">Cotizar ahora</h6>
+                        <span className="text-base font-medium">Cotizar ahora</span>
                         <i className="fas fa-arrow-right ml-1 h-4 w-4"></i>
                       </Link>
                     </li>
