@@ -60,7 +60,7 @@ export default function HeroVideoSection() {
         <div className="mx-auto max-w-2xl">
           <div className="text-center">
             {/* Título principal */}
-            <h2>
+            <h2 className="text-stone-800">
               Capacitación en Seguridad Industrial{" "}
               <span className="text-brand-700">para Empresas</span> de Alto Desempeño
             </h2>
