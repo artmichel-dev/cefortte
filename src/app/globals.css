@@ -42,8 +42,8 @@
   /* -----------------------------------------
         FUENTES
         ----------------------------------------- */
-  --font-sans: "Inter", system-ui, sans-serif, ui-sans-serif, system-ui, sans-serif,
-    "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  --font-sans: "Inter", system-ui, sans-serif, ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji",
+    "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   --font-heading: "Oswald", "Arial", "Helvetica Neue", ui-sans-serif, system-ui, sans-serif;
   --font-mono: "Fira Code", ui-monospace, monospace;
 
@@ -509,24 +509,33 @@
   /* -----------------------------------------
         NAVEGACIÓN
         ----------------------------------------- */
-  .nav-link-desktop {
-    @apply relative flex h-full items-center px-2 font-normal text-stone-600 transition-colors hover:text-stone-800 active:text-stone-950;
+  .nav-link {
+    @apply relative flex h-full items-center px-1 font-heading font-semibold uppercase transition-colors text-stone-950 opacity-80 transition-opacity;
     font-size: var(--text-small);
   }
 
-  .nav-link-desktop-underline {
+  .nav-link-underline {
     @apply bg-brand-700 absolute bottom-0 left-0 h-[3px] w-full opacity-0 transition-opacity duration-150;
   }
 
-  .group:hover .nav-link-desktop-underline {
+  .group:hover .nav-link,
+  .group:hover .nav-link-underline {
     @apply opacity-100;
   }
 
+  .mobile-nav-link {
+    @apply inline-block font-heading font-bold uppercase tracking-tight antialiased leading-tight text-balance transition-transform text-stone-100 hover:translate-x-1 hover:text-stone-50 active:text-white;
+  }
+  .mobile-nav-sublink {
+    @apply inline-block tracking-tight antialiased leading-tight text-balance transition-transform text-stone-100 hover:translate-x-1 hover:text-stone-50 active:text-white;
+  }
+
   /* -----------------------------------------
-        BOTONES CTA
+        BOTONES CTA (ELIMINAR)
         ----------------------------------------- */
+
   .btn-cta-primary {
-    @apply bg-brand-700 hover:bg-brand-600 active:bg-brand-700 rounded-xs inline-flex w-max items-center justify-center px-4 py-2.5 font-bold tracking-wide text-stone-50 transition-colors;
+    @apply bg-brand-700 hover:bg-brand-600 active:bg-brand-700 rounded-xs inline-flex w-max items-center justify-center px-4 py-2.5 tracking-wide text-stone-50 transition-colors;
     font-size: var(--text-small);
   }
 
@@ -543,18 +552,6 @@
   .btn-general {
     @apply bg-brand-700 hover:bg-brand-600 active:bg-brand-700 rounded-xs inline-block inline-flex w-max items-center justify-center my-2 px-4 py-2 font-bold tracking-wide text-stone-50 transition-colors;
     font-size: var(--text-small);
-  }
-
-  /* -----------------------------------------
-        ENLACES MENÚ
-        ----------------------------------------- */
-  .menu-link-primary {
-    @apply inline-block text-stone-100 transition-transform hover:translate-x-1 hover:text-stone-50 active:text-white;
-  }
-
-  .menu-link-secondary {
-    @apply inline-block font-medium text-stone-100 transition-transform hover:translate-x-1 hover:text-white active:text-white;
-    font-size: var(--text-body);
   }
 
   /* -----------------------------------------

@@ -1,8 +1,6 @@
 "use client";
 
 import Link from "next/link";
-import NextLink from "next/dist/client/link";
-
 import { useEffect } from "react";
 import { Button } from "@/components/catalystUI/button";
 import { Field, Label } from "@/components/catalystUI/fieldset";
@@ -31,8 +29,7 @@ export default function Navigation() {
         // Usar setTimeout corto en lugar de requestAnimationFrame para mejor compatibilidad
         setTimeout(() => {
           // Verificar si la página tiene scroll ANTES de aplicar las clases
-          const hasScroll =
-            document.documentElement.scrollHeight > document.documentElement.clientHeight;
+          const hasScroll = document.documentElement.scrollHeight > document.documentElement.clientHeight;
 
           // Aplicar las clases necesarias
           document.documentElement.classList.add("noscroll");
@@ -113,20 +110,10 @@ export default function Navigation() {
             </li>
             <li className="elemento iconomenu">
               {/* Hamburguesa */}
-              <a
-                href="#estadomenu"
-                role="button"
-                className="anclajemenu anclajemenu-open"
-                id="anclajemenu-open"
-              >
+              <a href="#estadomenu" role="button" className="anclajemenu anclajemenu-open" id="anclajemenu-open">
                 <span className="anclajemenu-label">Global Nav Abrir menu</span>
               </a>
-              <a
-                href="#"
-                role="button"
-                className="anclajemenu anclajemenu-close"
-                id="anclajemenu-close"
-              >
+              <a href="#" role="button" className="anclajemenu anclajemenu-close" id="anclajemenu-close">
                 <span className="anclajemenu-label">Global Nav Cerrar menu</span>
               </a>
               <label className="iconomenu-label" htmlFor="estadomenu" aria-hidden="true">
@@ -137,54 +124,38 @@ export default function Navigation() {
                   <span className="iconomenu-bread-crust iconomenu-bread-crust-bottom"></span>
                 </span>
               </label>
+
               {/* Menu superior */}
               <div className="desktop-nav-menu absolute right-9 hidden h-16 text-right md:block">
                 <div className="flex h-full items-center justify-end pr-6">
                   <ul className="flex h-16 items-center md:space-x-3 lg:space-x-4 xl:space-x-6">
                     <li className="flex h-full items-center">
-                      <Link
-                        href="/nosotros"
-                        className="group relative flex h-full items-center px-2 text-xs font-normal text-stone-600 transition-colors hover:text-stone-800 active:text-stone-950"
-                      >
-                        <h2 className="text-base font-medium">Nosotros</h2>
-                        <span className="bg-brand-700 absolute bottom-0 left-0 h-[3px] w-full opacity-0 transition-opacity duration-150 group-hover:opacity-100"></span>
+                      <Link href="/nosotros" className="group nav-link">
+                        <span className="nav-link text-base">Nosotros</span>
+                        <span className="nav-link-underline"></span>
                       </Link>
                     </li>
                     <li className="flex h-full items-center">
-                      <Link
-                        href="/soluciones"
-                        className="group relative flex h-full items-center px-2 text-xs font-normal text-stone-600 transition-colors hover:text-stone-800 active:text-stone-950"
-                      >
-                        <h6 className="text-base font-medium">Soluciones</h6>
-                        <span className="bg-brand-700 absolute bottom-0 left-0 h-[3px] w-full opacity-0 transition-opacity duration-150 group-hover:opacity-100"></span>
+                      <Link href="/soluciones" className="group nav-link">
+                        <span className="nav-link text-base">Soluciones</span>
+                        <span className="nav-link-underline"></span>
                       </Link>
                     </li>
                     <li className="flex h-full items-center">
-                      <Link
-                        href="/cursos"
-                        className="group relative flex h-full items-center px-2 text-xs font-normal text-stone-600 transition-colors hover:text-stone-800 active:text-stone-950"
-                      >
-                        <h6 className="text-base font-medium">Cursos</h6>
-                        <span className="bg-brand-700 absolute bottom-0 left-0 h-[3px] w-full opacity-0 transition-opacity duration-150 group-hover:opacity-100"></span>
+                      <Link href="/cursos" className="group nav-link">
+                        <span className="nav-link text-base">Cursos</span>
+                        <span className="nav-link-underline"></span>
                       </Link>
                     </li>
                     <li className="flex h-full items-center">
-                      <Link
-                        href="/blog"
-                        className="group relative flex h-full items-center px-2 text-xs font-normal text-stone-600 transition-colors hover:text-stone-800 active:text-stone-950"
-                      >
-                        <h6 className="text-base font-medium">Blog</h6>
-                        <span className="bg-brand-700 absolute bottom-0 left-0 h-[3px] w-full opacity-0 transition-opacity duration-150 group-hover:opacity-100"></span>
+                      <Link href="/blog" className="group nav-link">
+                        <span className="nav-link text-base">Blog</span>
+                        <span className="nav-link-underline"></span>
                       </Link>
                     </li>
                     <li className="flex h-full items-center">
-                      <Button
-                        color="red"
-                        href="/cotizacion"
-                        className="!bg-brand-700 hover:!bg-brand-600 active:!bg-brand-700 inline-flex w-max"
-                      >
-                        Cotizar ahora{" "}
-                        <i className="fas fa-arrow-right text-xs ml-1 h-4 w-4 text-stone-50"></i>
+                      <Button color="brand" href="/cotizacion" className="inline-flex w-max">
+                        Cotizar ahora <i className="fas fa-arrow-right text-xs text-stone-50"></i>
                       </Button>
                     </li>
                   </ul>
@@ -192,6 +163,7 @@ export default function Navigation() {
               </div>
             </li>
           </ul>
+
           {/* Escritorio */}
           <ul className="lista">
             {/* Contenido del menu interno */}
@@ -207,140 +179,118 @@ export default function Navigation() {
                         <ul className="space-y-4 ml-1">
                           <li>
                             <Link href="/">
-                              <h2 className="inline-block text-stone-100 transition-transform hover:translate-x-1 hover:text-stone-50 active:text-white">
-                                Inicio
-                              </h2>
+                              <p className="mobile-nav-link text-3xl">Inicio</p>
                             </Link>
                           </li>
                           <li>
                             <Link href="/nosotros">
-                              <h2 className="inline-block text-stone-100 transition-transform hover:translate-x-1 hover:text-stone-50 active:text-white">
-                                Nosotros
-                              </h2>
+                              <p className="mobile-nav-link text-3xl">Nosotros</p>
                             </Link>
                           </li>
                           <li>
                             <Link href="/cursos" className="md:hidden">
-                              <h2 className="inline-block text-stone-100 transition-transform hover:translate-x-1 hover:text-stone-50 active:text-white">
-                                Cursos
-                              </h2>
+                              <p className="mobile-nav-link text-3xl">Cursos</p>
                             </Link>
                           </li>
                           <li>
                             <Link href="/soluciones">
-                              <h2 className="inline-block text-stone-100 transition-transform hover:translate-x-1 hover:text-stone-50 active:text-white">
+                              <p className="mobile-nav-link text-3xl">
                                 Soluciones
-                              </h2>
+                                <span className="mobile-nav-link text-3xl hidden lg:inline"> para empresas</span>
+                              </p>
                             </Link>
                           </li>
                           <li>
                             <Link href="/testimonios">
-                              <h2 className="inline-block text-stone-100 transition-transform hover:translate-x-1 hover:text-stone-50 active:text-white">
-                                Testimonios
-                              </h2>
+                              <p className="mobile-nav-link text-3xl">Testimonios</p>
                             </Link>
                           </li>
                           <li>
                             <Link href="/blog">
-                              <h2 className="inline-block text-stone-100 transition-transform hover:translate-x-1 hover:text-stone-50 active:text-white">
-                                Blog
-                              </h2>
+                              <p className="mobile-nav-link text-3xl">Blog</p>
                             </Link>
                           </li>
                           <li>
                             <Link href="/contacto">
-                              <h2 className="inline-block text-stone-100 transition-transform hover:translate-x-1 hover:text-stone-50 active:text-white">
-                                Contáctanos
-                              </h2>
+                              <p className="mobile-nav-link text-3xl">Contáctanos</p>
                             </Link>
                           </li>
                           <li className="mt-6">
-                            <Link href="/cotizacion">
-                              <h2 className="text-brand-700 rounded-xs inline-block inline-block w-max bg-stone-100 px-3 py-3 transition-colors transition-transform hover:translate-x-1 hover:bg-stone-50 active:bg-white">
-                                Cotizar ahora
-                              </h2>
-                            </Link>
+                            <Button
+                              color="white"
+                              href="/cotizacion"
+                              className="transition-colors transition-transform hover:translate-x-1"
+                            >
+                              <p className="text-brand-700 font-bold text-base inline-block w-max px-2 py-1">
+                                Cotizar ahora{" "}
+                              </p>
+                            </Button>
                           </li>
                         </ul>
                       </nav>
                       {/* Iconos de redes sociales */}
-                      <li className="mt-12 flex gap-6">
+                      <div className="mt-12 flex gap-6 ml-1">
                         <Link href="#" aria-label="Facebook">
-                          <i className="fab fa-facebook-f text-3xl text-stone-100 transition-all duration-150 hover:-translate-y-0.5 hover:text-white active:text-white"></i>
+                          <span className="fab fa-facebook-f text-3xl social-icon-link"></span>
                         </Link>
                         <Link href="#" aria-label="YouTube">
-                          <i className="fab fa-youtube text-3xl text-stone-100 transition-all duration-150 hover:-translate-y-0.5 hover:text-white active:text-white"></i>
+                          <span className="fab fa-youtube text-3xl social-icon-link"></span>
                         </Link>
                         <Link href="#" aria-label="Instagram">
-                          <i className="fab fa-instagram text-3xl text-stone-100 transition-all duration-150 hover:-translate-y-0.5 hover:text-white active:text-white"></i>
+                          <span className="fab fa-instagram text-3xl social-icon-link"></span>
                         </Link>
                         <Link href="#" aria-label="LinkedIn">
-                          <i className="fab fa-linkedin-in text-3xl text-stone-100 transition-all duration-150 hover:-translate-y-0.5 hover:text-white active:text-white"></i>
+                          <span className="fab fa-linkedin-in text-3xl social-icon-link"></span>
                         </Link>
-                      </li>
+                      </div>
                     </div>
                     {/* Columna derecha: Enlaces principales */}
                     <div className="hidden grid-cols-2 md:mx-auto md:block">
-                      <Link href="/cursos">
-                        <h2 className="mb-6 inline-block text-stone-100 transition-transform hover:translate-x-1 hover:text-stone-50 active:text-white">
-                          Cursos y Capacitación
-                        </h2>
+                      <Link href="/">
+                        <p className="mobile-nav-link text-3xl mb-4">Cursos y Capacitación</p>
                       </Link>
+
                       <ul className="space-y-3">
                         <li>
                           <Link href="/cursos/seguridad-operativa">
-                            <b className="inline-block text-stone-100 transition-transform hover:translate-x-1 hover:text-white active:text-white">
-                              Seguridad Operativa
-                            </b>
+                            <span className="mobile-nav-sublink text-base ">Seguridad Operativa</span>
                           </Link>
                         </li>
                         <li>
                           <Link href="/cursos/maquinaria-equipos">
-                            <b className="inline-block text-stone-100 transition-transform hover:translate-x-1 hover:text-white active:text-white">
-                              Maquinaria y Equipos Críticos
-                            </b>
+                            <span className="mobile-nav-sublink text-base">Maquinaria y Equipos Críticos</span>
                           </Link>
                         </li>
                         <li>
                           <Link href="/cursos/sustancias-quimicas">
-                            <b className="inline-block text-stone-100 transition-transform hover:translate-x-1 hover:text-white active:text-white">
+                            <span className="mobile-nav-sublink text-base">
                               Sustancias Químicas y Atmósferas Peligrosas
-                            </b>
+                            </span>
                           </Link>
                         </li>
                         <li>
                           <Link href="/cursos/brigadas-proteccion-civil">
-                            <b className="inline-block text-stone-100 transition-transform hover:translate-x-1 hover:text-white active:text-white">
-                              Brigadas y Protección Civil
-                            </b>
+                            <span className="mobile-nav-sublink text-base">Brigadas y Protección Civil</span>
                           </Link>
                         </li>
                         <li>
                           <Link href="/cursos/normas-stps">
-                            <b className="inline-block text-stone-100 transition-transform hover:translate-x-1 hover:text-white active:text-white">
-                              Cursos Basados en Normas NOM-STPS
-                            </b>
+                            <span className="mobile-nav-sublink text-base">Cursos Basados en Normas NOM-STPS</span>
                           </Link>
                         </li>
                         <li>
                           <Link href="/cursos/gestion-cultura">
-                            <b className="inline-block text-stone-100 transition-transform hover:translate-x-1 hover:text-white active:text-white">
-                              Gestión y Cultura de Seguridad
-                            </b>
+                            <span className="mobile-nav-sublink text-base">Gestión y Cultura de Seguridad</span>
                           </Link>
                         </li>
                         <li>
                           <Link href="/cursos/logistica-almacenes">
-                            <b className="inline-block text-stone-100 transition-transform hover:translate-x-1 hover:text-white active:text-white">
-                              Logística y Almacenes
-                            </b>
+                            <span className="mobile-nav-sublink text-base">Logística y Almacenes</span>
                           </Link>
                         </li>
                         <li>
                           <Link href="/cursos/construccion">
-                            <b className="inline-block text-stone-100 transition-transform hover:translate-x-1 hover:text-white active:text-white">
-                              Construcción
-                            </b>
+                            <span className="mobile-nav-sublink text-base">Construcción</span>
                           </Link>
                         </li>
                       </ul>
@@ -357,12 +307,10 @@ export default function Navigation() {
                       <strong data-text="title-sm" className="text-stone-100">
                         Mantente actualizado
                       </strong>
-                      <p className="max-w-lg text-stone-100">
-                        Recibe novedades sobre cursos y normativas.
-                      </p>
+                      <p className="max-w-lg text-stone-100">Recibe novedades sobre cursos y normativas.</p>
                     </div>
                     {/* Formulario */}
-                    <div className="justify-between:justify-self-start items-center">
+                    <div className="justify-between md:justify-self-start items-center">
                       <form className="space-y-3">
                         <div className="flex flex-col gap-2 sm:flex-row sm:items-end">
                           <Field className="flex-1">
@@ -384,10 +332,7 @@ export default function Navigation() {
                       <small data-text="micro" className="text-stone-200">
                         Protegemos tus datos. Revisa nuestro
                         <span className="inline">
-                          <Link
-                            href="/privacidad"
-                            className="text-xs text-stone-100 hover:text-white"
-                          >
+                          <Link href="/privacidad" className="text-xs text-stone-100 hover:text-white">
                             {" "}
                             aviso de privacidad.
                           </Link>
