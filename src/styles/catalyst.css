@@ -1,0 +1,114 @@
+/* =============================================================================
+   CATALYST UI - Configuración y Variables CSS
+   Catalyst UI Kit de Tailwind UI - https://catalyst.tailwindui.com/
+   ============================================================================= */
+
+/* Variables CSS requeridas por Catalyst UI */
+:root {
+  /* Border radius */
+  --radius-xs: 0.125rem; /* 2px */
+  --radius-sm: 0.25rem; /* 4px */
+  --radius-md: 0.375rem; /* 6px */
+  --radius-lg: 0.5rem; /* 8px */
+  --radius-xl: 0.75rem; /* 12px */
+  --radius-2xl: 1rem; /* 16px */
+  --radius-3xl: 1.5rem; /* 24px */
+  --radius-full: 9999px;
+
+  /* Spacing base (usado por la función spacing) */
+  --spacing: 0.25rem; /* 4px base - Catalyst usa spacing(n) = n * 4px */
+}
+
+/* Utilidades de Catalyst que podrían necesitar estilos base */
+@layer utilities {
+  /* Pointer fine: para dispositivos con puntero preciso (mouse) */
+  @media (pointer: fine) {
+    .pointer-fine\:hidden {
+      display: none;
+    }
+  }
+
+  /* Variante para dark mode scheme */
+  .dark\:scheme-dark {
+    color-scheme: dark;
+  }
+
+  .scheme-dark {
+    color-scheme: dark;
+  }
+
+  /* Data attributes helpers para Catalyst */
+  [data-slot="icon"] {
+    display: inline-block;
+    flex-shrink: 0;
+  }
+
+  [data-slot="control"] {
+    position: relative;
+  }
+
+  /* Focus visible outline hidden (usado por Catalyst) */
+  .focus\:outline-hidden:focus,
+  .focus\:not-data-focus\:outline-hidden:focus:not([data-focus]) {
+    outline: 2px solid transparent;
+    outline-offset: 2px;
+  }
+
+  /* Data states para componentes de Headless UI */
+  [data-hover] {
+    /* Estilos aplicados cuando el componente está en hover */
+  }
+
+  [data-focus] {
+    /* Estilos aplicados cuando el componente tiene focus */
+  }
+
+  [data-active] {
+    /* Estilos aplicados cuando el componente está activo */
+  }
+
+  [data-disabled] {
+    /* Estilos aplicados cuando el componente está deshabilitado */
+    cursor: not-allowed;
+  }
+}
+
+/* Forzar colores del sistema en modo de alto contraste */
+@media (forced-colors: active) {
+  [data-slot="icon"] {
+    forced-color-adjust: auto;
+  }
+}
+
+/* Ajustes para el sistema de datos de Headless UI */
+@layer base {
+  /* Asegurar que los data attributes funcionen correctamente */
+  [data-headlessui-state] {
+    /* Placeholder para estados de Headless UI */
+  }
+
+  /* Mejorar accesibilidad con focus visible */
+  *:focus-visible {
+    outline: 2px solid currentColor;
+    outline-offset: 2px;
+  }
+
+  /* Remover outline para elementos con data-focus (manejado por Catalyst) */
+  [data-focus]:focus-visible {
+    outline: none;
+  }
+}
+
+/* Clases de ayuda para el sistema de spacing de Catalyst */
+@layer components {
+  /* Ejemplos de cómo Catalyst usa spacing:
+     px-[calc(--spacing(3)-1px)] = padding-x: calc(0.75rem - 1px)
+     py-[calc(--spacing(2.5)-1px)] = padding-y: calc(0.625rem - 1px)
+  */
+
+  /* Touch target mínimo para accesibilidad (44x44px) */
+  .touch-target {
+    min-width: 44px;
+    min-height: 44px;
+  }
+}
