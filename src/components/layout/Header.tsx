@@ -2,11 +2,11 @@
 
 import Link from "next/link";
 import { useEffect } from "react";
-import { Button } from "@/components/catalystUI/button";
-import { Field, Label } from "@/components/catalystUI/fieldset";
-import { Input } from "@/components/catalystUI/input";
+import { Button } from "@/components/ui/button";
+import { Field, Label } from "@/components/ui/fieldset";
+import { Input } from "@/components/ui/input";
 
-export default function Navigation() {
+export default function Header() {
   useEffect(() => {
     const checkbox = document.getElementById("estadomenu") as HTMLInputElement;
     let scrollPosition = 0;
@@ -231,16 +231,16 @@ export default function Navigation() {
                       {/* Iconos de redes sociales */}
                       <div className="mt-12 flex gap-6 ml-1">
                         <Link href="#" aria-label="Facebook">
-                          <span className="fab fa-facebook-f text-3xl social-icon-link"></span>
+                          <span className="fab fa-facebook-f text-3xl icon-link"></span>
                         </Link>
                         <Link href="#" aria-label="YouTube">
-                          <span className="fab fa-youtube text-3xl social-icon-link"></span>
+                          <span className="fab fa-youtube text-3xl icon-link"></span>
                         </Link>
                         <Link href="#" aria-label="Instagram">
-                          <span className="fab fa-instagram text-3xl social-icon-link"></span>
+                          <span className="fab fa-instagram text-3xl icon-link"></span>
                         </Link>
                         <Link href="#" aria-label="LinkedIn">
-                          <span className="fab fa-linkedin-in text-3xl social-icon-link"></span>
+                          <span className="fab fa-linkedin-in text-3xl icon-link"></span>
                         </Link>
                       </div>
                     </div>
@@ -253,7 +253,7 @@ export default function Navigation() {
                       <ul className="space-y-3">
                         <li>
                           <Link href="/cursos/seguridad-operativa">
-                            <span className="mobile-nav-sublink text-base ">Seguridad Operativa</span>
+                            <span className="mobile-nav-sublink text-base">Seguridad Operativa</span>
                           </Link>
                         </li>
                         <li>

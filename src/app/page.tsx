@@ -1,5 +1,5 @@
-import HeroVideoSection from "@/components/HeroVideoSection";
-import FeaturedCoursesGrid from "@/components/FeaturedCoursesGrid";
+import HeroVideoSection from "@/components/section/HeroVideoSection";
+import FeaturedCoursesGrid from "@/components/section/FeaturedCoursesGrid";
 
 export default function Home() {
   return (

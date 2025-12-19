@@ -2,8 +2,8 @@ import type { Metadata } from "next";
 import { Inter, Oswald, Fira_Code } from "next/font/google";
 import Script from "next/script";
 import "./globals.css";
-import Navigation from "@/components/Navigation";
-import Footer from "@/components/Footer";
+import Header from "@/components/layout/Header";
+import Footer from "@/components/layout/Footer";
 import DisableContextMenu from "./disable-context-menu";
 
 // Configuración base del sitio
@@ -181,7 +181,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       </head>
       <body className={`${inter.variable} ${oswald.variable} ${firaCode.variable} antialiased`}>
         <DisableContextMenu />
-        <Navigation />
+        <Header />
         {children}
         <Footer />
         {/* Scripts adicionales si los necesitas */}
