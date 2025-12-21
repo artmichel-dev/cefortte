@@ -21,7 +21,7 @@ export const metadata: Metadata = {
     title: "Soluciones de Capacitación para Empresas | Cefortte",
     description:
       "Programas de capacitación personalizados para empresas. Mejora la seguridad y cumplimiento normativo de tu organización.",
-    url: `${SITE_CONFIG.url}/soluciones`,
+    url: `${SITE_CONFIG.url}/empresas`,
     siteName: SITE_CONFIG.name,
     images: [
       {
@@ -41,7 +41,7 @@ export const metadata: Metadata = {
     images: [`${SITE_CONFIG.url}/og-soluciones.jpg`],
   },
   alternates: {
-    canonical: `${SITE_CONFIG.url}/soluciones`,
+    canonical: `${SITE_CONFIG.url}/empresas`,
   },
 };
 

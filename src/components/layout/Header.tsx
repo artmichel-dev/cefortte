@@ -136,14 +136,14 @@ export default function Header() {
                       </Link>
                     </li>
                     <li className="flex h-full items-center">
-                      <Link href="/soluciones" className="group nav-link">
-                        <span className="nav-link text-base">Soluciones</span>
+                      <Link href="/cursos" className="group nav-link">
+                        <span className="nav-link text-base">Cursos</span>
                         <span className="nav-link-underline"></span>
                       </Link>
                     </li>
                     <li className="flex h-full items-center">
-                      <Link href="/cursos" className="group nav-link">
-                        <span className="nav-link text-base">Cursos</span>
+                      <Link href="/empresas" className="group nav-link">
+                        <span className="nav-link text-base">Empresas</span>
                         <span className="nav-link-underline"></span>
                       </Link>
                     </li>
@@ -193,11 +193,8 @@ export default function Header() {
                             </Link>
                           </li>
                           <li>
-                            <Link href="/soluciones">
-                              <p className="mobile-nav-link text-3xl">
-                                Soluciones
-                                <span className="mobile-nav-link text-3xl hidden lg:inline"> para empresas</span>
-                              </p>
+                            <Link href="/empresas">
+                              <p className="mobile-nav-link text-3xl">Empresas</p>
                             </Link>
                           </li>
                           <li>

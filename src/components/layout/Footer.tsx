@@ -30,7 +30,7 @@ export default function Footer() {
                   {[
                     { href: "/", label: "Inicio" },
                     { href: "/nosotros", label: "Nosotros" },
-                    { href: "/soluciones", label: "Soluciones" },
+                    { href: "/empresas", label: "Empresas" },
                     { href: "/testimonios", label: "Testimonios" },
                     { href: "/blog", label: "Blog" },
                     { href: "/contacto", label: "Contáctanos" },
@@ -72,7 +72,7 @@ export default function Footer() {
 
             {/* Columna 3: Card Cotización */}
             <div className="md:col-span-2 lg:col-span-1 mx-1">
-              <div className="flex h-full flex-col justify-center rounded-sm border border-white/10 hover:border-white/20 hover:bg-white/5 p-8 transition-all duration-300">
+              <div className="flex h-full flex-col justify-start rounded-sm border border-white/10 hover:border-white/20 hover:bg-white/5 p-8 transition-all duration-300">
                 <h3 className="mb-6 text-stone-100">¿Necesitas una Cotización?</h3>
                 <p className="mb-6 text-base leading-relaxed text-stone-100">
                   Obtén una cotización personalizada para las necesidades específicas de tu empresa en minutos.
