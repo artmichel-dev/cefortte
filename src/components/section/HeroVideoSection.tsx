@@ -43,14 +43,7 @@ export default function HeroVideoSection() {
     <section className="relative grid min-h-screen">
       {/* Video de fondo */}
       <div className="absolute w-full h-full max-w-full pointer-events-none overflow-hidden top-0 left-0 z-0 bg-stone-100">
-        <video
-          ref={videoRef}
-          className="h-full w-full object-cover"
-          autoPlay
-          muted
-          loop
-          playsInline
-        />
+        <video ref={videoRef} className="h-full w-full object-cover" autoPlay muted loop playsInline />
         {/* Overlay para mejorar legibilidad */}
         <div className="absolute inset-0 bg-white/50" />
       </div>
@@ -61,13 +54,13 @@ export default function HeroVideoSection() {
           <div className="text-center">
             {/* Título principal */}
             <h2 className="text-stone-800">
-              Capacitación en Seguridad Industrial{" "}
-              <span className="text-brand-700">para Empresas</span> de Alto Desempeño
+              Capacitación en Seguridad Industrial <span className="text-brand-700">para Empresas</span> de Alto
+              Desempeño
             </h2>
             {/* Subtítulo */}
             <p className="mt-8 text-pretty font-medium text-stone-800 mx-auto px-4 max-w-xl">
-              Formación y certificaciones alineadas con NOM-STPS, OSHA, NFPA, ANSI e ISO 45001 para
-              impulsar la seguridad y productividad de tu organización.
+              Formación y certificaciones alineadas con NOM-STPS, OSHA, NFPA, ANSI e ISO 45001 para impulsar la
+              seguridad y productividad de tu organización.
             </p>
 
             {/* Botones de CTA */}
