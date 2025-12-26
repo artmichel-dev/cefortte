@@ -4,7 +4,7 @@ import FeaturedCoursesGrid from "@/components/section/FeaturedCoursesGrid";
 
 export default function Home() {
   return (
-    <main id="content" className="relative w-full bg-stone-100">
+    <main id="content" className="bg-stone-100">
       <div className="relative h-16 w-full bg-white"></div>
       <HeroSimple />
       <HeroVideoSection />

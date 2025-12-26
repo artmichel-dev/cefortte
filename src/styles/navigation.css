@@ -106,10 +106,7 @@ html {
   background-color: #fafaf9;
 }
 
-@supports (
-  (-webkit-backdrop-filter: saturate(180%) blur(20px)) or
-    (backdrop-filter: saturate(180%) blur(20px))
-) {
+@supports ((-webkit-backdrop-filter: saturate(180%) blur(20px)) or (backdrop-filter: saturate(180%) blur(20px))) {
   #navegacionglobal {
     backdrop-filter: none;
     -webkit-backdrop-filter: none;
@@ -621,16 +618,14 @@ html {
 .desktop-nav-menu {
   opacity: 1;
   visibility: visible;
-  transition: opacity 0.3s cubic-bezier(0.25, 0.1, 0.25, 1),
-    visibility 0.3s cubic-bezier(0.25, 0.1, 0.25, 1);
+  transition: opacity 0.3s cubic-bezier(0.25, 0.1, 0.25, 1), visibility 0.3s cubic-bezier(0.25, 0.1, 0.25, 1);
 }
 
 #estadomenu:checked ~ #navegacionglobal .desktop-nav-menu,
 #estadomenu:target ~ #navegacionglobal .desktop-nav-menu {
   opacity: 0;
   visibility: hidden;
-  transition: opacity 0.3s cubic-bezier(0.25, 0.1, 0.25, 1),
-    visibility 0.3s cubic-bezier(0.25, 0.1, 0.25, 1);
+  transition: opacity 0.3s cubic-bezier(0.25, 0.1, 0.25, 1), visibility 0.3s cubic-bezier(0.25, 0.1, 0.25, 1);
 }
 
 /* CSS - Prevenir zoom en iOS: */
