@@ -249,15 +249,15 @@ article {
         ESTRUCTURA PRINCIPAL
         ----------------------------------------- */
   main {
-    @apply relative w-full bg-stone-50;
+    @apply relative grid w-full bg-stone-50 gap-3;
   }
 
   section {
-    @apply relative w-full isolate overflow-hidden mx-auto h-auto;
+    @apply relative grid w-full isolate overflow-hidden mx-auto h-auto;
   }
 
   article {
-    @apply relative isolate overflow-hidden mx-auto h-auto py-8;
+    @apply relative grid isolate overflow-hidden mx-auto h-auto py-24 md:py-32 lg:py-40;
   }
 
   /* -----------------------------------------
