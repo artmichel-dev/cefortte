@@ -155,7 +155,7 @@ export default function Header() {
                     </li>
                     <li className="flex h-full items-center">
                       <Button color="brand" href="/cotizacion" className="inline-flex w-max">
-                        Cotizar ahora <i className="fas fa-arrow-right text-xs text-stone-50"></i>
+                        Cotizar ahora <i className="fas fa-arrow-right text-xs text-gray-50"></i>
                       </Button>
                     </li>
                   </ul>
@@ -301,10 +301,10 @@ export default function Header() {
                   <div className="grid grid-cols-1 items-end justify-center gap-2 md:gap-8 md:grid-cols-[auto_auto]">
                     {/* Texto descriptivo */}
                     <div className="items-center justify-between md:justify-self-end">
-                      <strong data-text="title-sm" className="text-stone-100">
+                      <strong data-text="title-sm" className="text-gray-100">
                         Mantente actualizado
                       </strong>
-                      <p className="max-w-lg text-stone-100">Recibe novedades sobre cursos y normativas.</p>
+                      <p className="max-w-lg text-gray-100">Recibe novedades sobre cursos y normativas.</p>
                     </div>
                     {/* Formulario */}
                     <div className="justify-between md:justify-self-start items-center">
@@ -326,10 +326,10 @@ export default function Header() {
                           </Button>
                         </div>
                       </form>
-                      <small data-text="micro" className="text-stone-200">
+                      <small data-text="micro" className="text-gray-200">
                         Protegemos tus datos. Revisa nuestro
                         <span className="inline">
-                          <Link href="/privacidad" className="text-xs text-stone-100 hover:text-white">
+                          <Link href="/privacidad" className="text-xs text-gray-100 hover:text-white">
                             {" "}
                             aviso de privacidad.
                           </Link>

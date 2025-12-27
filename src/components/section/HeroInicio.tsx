@@ -102,19 +102,19 @@ export default function HeroInicio() {
 
         <div className="mx-auto max-w-sm md:max-w-md lg:max-w-4xl text-center z-10">
           <h1 className="text-white drop-shadow-sm text-4xl md:text-5xl lg:text-6xl font-bold">{HERO_CONTENT.title}</h1>
-          <p className="text-stone-50 drop-shadow-sm text-sm md:text-base lg:text-lg">{HERO_CONTENT.description}</p>
+          <p className="text-gray-50 drop-shadow-sm text-sm md:text-base lg:text-lg">{HERO_CONTENT.description}</p>
           <div className="mt-10 flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-x-6">
             <Button color="brand" href={HERO_CONTENT.cta.primary.href} className="inline-flex w-max shadow-sm">
-              {HERO_CONTENT.cta.primary.text} <i className="fas fa-arrow-right text-xs text-stone-50" />
+              {HERO_CONTENT.cta.primary.text} <i className="fas fa-arrow-right text-xs text-gray-50" />
             </Button>
             <Link
               href={HERO_CONTENT.cta.secondary.href}
               className="group inline-flex items-center gap-2 transition-colors drop-shadow-sm"
             >
-              <span className="text-base font-medium text-stone-50 group-hover:text-white transition-colors">
+              <span className="text-base font-medium text-gray-50 group-hover:text-white transition-colors">
                 {HERO_CONTENT.cta.secondary.text}
               </span>
-              <i className="fas fa-graduation-cap text-stone-50 group-hover:text-white transition-colors h-4 w-4" />
+              <i className="fas fa-graduation-cap text-gray-50 group-hover:text-white transition-colors h-4 w-4" />
             </Link>
           </div>
         </div>

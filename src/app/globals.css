@@ -234,7 +234,7 @@ article {
   }
 
   body {
-    @apply m-0 p-0 min-h-dvh bg-stone-100 antialiased grid grid-rows-[auto_1fr_auto];
+    @apply m-0 p-0 min-h-dvh bg-gray-100 antialiased grid grid-rows-[auto_1fr_auto];
     font-size: var(--text-body);
     line-height: 1.5;
     overflow-x: hidden;
@@ -249,7 +249,7 @@ article {
         ESTRUCTURA PRINCIPAL
         ----------------------------------------- */
   main {
-    @apply relative grid w-full bg-stone-50 gap-3;
+    @apply relative grid w-full bg-gray-50 gap-3;
   }
 
   section {
@@ -269,7 +269,7 @@ article {
   h4,
   h5,
   h6 {
-    @apply font-heading font-bold uppercase tracking-tight antialiased leading-tight text-balance text-stone-800;
+    @apply font-heading font-bold uppercase tracking-tight antialiased leading-tight text-balance text-gray-800;
     user-select: none;
     -webkit-user-select: none;
     -moz-user-select: none;
@@ -339,7 +339,7 @@ article {
   textarea,
   button,
   span {
-    @apply font-sans tracking-tight text-balance leading-relaxed break-words antialiased text-stone-600;
+    @apply font-sans tracking-tight text-balance leading-relaxed break-words antialiased text-gray-600;
     font-size: var(--text-body);
     user-select: none;
     -webkit-user-select: none;
@@ -348,12 +348,12 @@ article {
   }
 
   small {
-    @apply font-sans tracking-tight leading-relaxed break-words antialiased text-stone-500;
+    @apply font-sans tracking-tight leading-relaxed break-words antialiased text-gray-500;
     font-size: var(--text-small);
   }
 
   b {
-    @apply font-bold text-stone-800;
+    @apply font-bold text-gray-800;
     font-size: var(--text-body-large);
   }
 
@@ -512,7 +512,7 @@ article {
         NAVEGACIÓN
         ----------------------------------------- */
   .nav-link {
-    @apply relative flex h-full items-center px-1 font-heading font-semibold uppercase transition-colors text-stone-950 opacity-80 transition-opacity;
+    @apply relative flex h-full items-center px-1 font-heading font-semibold uppercase transition-colors text-gray-950 opacity-80 transition-opacity;
     font-size: var(--text-small);
   }
 
@@ -526,14 +526,14 @@ article {
   }
 
   .mobile-nav-link {
-    @apply inline-block font-heading font-bold uppercase tracking-tight antialiased leading-tight text-balance transition-transform text-stone-100 hover:translate-x-1 hover:text-stone-50 active:text-white;
+    @apply inline-block font-heading font-bold uppercase tracking-tight antialiased leading-tight text-balance transition-transform text-gray-100 hover:translate-x-1 hover:text-gray-50 active:text-white;
   }
   .mobile-nav-sublink {
-    @apply inline-block tracking-tight antialiased leading-tight text-balance transition-transform text-stone-100 hover:translate-x-1 hover:text-stone-50 active:text-white;
+    @apply inline-block tracking-tight antialiased leading-tight text-balance transition-transform text-gray-100 hover:translate-x-1 hover:text-gray-50 active:text-white;
   }
 
   .icon-link {
-    @apply inline-block text-stone-100 transition-all duration-150 hover:-translate-y-0.5 hover:text-white active:text-white;
+    @apply inline-block text-gray-100 transition-all duration-150 hover:-translate-y-0.5 hover:text-white active:text-white;
   }
 
   /* -----------------------------------------
@@ -548,7 +548,7 @@ article {
   }
 
   .card-rounded {
-    @apply relative flex min-h-64 flex-col overflow-hidden bg-stone-50 shadow-sm ring-1 ring-black/5 transition-colors duration-300 hover:bg-white sm:min-h-0;
+    @apply relative flex min-h-64 flex-col overflow-hidden bg-gray-50 shadow-sm ring-1 ring-black/5 transition-colors duration-300 hover:bg-white sm:min-h-0;
   }
 }
 

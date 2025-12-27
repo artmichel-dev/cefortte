@@ -2,24 +2,21 @@ import Link from "next/link";
 
 export default function CursosEspecializados() {
   return (
-    <section className="card-padding container max-w-3xl bg-stone-100 text-center">
+    <section className="card-padding container max-w-3xl bg-gray-100 text-center">
       <div className="card-padding grid grid-cols-1 gap-2 sm:grid-cols-2 md:gap-4 lg:grid-cols-3">
         {/* Card 1: Title */}
         <div className="card-padding card-rounded rounded-t-4xl sm:rounded-tl-4xl sm:rounded-tr-4xl group rounded-b-sm sm:col-span-2 sm:rounded-sm lg:col-span-3">
           <h3 className="mx-auto max-w-3xl pt-2 lg:pt-4">Cursos Especializados</h3>
           <p className="card-padding mx-auto max-w-md px-12 md:max-w-2xl lg:max-w-5xl">
             Formación práctica y normativa para
-            <span className="font-bold text-stone-800">
-              {" "}
-              equipos técnicos, operativos y de supervisión.
-            </span>
+            <span className="font-bold text-gray-800"> equipos técnicos, operativos y de supervisión.</span>
             <br />
-            Seleccionamos los cursos más solicitados por la industria para garantizar resultados
-            inmediatos en cumplimiento y seguridad.
+            Seleccionamos los cursos más solicitados por la industria para garantizar resultados inmediatos en
+            cumplimiento y seguridad.
           </p>
           <Link className="btn-general mx-auto" href="/cursos">
             Ver todos los cursos
-            <i className="fas fa-arrow-right ml-2 h-4 w-4 text-stone-50"></i>
+            <i className="fas fa-arrow-right ml-2 h-4 w-4 text-gray-50"></i>
           </Link>
         </div>
 
@@ -28,8 +25,7 @@ export default function CursosEspecializados() {
           <div className="card-padding mx-auto text-center">
             <b>Bloqueo y Etiquetado (LOTO)</b>
             <p className="card-padding max-w-md px-8">
-              Procedimiento crítico para el control de energías peligrosas. Evita activaciones
-              inesperadas.
+              Procedimiento crítico para el control de energías peligrosas. Evita activaciones inesperadas.
             </p>
           </div>
           <div className="mt-auto flex justify-center">
@@ -48,8 +44,8 @@ export default function CursosEspecializados() {
           <div className="card-padding mx-auto text-center">
             <b>Trabajo en Alturas NOM-009</b>
             <p className="card-padding max-w-md px-8">
-              Entrenamiento esencial para maniobras seguras en altura. Previene caídas y fortalece
-              la cultura de seguridad.
+              Entrenamiento esencial para maniobras seguras en altura. Previene caídas y fortalece la cultura de
+              seguridad.
             </p>
           </div>
           <div className="relative mt-auto flex-1 overflow-hidden">

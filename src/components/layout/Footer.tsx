@@ -73,8 +73,8 @@ export default function Footer() {
             {/* Columna 3: Card Cotización */}
             <div className="md:col-span-2 lg:col-span-1 mx-1">
               <div className="flex h-full flex-col justify-start rounded-sm border border-white/10 hover:border-white/20 hover:bg-white/5 p-8 transition-all duration-300">
-                <h3 className="mb-6 text-stone-100">¿Necesitas una Cotización?</h3>
-                <p className="mb-6 text-base leading-relaxed text-stone-100">
+                <h3 className="mb-6 text-gray-100">¿Necesitas una Cotización?</h3>
+                <p className="mb-6 text-base leading-relaxed text-gray-100">
                   Obtén una cotización personalizada para las necesidades específicas de tu empresa en minutos.
                 </p>
                 <Button
@@ -116,7 +116,7 @@ export default function Footer() {
                   )}
                   <Link
                     href={href}
-                    className="inline-block text-sm text-stone-100 transition-all duration-150 hover:translate-x-1 hover:text-stone-50"
+                    className="inline-block text-sm text-gray-100 transition-all duration-150 hover:translate-x-1 hover:text-gray-50"
                   >
                     {label}
                   </Link>
