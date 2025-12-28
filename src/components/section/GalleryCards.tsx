@@ -1,56 +1,66 @@
 "use client";
 
 import { useRef, useState, useEffect, useCallback } from "react";
-import { Link } from "@/components/ui/link";
+import { Button } from "@/components/ui/button";
 import "../../styles/gallery-cards.css";
 
-const cards = [
-  {
-    title: "Seguridad operativa",
-    href: "/cursos/seguridad-operativa",
-    image: "card.jpg",
+const GALLERY_CONTENT = {
+  title: "Cursos especializados",
+  subtitle: "Formación práctica y normativa para equipos técnicos, operativos y de supervisión.",
+  cta: {
+    text: "Descubre más",
+    href: "/cursos",
   },
-  {
-    title: "Maquinaria y equipos críticos",
-    href: "/cursos/maquinaria-equipos",
-    image: "card.jpg",
-  },
-  {
-    title: "Sustancias Químicas y Atmósferas peligrosas",
-    href: "/cursos/sustancias-quimicas",
-    image: "card.jpg",
-  },
-  {
-    title: "Brigadas y Protección civil",
-    href: "/cursos/brigadas-proteccion-civil",
-    image: "card.jpg",
-  },
-  {
-    title: "Cursos basados en normas NOM-STPS",
-    href: "/cursos/normas-stps",
-    image: "card.jpg",
-  },
-  {
-    title: "Gestión y Cultura de Seguridad",
-    href: "/cursos/gestion-cultura",
-    image: "card.jpg",
-  },
-  {
-    title: "Logística y Almacenes",
-    href: "/cursos/logistica-almacenes",
-    image: "card.jpg",
-  },
-  {
-    title: "Construcción",
-    href: "/cursos/construccion",
-    image: "card.jpg",
-  },
-];
+  cards: [
+    {
+      title: "Seguridad operativa",
+      href: "/cursos/seguridad-operativa",
+      image: "card.jpg",
+    },
+    {
+      title: "Maquinaria y equipos críticos",
+      href: "/cursos/maquinaria-equipos",
+      image: "card.jpg",
+    },
+    {
+      title: "Sustancias Químicas y Atmósferas peligrosas",
+      href: "/cursos/sustancias-quimicas",
+      image: "card.jpg",
+    },
+    {
+      title: "Brigadas y Protección civil",
+      href: "/cursos/brigadas-proteccion-civil",
+      image: "card.jpg",
+    },
+    {
+      title: "Cursos basados en normas NOM-STPS",
+      href: "/cursos/normas-stps",
+      image: "card.jpg",
+    },
+    {
+      title: "Gestión y Cultura de Seguridad",
+      href: "/cursos/gestion-cultura",
+      image: "card.jpg",
+    },
+    {
+      title: "Logística y Almacenes",
+      href: "/cursos/logistica-almacenes",
+      image: "card.jpg",
+    },
+    {
+      title: "Construcción",
+      href: "/cursos/construccion",
+      image: "card.jpg",
+    },
+  ],
+} as const;
 
 export default function GalleryCards() {
   const scrollContainerRef = useRef<HTMLDivElement>(null);
+  const sectionRef = useRef<HTMLElement>(null);
   const [prevDisabled, setPrevDisabled] = useState(true);
   const [nextDisabled, setNextDisabled] = useState(false);
+  const [isVisible, setIsVisible] = useState(false);
 
   const getItemWidth = useCallback(() => {
     const scrollContainer = scrollContainerRef.current;
@@ -133,19 +143,67 @@ export default function GalleryCards() {
     };
   }, [updateButtons]);
 
+  // Intersection Observer para animaciones
+  useEffect(() => {
+    const section = sectionRef.current;
+    if (!section) return;
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting && !isVisible) {
+            setIsVisible(true);
+
+            // Animar header
+            const header = section.querySelector(".gallery-header");
+            if (header) {
+              header.classList.add("animate");
+            }
+
+            // Animar cards con delay escalonado
+            const items = section.querySelectorAll(".gallery-item");
+            items.forEach((item, index) => {
+              setTimeout(() => {
+                item.classList.add("animate");
+              }, 150 + index * 80); // 0.08s delay entre cada card (más rápido)
+            });
+
+            // Animar botones de navegación (aparecen más pronto)
+            const paddlenav = section.querySelector(".paddlenav");
+            if (paddlenav) {
+              setTimeout(() => {
+                paddlenav.classList.add("animate");
+              }, 400); // Aparecen después de 400ms (antes de que terminen todas las cards)
+            }
+          }
+        });
+      },
+      {
+        threshold: 0.1, // Se activa cuando el 10% de la sección es visible
+        rootMargin: "0px 0px -50px 0px", // Se activa un poco antes
+      }
+    );
+
+    observer.observe(section);
+
+    return () => {
+      observer.disconnect();
+    };
+  }, [isVisible]);
+
   return (
-    <section className="gallery-cards-section section-consider bg-gray-200">
+    <section ref={sectionRef} className="gallery-cards-section section-consider bg-gray-200">
       <div className="py-24 md:py-32 lg:py-40">
-        <div className="container mx-auto pb-12 text-center">
-          <h1>Title</h1>
-          <p>Textos</p>
+        <div className="gallery-header container mx-auto pb-12 text-center">
+          <h1>{GALLERY_CONTENT.title}</h1>
+          <p>{GALLERY_CONTENT.subtitle}</p>
         </div>
         <div className="gallery-cards-wrapper">
           <div className="gallery gallery-align-start gallery-feature-cards">
             <div className="scroll-container" ref={scrollContainerRef}>
               <div className="item-container">
                 <ul className="card-set">
-                  {cards.map((card, index) => (
+                  {GALLERY_CONTENT.cards.map((card, index) => (
                     <li key={index} className="gallery-item grid-item">
                       <div className="feature-card card-container">
                         <div className="card">
@@ -154,15 +212,14 @@ export default function GalleryCards() {
                               <h2 className="card-title">{card.title}</h2>
                             </div>
                             <div className="mt-10 flex items-center justify-center gap-x-6 flex-wrap">
-                              <Link
-                                href={card.href}
-                                className="group rounded-md bg-brand-700 hover:bg-brand-600 active:bg-brand-700 inline-block inline-flex w-max items-center justify-center my-2 px-4 py-2 font-bold tracking-wide text-gray-50 transition-colors group-hover:text-gray-50 group-active:text-gray-50"
+                              <Button
+                                color="brand"
+                                href={GALLERY_CONTENT.cta.href}
+                                className="inline-flex w-max shadow-sm"
                               >
-                                <span className="font-medium text-gray-50 group-hover:text-gray-50 group-active:text-gray-50">
-                                  Ver más
-                                </span>
-                                <i className="fas fa-arrow-right ml-1 h-4 w-4 text-gray-50 group-hover:text-gray-50 group-active:text-gray-50"></i>
-                              </Link>
+                                {GALLERY_CONTENT.cta.text}
+                                <i className="fas fa-graduation-cap text-gray-50 group-hover:text-white transition-colors h-4 w-4" />
+                              </Button>
                             </div>
                           </div>
                         </div>

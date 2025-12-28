@@ -1,4 +1,4 @@
-import HeroVideoSection from "@/components/section/HeroInicio";
+import HeroInicio from "@/components/section/HeroInicio";
 import GalleryCards from "@/components/section/GalleryCards";
 import FeaturedCoursesGrid from "@/components/section/FeaturedCoursesGrid";
 
@@ -6,7 +6,7 @@ export default function Home() {
   return (
     <main id="content">
       <section className="relative h-16 w-full"></section>
-      <HeroVideoSection />
+      <HeroInicio />
       <GalleryCards />
       <FeaturedCoursesGrid />
       <div className="container mx-auto max-w-4xl space-y-4 px-4 py-8">

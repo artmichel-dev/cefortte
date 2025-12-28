@@ -1,9 +1,10 @@
 "use client";
 
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 import Hls from "hls.js";
 import { Button } from "@/components/ui/button";
 import { Link } from "@/components/ui/link";
+import "../../styles/hero-inicio.css";
 
 const HERO_CONTENT = {
   title: "Capacitación para Empresas",
@@ -79,31 +80,95 @@ function useHlsVideo(videoRef: React.RefObject<HTMLVideoElement | null>, src: st
 
 export default function HeroInicio() {
   const videoRef = useRef<HTMLVideoElement>(null);
+  const sectionRef = useRef<HTMLElement>(null);
+  const [isVisible, setIsVisible] = useState(false);
 
   useHlsVideo(videoRef, HERO_CONTENT.video.src);
 
+  // Intersection Observer para animaciones
+  useEffect(() => {
+    const section = sectionRef.current;
+    if (!section) return;
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting && !isVisible) {
+            setIsVisible(true);
+
+            // Animar video/fondo
+            const videoContainer = section.querySelector(".hero-video-container");
+            if (videoContainer) {
+              videoContainer.classList.add("animate");
+            }
+
+            // Animar título
+            const title = section.querySelector(".hero-title");
+            if (title) {
+              setTimeout(() => {
+                title.classList.add("animate");
+              }, 150);
+            }
+
+            // Animar descripción
+            const description = section.querySelector(".hero-description");
+            if (description) {
+              setTimeout(() => {
+                description.classList.add("animate");
+              }, 300);
+            }
+
+            // Animar botones
+            const cta = section.querySelector(".hero-cta");
+            if (cta) {
+              setTimeout(() => {
+                cta.classList.add("animate");
+              }, 450);
+            }
+          }
+        });
+      },
+      {
+        threshold: 0.1,
+        rootMargin: "0px 0px -50px 0px",
+      }
+    );
+
+    observer.observe(section);
+
+    return () => {
+      observer.disconnect();
+    };
+  }, [isVisible]);
+
   return (
-    <section>
-      <article>
+    <section ref={sectionRef} className="z-10">
+      <article className="!overflow-visible">
         {/* Video de fondo */}
-        <div className="absolute px-6 w-full h-full max-w-full pointer-events-none overflow-hidden top-0 left-0 z-0">
-          <video
-            ref={videoRef}
-            className="h-full w-full rounded-xl object-cover"
-            poster={HERO_CONTENT.video.poster}
-            autoPlay
-            muted
-            loop
-            playsInline
-          />
-          {/* Overlay para mejorar legibilidad */}
-          <div className="absolute mx-6 inset-0 bg-black/30 rounded-xl" />
+        <div className="hero-video-container absolute px-6 w-full h-full max-w-full pointer-events-none top-0 left-0 z-0 opacity-0 translate-y-[30px]">
+          <div className="relative h-full w-full rounded-xl overflow-hidden">
+            <video
+              ref={videoRef}
+              className="h-full w-full object-cover"
+              poster={HERO_CONTENT.video.poster}
+              autoPlay
+              muted
+              loop
+              playsInline
+            />
+            {/* Overlay para mejorar legibilidad */}
+            <div className="absolute inset-0 bg-black/30" />
+          </div>
         </div>
 
         <div className="mx-auto max-w-sm md:max-w-md lg:max-w-4xl text-center z-10">
-          <h1 className="text-white drop-shadow-sm text-4xl md:text-5xl lg:text-6xl font-bold">{HERO_CONTENT.title}</h1>
-          <p className="text-gray-50 drop-shadow-sm text-sm md:text-base lg:text-lg">{HERO_CONTENT.description}</p>
-          <div className="mt-10 flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-x-6">
+          <h1 className="hero-title text-white drop-shadow-sm text-4xl md:text-5xl lg:text-6xl font-bold opacity-0 translate-y-[30px]">
+            {HERO_CONTENT.title}
+          </h1>
+          <p className="hero-description text-gray-50 drop-shadow-sm text-sm md:text-base lg:text-lg opacity-0 translate-y-[30px]">
+            {HERO_CONTENT.description}
+          </p>
+          <div className="hero-cta mt-10 flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-x-6 opacity-0 translate-y-[30px]">
             <Button color="brand" href={HERO_CONTENT.cta.primary.href} className="inline-flex w-max shadow-sm">
               {HERO_CONTENT.cta.primary.text} <i className="fas fa-arrow-right text-xs text-gray-50" />
             </Button>

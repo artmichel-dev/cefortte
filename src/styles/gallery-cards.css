@@ -8,7 +8,50 @@
    - Usa .gallery-cards-section en lugar de .section
    - Usa overflow: visible para permitir scroll horizontal
    - Anula el comportamiento grid del main padre
+   
+   ANIMACIONES:
+   - Fade in con delays escalonados en título, cards y botones
+   - Hover scale en cards con transición suave
    ============================================= */
+
+/* === Keyframes === */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* === Estados de animación === */
+.gallery-header {
+  opacity: 0;
+}
+
+.gallery-header.animate {
+  animation: fadeInUp 0.45s ease-out forwards;
+}
+
+.gallery-item {
+  opacity: 0;
+  /* NO usar transform aquí para que ocupe su espacio */
+}
+
+.gallery-item.animate {
+  animation: fadeInUp 0.45s ease-out forwards;
+}
+
+.paddlenav {
+  opacity: 0;
+  /* NO usar transform aquí para que ocupe su espacio */
+}
+
+.paddlenav.animate {
+  animation: fadeInUp 0.45s ease-out forwards;
+}
 
 /* === Variables CSS === */
 .section-consider {
@@ -84,12 +127,6 @@
   width: 100%;
 }
 
-@media (max-width: 768px) {
-  .gallery {
-    /* padding-bottom: 78px;  */
-  }
-}
-
 .gallery ::-webkit-scrollbar {
   width: 0px;
   height: 0px;
@@ -105,7 +142,7 @@
   overflow-y: visible;
   scrollbar-width: none;
   scroll-snap-type: x mandatory;
-  padding: 10px 0;
+  padding: 40px 0;
   margin: -10px 0;
   box-sizing: border-box;
 }
@@ -183,7 +220,11 @@
 
 /* === Feature Card === */
 .feature-card {
-  transition: transform 0.3s cubic-bezier(0, 0, 0.5, 1);
+  transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.feature-card:hover {
+  transform: scale(1.016);
 }
 
 /* === Card === */
