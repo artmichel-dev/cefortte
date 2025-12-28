@@ -40,7 +40,7 @@ export default function HeroVideoSection() {
   }, []);
 
   return (
-    <section className="relative grid min-h-screen">
+    <section className="relative grid min-h-screen overflow-hidden isolate">
       {/* Video de fondo */}
       <div className="absolute w-full h-full max-w-full pointer-events-none overflow-hidden top-0 left-0 z-0 bg-gray-100">
         <video ref={videoRef} className="h-full w-full object-cover" autoPlay muted loop playsInline />

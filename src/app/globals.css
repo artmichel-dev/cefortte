@@ -253,7 +253,7 @@ article {
   }
 
   section {
-    @apply relative grid w-full isolate overflow-hidden mx-auto h-auto;
+    @apply relative grid w-full overflow-hidden isolate mx-auto h-auto;
   }
 
   article {

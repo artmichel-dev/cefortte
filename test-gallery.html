@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Test Gallery</title>
+  <link rel="stylesheet" href="src/styles/gallery-cards.css">
+</head>
+<body>
+  <h1>Prueba del componente original</h1>
+  <p>Si ves las tarjetas y los botones funcionan, el HTML original está bien.</p>
+  
+  <section class="section section-consider">
+    <div class="gallery gallery-align-start gallery-feature-cards">
+      <div class="scroll-container" id="gallery-scroll">
+        <div class="item-container">
+          <ul class="card-set">
+            <li class="gallery-item grid-item">
+              <div class="feature-card card-container">
+                <div class="card">
+                  <div class="card-modifier" style="background-image: url('public/card.jpg')">
+                    <div class="card-content">
+                      <h2 class="card-title">Card 1</h2>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li class="gallery-item grid-item">
+              <div class="feature-card card-container">
+                <div class="card">
+                  <div class="card-modifier" style="background-image: url('public/card.jpg')">
+                    <div class="card-content">
+                      <h2 class="card-title">Card 2</h2>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li class="gallery-item grid-item">
+              <div class="feature-card card-container">
+                <div class="card">
+                  <div class="card-modifier" style="background-image: url('public/card.jpg')">
+                    <div class="card-content">
+                      <h2 class="card-title">Card 3</h2>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <nav class="paddlenav">
+        <button class="paddlenav-arrow paddlenav-arrow-previous" id="btn-prev" disabled>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <polyline points="9 18 15 12 9 6"></polyline>
+          </svg>
+        </button>
+        <button class="paddlenav-arrow paddlenav-arrow-next" id="btn-next">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <polyline points="9 18 15 12 9 6"></polyline>
+          </svg>
+        </button>
+      </nav>
+    </div>
+  </section>
+
+  <script>
+    (function () {
+      const scrollContainer = document.getElementById("gallery-scroll");
+      const btnPrev = document.getElementById("btn-prev");
+      const btnNext = document.getElementById("btn-next");
+      const items = scrollContainer.querySelectorAll(".gallery-item");
+
+      let currentIndex = 0;
+
+      function getItemWidth() {
+        if (items.length === 0) return 0;
+        const item = items[0];
+        const style = window.getComputedStyle(scrollContainer.querySelector(".item-container"));
+        const gap = parseFloat(style.columnGap) || 20;
+        return item.offsetWidth + gap;
+      }
+
+      function updateButtons() {
+        const scrollLeft = scrollContainer.scrollLeft;
+        const maxScroll = scrollContainer.scrollWidth - scrollContainer.clientWidth;
+        btnPrev.disabled = scrollLeft <= 5;
+        btnNext.disabled = scrollLeft >= maxScroll - 5;
+      }
+
+      function scrollToIndex(index) {
+        if (index < 0) index = 0;
+        if (index >= items.length) index = items.length - 1;
+        currentIndex = index;
+        const itemWidth = getItemWidth();
+        scrollContainer.scrollTo({
+          left: index * itemWidth,
+          behavior: "smooth",
+        });
+      }
+
+      function getCurrentIndex() {
+        const itemWidth = getItemWidth();
+        if (itemWidth === 0) return 0;
+        return Math.round(scrollContainer.scrollLeft / itemWidth);
+      }
+
+      btnPrev.addEventListener("click", function () {
+        currentIndex = getCurrentIndex();
+        scrollToIndex(currentIndex - 1);
+      });
+
+      btnNext.addEventListener("click", function () {
+        currentIndex = getCurrentIndex();
+        scrollToIndex(currentIndex + 1);
+      });
+
+      scrollContainer.addEventListener("scroll", updateButtons);
+      window.addEventListener("resize", updateButtons);
+      updateButtons();
+    })();
+  </script>
+</body>
+</html>
+
