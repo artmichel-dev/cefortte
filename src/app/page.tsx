@@ -1,14 +1,12 @@
 import HeroVideoSection from "@/components/section/HeroInicio";
-import BentoGrid from "@/components/section/BentoGrid";
-import FeaturedCoursesGrid from "@/components/section/FeaturedCoursesGrid";
+import CarouselCard from "@/components/section/CarouselCard";
 
 export default function Home() {
   return (
     <main id="content">
       <section className="relative h-16 w-full"></section>
       <HeroVideoSection />
-      <BentoGrid />
-      <FeaturedCoursesGrid />
+      <CarouselCard />
       <div className="container mx-auto max-w-4xl space-y-4 px-4 py-8">
         <p>TIPOGRAFÍA - SISTEMA BASE (UI)</p>
         <p data-text="micro">p text-micro</p>
