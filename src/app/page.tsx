@@ -1,6 +1,5 @@
 import HeroInicio from "@/components/section/HeroInicio";
 import GalleryCards from "@/components/section/GalleryCards";
-import FeaturedCoursesGrid from "@/components/section/FeaturedCoursesGrid";
 
 export default function Home() {
   return (
@@ -8,13 +7,13 @@ export default function Home() {
       <section className="relative h-16 w-full"></section>
       <HeroInicio />
       <GalleryCards />
-      <FeaturedCoursesGrid />
       <div className="container mx-auto max-w-4xl space-y-4 px-4 py-8">
         <p>TIPOGRAFÍA - SISTEMA BASE (UI)</p>
-        <p data-text="micro">p text-micro</p>
-        <p data-text="small">p text-small</p>
-        <p data-text="body">p text-body</p>
-        <p data-text="body-lg">p text-body-lg</p>
+        <code>p text-micro</code>
+        <br />
+        <small>p text-small</small>
+        <p>p text-body</p>
+        <p className="text-body-lg">p text-body-lg</p>
         <br />
         <h6>Etiqueta h6</h6>
         <h5>Etiqueta h5</h5>
@@ -34,16 +33,16 @@ export default function Home() {
         <br />
 
         <p>TIPOGRAFÍA - SISTEMA EDITORIAL (Marketing)</p>
-        <p data-text="display-xxl">p display-xxl</p>
-        <p data-text="display-xl">p display-xl</p>
-        <p data-text="display-lg">p display-lg</p>
-        <p data-text="display-md">p display-md</p>
-        <p data-text="display-sm">p display-sm</p>
-        <p data-text="title-lg">p title-lg</p>
-        <p data-text="title-md">p title-md</p>
-        <p data-text="title-sm">p title-sm</p>
-        <p data-text="title-lead">p title-lead</p>
-        <p data-text="title-highlight">p title-highlight</p>
+        <p className="text-display-xxl">p display-xxl</p>
+        <p className="text-display-xl">p display-xl</p>
+        <p className="text-display-lg">p display-lg</p>
+        <p className="text-display-md">p display-md</p>
+        <p className="text-display-sm">p display-sm</p>
+        <p className="text-title-lg">p title-lg</p>
+        <p className="text-title-md">p title-md</p>
+        <p className="text-title-sm">p title-sm</p>
+        <p className="text-lead">p title-lead</p>
+        <p className="text-highlight">p title-highlight</p>
         <br />
         <br />
       </div>
