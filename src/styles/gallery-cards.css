@@ -257,35 +257,6 @@
   padding-top: 20px;
 }
 
-.card-subtitle {
-  font-size: 14px;
-  font-weight: 400;
-  margin-bottom: 8px;
-  letter-spacing: 0.02em;
-}
-
-.card-title {
-  font-size: 32px;
-  font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: 0.02em;
-}
-
-@media (max-width: 1024px) {
-  .card-title {
-    font-size: 28px;
-  }
-}
-
-@media (max-width: 768px) {
-  .card-subtitle {
-    font-size: 12px;
-  }
-  .card-title {
-    font-size: 24px;
-  }
-}
-
 /* === Card Button === */
 .card-footer {
   display: flex;
@@ -296,13 +267,6 @@
 .card-button svg {
   width: 14px;
   height: 14px;
-}
-
-@media (max-width: 768px) {
-  .card-button {
-    font-size: 12px;
-    padding: 8px 16px;
-  }
 }
 
 /* === Section Consider Override === */

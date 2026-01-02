@@ -22,7 +22,14 @@ const homeContent = {
   },
   gallery: {
     title: "Cursos especializados",
-    subtitle: "Formación práctica y normativa para equipos técnicos, operativos y de supervisión.",
+    subtitle: (
+      <>
+        Formación práctica y normativa para equipos técnicos, operativos y de supervisión.
+        <br />
+        Seleccionamos los cursos más solicitados por la industria para garantizar resultados inmediatos en cumplimiento
+        y seguridad.
+      </>
+    ),
     cta: {
       text: "Descubre más",
       href: "/cursos",
@@ -31,42 +38,42 @@ const homeContent = {
       {
         title: "Seguridad operativa",
         href: "/cursos/seguridad-operativa",
-        image: "/card.jpg",
+        image: "/card-bg_courses_safety-operational_405x830.webp",
       },
       {
         title: "Maquinaria y equipos críticos",
         href: "/cursos/maquinaria-equipos",
-        image: "/card.jpg",
+        image: "/card-bg_courses_critical-machinery_405x830.webp",
       },
       {
         title: "Sustancias Químicas y Atmósferas peligrosas",
         href: "/cursos/sustancias-quimicas",
-        image: "/card.jpg",
+        image: "/card-bg_courses_chemical-atmospheres_405x830.webp",
       },
       {
         title: "Brigadas y Protección civil",
         href: "/cursos/brigadas-proteccion-civil",
-        image: "/card.jpg",
+        image: "/card-bg_courses_emergency-response_405x830.webp",
       },
       {
         title: "Cursos basados en normas NOM-STPS",
         href: "/cursos/normas-stps",
-        image: "/card.jpg",
+        image: "/card-bg_courses_nom-stps_405x830.webp",
       },
       {
         title: "Gestión y Cultura de Seguridad",
         href: "/cursos/gestion-cultura",
-        image: "/card.jpg",
+        image: "/card-bg_courses_safety-culture_405x830.webp",
       },
       {
         title: "Logística y Almacenes",
         href: "/cursos/logistica-almacenes",
-        image: "/card.jpg",
+        image: "/card-bg_courses_logistics-warehouse_405x830.webp",
       },
       {
         title: "Construcción",
         href: "/cursos/construccion",
-        image: "/card.jpg",
+        image: "/card-bg_courses_construction_405x830.webp",
       },
     ],
   },

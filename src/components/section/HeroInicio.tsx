@@ -151,7 +151,7 @@ export default function HeroInicio({ title, description, primaryCta, secondaryCt
         </div>
 
         <div className="mx-auto max-w-sm md:max-w-md lg:max-w-4xl text-center z-10">
-          <h1 className="hero-title text-white uppercase drop-shadow-sm text-4xl md:text-5xl lg:text-6xl font-bold opacity-0 translate-y-[30px]">
+          <h1 className="hero-title text-white uppercase drop-shadow-sm md:text-5xl lg:text-6xl font-bold opacity-0 translate-y-[30px]">
             {title}
           </h1>
           <p className="hero-description mt-4 text-gray-50 drop-shadow-sm text-sm md:text-base lg:text-lg opacity-0 translate-y-[30px]">

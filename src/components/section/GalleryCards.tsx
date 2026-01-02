@@ -160,8 +160,8 @@ export default function GalleryCards({ title, subtitle, cta, cards, className = 
     <section ref={sectionRef} className={`gallery-cards-section section-consider bg-gray-200 ${className}`}>
       <div className="py-24 md:py-32 lg:py-40">
         <div className="gallery-header container mx-auto pb-12 text-center">
-          <h1>{title}</h1>
-          <p>{subtitle}</p>
+          <p className="text-display-lg text-left uppercase">{title}</p>
+          <p className="text-body text-left py-4">{subtitle}</p>
         </div>
         <div className="gallery-cards-wrapper">
           <div className="gallery gallery-align-start gallery-feature-cards">
@@ -174,7 +174,7 @@ export default function GalleryCards({ title, subtitle, cta, cards, className = 
                         <div className="card">
                           <div className="card-modifier" style={{ backgroundImage: `url('${card.image}')` }}>
                             <div className="card-content">
-                              <h2 className="card-title">{card.title}</h2>
+                              <p className="text-title-lg uppercase">{card.title}</p>
                             </div>
                             <div className="mt-10 flex items-center justify-center gap-x-6 flex-wrap">
                               <Button color="brand" href={card.href} className="inline-flex w-max shadow-sm">
