@@ -94,6 +94,22 @@
   --text-lead: 1.25rem; /* 20px */
   --text-highlight: 1.125rem; /* 18px */
 
+  /* SPACING – UI (Figma: space/ui/*) */
+  --space-ui-xs: 4px;
+  --space-ui-sm: 8px;
+  --space-ui-md: 16px;
+  --space-ui-lg: 24px;
+  --space-ui-xl: 32px;
+  --space-ui-2xl: 48px;
+  --space-ui-3xl: 64px;
+
+  /* SPACING – EDITORIAL (Mobile) */
+  --space-editorial-sm: 16px;
+  --space-editorial-md: 24px;
+  --space-editorial-lg: 40px;
+  --space-editorial-xl: 64px;
+  --space-editorial-2xl: 96px;
+
   /* COLORES - BRAND (colors/brand/) */
   --color-brand-50: #fef2f2;
   --color-brand-100: #fee2e2;
@@ -159,6 +175,18 @@
 }
 
 /* 3. CSS PURO (fuera de layers) */
+
+/* SPACING – EDITORIAL (Desktop override)
+   Fuera de @theme porque @media no es permitido dentro */
+@media (min-width: 1024px) {
+  :root {
+    --space-editorial-sm: 24px;
+    --space-editorial-md: 40px;
+    --space-editorial-lg: 64px;
+    --space-editorial-xl: 96px;
+    --space-editorial-2xl: 128px;
+  }
+}
 
 /* Función spacing para Catalyst */
 @supports (color: rgb(from white r g b)) {
@@ -614,5 +642,39 @@ article {
     .text-highlight {
       font-size: var(--text-highlight);
     }
+  }
+
+  /* SPACING UTILITIES – EDITORIAL */
+  .section-sm {
+    padding-block: var(--space-editorial-sm);
+  }
+  .section-md {
+    padding-block: var(--space-editorial-md);
+  }
+  .section-lg {
+    padding-block: var(--space-editorial-lg);
+  }
+  .section-xl {
+    padding-block: var(--space-editorial-xl);
+  }
+  .section-2xl {
+    padding-block: var(--space-editorial-2xl);
+  }
+
+  /* SPACING UTILITIES – UI */
+  .stack-xs {
+    gap: var(--space-ui-xs);
+  }
+  .stack-sm {
+    gap: var(--space-ui-sm);
+  }
+  .stack-md {
+    gap: var(--space-ui-md);
+  }
+  .stack-lg {
+    gap: var(--space-ui-lg);
+  }
+  .stack-xl {
+    gap: var(--space-ui-xl);
   }
 }
