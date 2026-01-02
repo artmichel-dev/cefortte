@@ -2,9 +2,6 @@ import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { SITE_CONFIG, OG_IMAGE_CONFIG, COURSE_CATEGORIES } from "@/lib/seo-constants";
 
-/**
- * Tipos para el curso
- */
 interface Course {
   slug: string;
   title: string;
@@ -19,12 +16,7 @@ interface Course {
   requirements: string[];
 }
 
-/**
- * Función para obtener datos del curso (mock)
- * TODO: Reemplazar con llamada real a API o base de datos
- */
 async function getCourse(slug: string): Promise<Course | null> {
-  // Mock de datos - Reemplazar con fetch real
   const mockCourses: Record<string, Course> = {
     "trabajo-en-alturas": {
       slug: "trabajo-en-alturas",
@@ -82,15 +74,9 @@ async function getCourse(slug: string): Promise<Course | null> {
   return mockCourses[slug] || null;
 }
 
-/**
- * Genera metadata dinámica para cada curso
- */
-export async function generateMetadata({
-  params,
-}: {
-  params: { slug: string };
-}): Promise<Metadata> {
-  const course = await getCourse(params.slug);
+export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }): Promise<Metadata> {
+  const { slug } = await params;
+  const course = await getCourse(slug);
 
   if (!course) {
     return {
@@ -146,30 +132,18 @@ export async function generateMetadata({
   };
 }
 
-/**
- * Genera rutas estáticas para los cursos
- * TODO: Actualizar con lista real de cursos
- */
 export async function generateStaticParams() {
-  // Mock de slugs - Reemplazar con fetch real
-  return [
-    { slug: "trabajo-en-alturas" },
-    { slug: "espacios-confinados" },
-    // Agregar más cursos aquí
-  ];
+  return [{ slug: "trabajo-en-alturas" }, { slug: "espacios-confinados" }];
 }
 
-/**
- * Página dinámica de curso individual
- */
-export default async function CursoPage({ params }: { params: { slug: string } }) {
-  const course = await getCourse(params.slug);
+export default async function CursoPage({ params }: { params: Promise<{ slug: string }> }) {
+  const { slug } = await params;
+  const course = await getCourse(slug);
 
   if (!course) {
     notFound();
   }
 
-  // Schema JSON-LD para el curso
   const courseSchema = {
     "@context": "https://schema.org",
     "@type": "Course",
@@ -193,13 +167,8 @@ export default async function CursoPage({ params }: { params: { slug: string } }
 
   return (
     <>
-      {/* JSON-LD Schema */}
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(courseSchema) }}
-      />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(courseSchema) }} />
 
-      {/* Contenido de la página */}
       <div>
         <h1>{course.title}</h1>
         <p>{course.description}</p>
@@ -245,8 +214,6 @@ export default async function CursoPage({ params }: { params: { slug: string } }
             ))}
           </ul>
         </div>
-
-        {/* TODO: Agregar más secciones y diseño */}
       </div>
     </>
   );

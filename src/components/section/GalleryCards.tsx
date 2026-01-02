@@ -4,58 +4,27 @@ import { useRef, useState, useEffect, useCallback } from "react";
 import { Button } from "@/components/ui/button";
 import "../../styles/gallery-cards.css";
 
-const GALLERY_CONTENT = {
-  title: "Cursos especializados",
-  subtitle: "Formación práctica y normativa para equipos técnicos, operativos y de supervisión.",
-  cta: {
-    text: "Descubre más",
-    href: "/cursos",
-  },
-  cards: [
-    {
-      title: "Seguridad operativa",
-      href: "/cursos/seguridad-operativa",
-      image: "card.jpg",
-    },
-    {
-      title: "Maquinaria y equipos críticos",
-      href: "/cursos/maquinaria-equipos",
-      image: "card.jpg",
-    },
-    {
-      title: "Sustancias Químicas y Atmósferas peligrosas",
-      href: "/cursos/sustancias-quimicas",
-      image: "card.jpg",
-    },
-    {
-      title: "Brigadas y Protección civil",
-      href: "/cursos/brigadas-proteccion-civil",
-      image: "card.jpg",
-    },
-    {
-      title: "Cursos basados en normas NOM-STPS",
-      href: "/cursos/normas-stps",
-      image: "card.jpg",
-    },
-    {
-      title: "Gestión y Cultura de Seguridad",
-      href: "/cursos/gestion-cultura",
-      image: "card.jpg",
-    },
-    {
-      title: "Logística y Almacenes",
-      href: "/cursos/logistica-almacenes",
-      image: "card.jpg",
-    },
-    {
-      title: "Construcción",
-      href: "/cursos/construccion",
-      image: "card.jpg",
-    },
-  ],
-} as const;
+// Tipos para las props
+interface GalleryCard {
+  title: string;
+  href: string;
+  image: string;
+}
 
-export default function GalleryCards() {
+interface GalleryCta {
+  text: string;
+  href: string;
+}
+
+interface GalleryCardsProps {
+  title: string;
+  subtitle: string;
+  cta: GalleryCta;
+  cards: GalleryCard[];
+  className?: string;
+}
+
+export default function GalleryCards({ title, subtitle, cta, cards, className = "" }: GalleryCardsProps) {
   const scrollContainerRef = useRef<HTMLDivElement>(null);
   const sectionRef = useRef<HTMLElement>(null);
   const [prevDisabled, setPrevDisabled] = useState(true);
@@ -143,7 +112,6 @@ export default function GalleryCards() {
     };
   }, [updateButtons]);
 
-  // Intersection Observer para animaciones
   useEffect(() => {
     const section = sectionRef.current;
     if (!section) return;
@@ -154,33 +122,30 @@ export default function GalleryCards() {
           if (entry.isIntersecting && !isVisible) {
             setIsVisible(true);
 
-            // Animar header
             const header = section.querySelector(".gallery-header");
             if (header) {
               header.classList.add("animate");
             }
 
-            // Animar cards con delay escalonado
             const items = section.querySelectorAll(".gallery-item");
             items.forEach((item, index) => {
               setTimeout(() => {
                 item.classList.add("animate");
-              }, 150 + index * 80); // 0.08s delay entre cada card (más rápido)
+              }, 150 + index * 80);
             });
 
-            // Animar botones de navegación (aparecen más pronto)
             const paddlenav = section.querySelector(".paddlenav");
             if (paddlenav) {
               setTimeout(() => {
                 paddlenav.classList.add("animate");
-              }, 400); // Aparecen después de 400ms (antes de que terminen todas las cards)
+              }, 400);
             }
           }
         });
       },
       {
-        threshold: 0.1, // Se activa cuando el 10% de la sección es visible
-        rootMargin: "0px 0px -50px 0px", // Se activa un poco antes
+        threshold: 0.1,
+        rootMargin: "0px 0px -50px 0px",
       }
     );
 
@@ -192,18 +157,18 @@ export default function GalleryCards() {
   }, [isVisible]);
 
   return (
-    <section ref={sectionRef} className="gallery-cards-section section-consider bg-gray-200">
+    <section ref={sectionRef} className={`gallery-cards-section section-consider bg-gray-200 ${className}`}>
       <div className="py-24 md:py-32 lg:py-40">
         <div className="gallery-header container mx-auto pb-12 text-center">
-          <h1>{GALLERY_CONTENT.title}</h1>
-          <p>{GALLERY_CONTENT.subtitle}</p>
+          <h1>{title}</h1>
+          <p>{subtitle}</p>
         </div>
         <div className="gallery-cards-wrapper">
           <div className="gallery gallery-align-start gallery-feature-cards">
             <div className="scroll-container" ref={scrollContainerRef}>
               <div className="item-container">
                 <ul className="card-set">
-                  {GALLERY_CONTENT.cards.map((card, index) => (
+                  {cards.map((card, index) => (
                     <li key={index} className="gallery-item grid-item">
                       <div className="feature-card card-container">
                         <div className="card">
@@ -212,12 +177,8 @@ export default function GalleryCards() {
                               <h2 className="card-title">{card.title}</h2>
                             </div>
                             <div className="mt-10 flex items-center justify-center gap-x-6 flex-wrap">
-                              <Button
-                                color="brand"
-                                href={GALLERY_CONTENT.cta.href}
-                                className="inline-flex w-max shadow-sm"
-                              >
-                                {GALLERY_CONTENT.cta.text}
+                              <Button color="brand" href={card.href} className="inline-flex w-max shadow-sm">
+                                {cta.text}
                                 <i className="fas fa-graduation-cap text-gray-50 group-hover:text-white transition-colors h-4 w-4" />
                               </Button>
                             </div>
@@ -230,7 +191,6 @@ export default function GalleryCards() {
               </div>
             </div>
 
-            {/* Paddlenav Buttons */}
             <nav className="paddlenav" aria-label="Gallery navigation">
               <button
                 className="paddlenav-arrow paddlenav-arrow-previous"
