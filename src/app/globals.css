@@ -247,8 +247,6 @@ article {
   html {
     @apply m-0 p-0;
     font-size: 100%;
-    overflow-x: hidden;
-    max-width: 100vw;
   }
 
   body {
@@ -257,8 +255,6 @@ article {
     font-weight: var(--font-weight-regular);
     line-height: var(--line-height-relaxed);
     letter-spacing: var(--letter-spacing-normal);
-    overflow-x: hidden;
-    max-width: 100vw;
   }
 
   /* ESTRUCTURA PRINCIPAL */

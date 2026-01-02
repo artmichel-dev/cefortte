@@ -97,13 +97,15 @@
 .gallery-cards-section {
   position: relative;
   width: 100%;
-  max-width: 100vw;
-  overflow: visible;
+  max-width: none; /* ← Cambiar */
+  margin-left: 0;
+  margin-right: 0;
+  padding-left: 0; /* ← Agregar */
+  padding-right: 0; /* ← Agregar */
+  overflow: hidden;
   padding-top: var(--global-section-padding);
   padding-bottom: var(--global-section-padding);
-  margin: 0;
   box-sizing: border-box;
-  /* Anular estilos del grid del main */
   grid-column: 1 / -1;
   display: block;
 }
@@ -111,11 +113,11 @@
 /* === Gallery === */
 .gallery-cards-wrapper {
   position: relative;
-  width: 100%;
-  max-width: 100vw;
-  margin: 0;
+  width: 100vw; /* ← Mover el 100vw aquí */
+  margin-left: calc(-50vw + 50%);
+  margin-right: calc(-50vw + 50%);
   padding: 0;
-  overflow: visible;
+  overflow: hidden;
   isolation: isolate;
 }
 
@@ -123,7 +125,7 @@
   position: relative;
   margin-top: 0;
   /* padding-bottom: 83px; */
-  overflow: visible;
+  overflow: hidden;
   width: 100%;
 }
 
@@ -137,9 +139,8 @@
 .scroll-container {
   position: relative;
   width: 100%;
-  max-width: 100vw;
-  overflow-x: scroll;
-  overflow-y: visible;
+  overflow-x: auto; /* ← Mantener auto */
+  overflow-y: hidden; /* ← Cambiar de visible a hidden */
   scrollbar-width: none;
   scroll-snap-type: x mandatory;
   padding: 40px 0;
@@ -257,6 +258,35 @@
   padding-top: 20px;
 }
 
+.card-subtitle {
+  font-size: 14px;
+  font-weight: 400;
+  margin-bottom: 8px;
+  letter-spacing: 0.02em;
+}
+
+.card-title {
+  font-size: 32px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+}
+
+@media (max-width: 1024px) {
+  .card-title {
+    font-size: 28px;
+  }
+}
+
+@media (max-width: 768px) {
+  .card-subtitle {
+    font-size: 12px;
+  }
+  .card-title {
+    font-size: 24px;
+  }
+}
+
 /* === Card Button === */
 .card-footer {
   display: flex;
@@ -267,6 +297,13 @@
 .card-button svg {
   width: 14px;
   height: 14px;
+}
+
+@media (max-width: 768px) {
+  .card-button {
+    font-size: 12px;
+    padding: 8px 16px;
+  }
 }
 
 /* === Section Consider Override === */
