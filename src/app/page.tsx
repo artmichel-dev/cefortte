@@ -1,9 +1,11 @@
 import HeroInicio from "@/components/section/HeroInicio";
 import GalleryCards from "@/components/section/GalleryCards";
 import FeatureGrid from "@/components/section/FeactureGrid";
-import TypoExample from "@/components/section/TypoExample";
 import ProcessTimeline from "@/components/section/ProcessTimeline";
 import SpaceHeader from "@/components/section/SpaceHeader";
+import Testimonials from "@/components/section/Testimonials";
+import ClientLogos from "@/components/section/ClientLogos";
+import CtaSection from "@/components/section/CtaSection";
 
 // Datos del contenido (podrían venir de un CMS, API, o archivo de constantes)
 
@@ -166,12 +168,71 @@ const homeContent = {
       },
     ],
   },
+  Testimonials: {
+    title: "Empresas que Confían en Nuestra Formación",
+    subtitle: "Resultados reales en seguridad, cumplimiento y operación.",
+    cta: {
+      text: "Ver más testimonios",
+      href: "/testimonios",
+    },
+    items: [
+      {
+        quote: "La capacitación fue clara, práctica y personalizada a nuestras operaciones.",
+        name: "Juan Rodríguez",
+        role: "Gerente de Operaciones",
+        initials: "JR",
+      },
+      {
+        quote: "Mejoramos nuestro cumplimiento NOM-STPS en menos de tres meses.",
+        name: "María González",
+        role: "Directora de Seguridad Industrial",
+        initials: "MG",
+      },
+      {
+        quote: "El instructor domina completamente el tema y sabe cómo transmitirlo.",
+        name: "Carlos Sánchez",
+        role: "Jefe de Recursos Humanos",
+        initials: "CS",
+      },
+    ],
+  },
+  clientLogos: {
+    title: "Aliados en Seguridad y Desarrollo Operativo",
+    subtitle:
+      "Hemos trabajado con empresas de los sectores manufacturero, logístico, energético, automotriz, químico y más.",
+    logos: [
+      { src: "https://tailwindcss.com/plus-assets/img/logos/tuple-logo-gray-900.svg", alt: "Cliente 1" },
+      { src: "https://tailwindcss.com/plus-assets/img/logos/reform-logo-gray-900.svg", alt: "Cliente 2" },
+      { src: "https://tailwindcss.com/plus-assets/img/logos/savvycal-logo-gray-900.svg", alt: "Cliente 3" },
+      { src: "https://tailwindcss.com/plus-assets/img/logos/laravel-logo-gray-900.svg", alt: "Cliente 4" },
+      { src: "https://tailwindcss.com/plus-assets/img/logos/transistor-logo-gray-900.svg", alt: "Cliente 5" },
+      { src: "https://tailwindcss.com/plus-assets/img/logos/statamic-logo-gray-900.svg", alt: "Cliente 6" },
+    ],
+  },
+  CtaSection: {
+    title: "Fortalece la Seguridad y el Cumplimiento de tu Empresa",
+    subtitle:
+      "Solicita una cotización o programa anual de capacitación. Nuestro equipo te ayudará a diseñar la solución que tu operación necesita.",
+    primaryCta: {
+      text: "Solicitar cotización ahora",
+      href: "/cotizacion",
+    },
+    secondaryCta: {
+      text: "Hablar por WhatsApp",
+      href: "https://wa.me/521234567890",
+    },
+    image: {
+      src: "https://tailwindcss.com/plus-assets/img/component-images/dark-project-app-screenshot.png",
+      alt: "Plataforma de capacitación Cefortte",
+    },
+  },
 };
 
 export default function Home() {
   return (
     <main id="content">
       <SpaceHeader />
+
       <HeroInicio
         title={homeContent.hero.title}
         description={homeContent.hero.description}
@@ -188,13 +249,33 @@ export default function Home() {
       />
 
       <FeatureGrid header={homeContent.features.header} features={homeContent.features.items} />
+
       <ProcessTimeline
         title={homeContent.process.title}
         subtitle={homeContent.process.subtitle}
         steps={homeContent.process.steps}
       />
 
-      <TypoExample />
+      <Testimonials
+        title={homeContent.Testimonials.title}
+        subtitle={homeContent.Testimonials.subtitle}
+        testimonials={homeContent.Testimonials.items}
+        cta={homeContent.Testimonials.cta}
+      />
+
+      <ClientLogos
+        title={homeContent.clientLogos.title}
+        subtitle={homeContent.clientLogos.subtitle}
+        logos={homeContent.clientLogos.logos}
+      />
+
+      <CtaSection
+        title={homeContent.CtaSection.title}
+        subtitle={homeContent.CtaSection.subtitle}
+        primaryCta={homeContent.CtaSection.primaryCta}
+        secondaryCta={homeContent.CtaSection.secondaryCta}
+        image={homeContent.CtaSection.image}
+      />
     </main>
   );
 }
