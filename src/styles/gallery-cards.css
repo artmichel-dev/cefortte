@@ -199,7 +199,8 @@
   column-gap: var(--gallery-column-gap);
   row-gap: 0px;
   width: fit-content;
-  margin: 0;
+  margin-top: 10px;
+  margin-bottom: 10px;
   list-style: none;
   padding: 0;
 }

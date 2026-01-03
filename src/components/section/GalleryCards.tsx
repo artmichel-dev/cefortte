@@ -18,7 +18,7 @@ interface GalleryCta {
 
 interface GalleryCardsProps {
   title: string;
-  subtitle: string;
+  subtitle: string | React.ReactNode;
   cta: GalleryCta;
   cards: GalleryCard[];
   className?: string;
@@ -159,7 +159,7 @@ export default function GalleryCards({ title, subtitle, cta, cards, className = 
   return (
     <section ref={sectionRef} className={`gallery-cards-section section-consider bg-gray-200 ${className}`}>
       <div className="py-24 md:py-32 lg:py-40">
-        <div className="gallery-header container mx-auto pb-12 text-center">
+        <div className="gallery-header container mx-auto pb-4 text-center">
           <p className="text-display-lg text-left uppercase">{title}</p>
           <p className="text-body text-left py-4">{subtitle}</p>
         </div>
@@ -174,12 +174,12 @@ export default function GalleryCards({ title, subtitle, cta, cards, className = 
                         <div className="card">
                           <div className="card-modifier" style={{ backgroundImage: `url('${card.image}')` }}>
                             <div className="card-content">
-                              <p className="text-title-lg uppercase">{card.title}</p>
+                              <p className="text-title-md uppercase">{card.title}</p>
                             </div>
                             <div className="mt-10 flex items-center justify-center gap-x-6 flex-wrap">
-                              <Button color="brand" href={card.href} className="inline-flex w-max shadow-sm">
+                              <Button color="white" href={card.href} className="inline-flex w-max shadow-sm">
                                 {cta.text}
-                                <i className="fas fa-graduation-cap text-gray-50 group-hover:text-white transition-colors h-4 w-4" />
+                                <i className="fas fa-graduation-cap text-gray-950 group-hover:text-gray-950 transition-colors h-4 w-4" />
                               </Button>
                             </div>
                           </div>
