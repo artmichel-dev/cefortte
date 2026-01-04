@@ -223,7 +223,7 @@ const homeContent = {
       href: "https://wa.me/521234567890",
     },
     image: {
-      src: "https://cdn.zupernova.dev/cefortte/webp/card-bg_cta_01_2400x1420.jpg",
+      src: "https://cdn.zupernova.dev/cefortte/webp/card-bg_cta_01_2400x1420.webp",
       alt: "Plataforma de capacitación Cefortte",
     },
   },
