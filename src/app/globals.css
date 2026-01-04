@@ -250,7 +250,7 @@ article {
   }
 
   body {
-    @apply m-0 p-0 min-h-dvh bg-gray-100 text-balance text-gray-800 antialiased grid grid-rows-[auto_1fr_auto];
+    @apply m-0 p-0 min-h-dvh bg-gray-100 text-balance text-gray-950 antialiased grid grid-rows-[auto_1fr_auto];
     font-size: var(--text-body);
     font-weight: var(--font-weight-regular);
     line-height: var(--line-height-relaxed);

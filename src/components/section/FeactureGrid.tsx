@@ -31,7 +31,7 @@ interface FeatureGridProps {
 
 export default function FeatureGrid({ header, features, className = "" }: FeatureGridProps) {
   return (
-    <section className={`bg-gray-50 ${className}`}>
+    <section className={`bg-brand-700 ${className}`}>
       <article>
         <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 xl:grid-cols-5">
           {/* Header con imagen de fondo */}
@@ -40,15 +40,14 @@ export default function FeatureGrid({ header, features, className = "" }: Featur
             style={{ backgroundImage: `url('${header.backgroundImage}')` }}
           >
             {/* Overlay */}
-            <div className="absolute inset-0 bg-gradient-to-b from-black/0 via-black/50 to-black/0" />
+            <div className="absolute inset-0 bg-gradient-to-b from-black/50 via-black/20 to-black/0" />
 
             {/* Contenido */}
-            <div className="relative z-10 flex h-full flex-col justify-center p-8 lg:p-10">
-              <h3 className="text-display-sm uppercase text-white drop-shadow-sm">{header.title}</h3>
-              <p className="text-body pt-4 text-gray-50 drop-shadow-sm">{header.subtitle}</p>
-
+            <div className="relative z-10 flex h-full flex-col justify-start p-8 lg:p-10">
+              <p className="text-display-md uppercase text-gray-50 drop-shadow-sm">{header.title}</p>
+              <p className="text-body-lg mt-4 text-gray-100 drop-shadow-sm">{header.subtitle}</p>
               {/* CTAs alineados horizontalmente */}
-              <div className="mt-8 flex flex-row items-center gap-6">
+              <div className="mt-4 flex flex-row items-center gap-6">
                 <Button color="brand" href={header.primaryCta.href} className="inline-flex w-max shadow-sm">
                   {header.primaryCta.text}
                   <i className="fas fa-arrow-right text-xs text-gray-50" />
@@ -58,10 +57,10 @@ export default function FeatureGrid({ header, features, className = "" }: Featur
                     href={header.secondaryCta.href}
                     className="group inline-flex items-center gap-2 transition-colors"
                   >
-                    <span className="text-base font-medium text-gray-100 transition-colors group-hover:text-white">
+                    <span className="text-base font-medium text-gray-50 transition-colors group-hover:text-white">
                       {header.secondaryCta.text}
                     </span>
-                    <i className="fas fa-graduation-cap h-4 w-4 text-gray-100 transition-colors group-hover:text-white" />
+                    <i className="fas fa-graduation-cap h-4 w-4 text-gray-50 transition-colors group-hover:text-white" />
                   </Link>
                 )}
               </div>
@@ -70,12 +69,15 @@ export default function FeatureGrid({ header, features, className = "" }: Featur
 
           {/* Feature Items */}
           {features.map((feature, index) => (
-            <div key={index} className="rounded-2xl bg-gray-200 p-8 hover:bg-gray-300 transition-colors">
-              <div className="mb-6 flex size-10 items-center justify-center rounded-lg bg-brand-700">
-                <i className={`${feature.icon} text-xl text-white`} />
+            <div
+              key={index}
+              className="rounded-2xl border border-brand-400/10 bg-brand-600/50 p-8 hover:bg-brand-500/40 transition-colors"
+            >
+              <div className="mb-6 flex size-10 items-center justify-center rounded-lg bg-brand-800/50">
+                <i className={`${feature.icon} text-xl text-brand-100`} />
               </div>
-              <b className="text-gray-800">{feature.title}</b>
-              <p className="text-body pt-2 text-gray-800">{feature.description}</p>
+              <b className="text-h4 text-brand-50 uppercase">{feature.title}</b>
+              <p className="text-body pt-4 text-brand-200">{feature.description}</p>
             </div>
           ))}
         </div>

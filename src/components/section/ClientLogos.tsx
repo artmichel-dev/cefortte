@@ -56,8 +56,8 @@ export default function ClientLogos({ title, subtitle, logos, className = "" }: 
               isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-5"
             }`}
           >
-            <h3 className="text-display-lg uppercase text-gray-800">{title}</h3>
-            <p className="text-body pt-4 text-gray-800">{subtitle}</p>
+            <p className="text-display-lg uppercase text-gray-950">{title}</p>
+            <p className="text-body-lg mt-4 text-gray-800">{subtitle}</p>
           </div>
 
           {/* Logos Grid */}

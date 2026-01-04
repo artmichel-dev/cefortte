@@ -78,7 +78,7 @@ const styles = {
       "[--btn-icon:var(--color-gray-400)] data-active:[--btn-icon:var(--color-gray-300)] data-hover:[--btn-icon:var(--color-gray-300)]",
     ],
     white: [
-      "text-gray-950 [--btn-bg:white] [--btn-border:var(--color-gray-950)]/10 [--btn-hover-overlay:var(--color-gray-950)]/2.5 data-active:[--btn-border:var(--color-gray-950)]/15 data-hover:[--btn-border:var(--color-gray-950)]/15",
+      "text-brand-800 [--btn-bg:white] [--btn-border:var(--color-gray-950)]/10 [--btn-hover-overlay:var(--color-gray-950)]/2.5 data-active:[--btn-border:var(--color-gray-950)]/15 data-hover:[--btn-border:var(--color-gray-950)]/15",
       "dark:[--btn-hover-overlay:var(--color-gray-950)]/5",
       "[--btn-icon:var(--color-gray-400)] data-active:[--btn-icon:var(--color-gray-500)] data-hover:[--btn-icon:var(--color-gray-500)]",
     ],

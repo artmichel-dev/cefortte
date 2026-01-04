@@ -146,18 +146,18 @@ export default function HeroInicio({ title, description, primaryCta, secondaryCt
               loop
               playsInline
             />
-            <div className="absolute inset-0 bg-black/30" />
+            <div className="absolute inset-0 bg-black/10" />
           </div>
         </div>
 
         <div className="mx-auto max-w-sm md:max-w-md lg:max-w-4xl text-center z-10">
-          <h1 className="hero-title text-white uppercase drop-shadow-sm md:text-5xl lg:text-6xl font-bold opacity-0 translate-y-[30px]">
+          <p className="hero-title text-display-lg uppercase text-white drop-shadow-sm opacity-0 translate-y-[30px]">
             {title}
-          </h1>
-          <p className="hero-description mt-4 text-gray-50 drop-shadow-sm text-sm md:text-base lg:text-lg opacity-0 translate-y-[30px]">
+          </p>
+          <p className="hero-description text-body-lg text-white drop-shadow-sm mt-4 opacity-0 translate-y-[30px]">
             {description}
           </p>
-          <div className="hero-cta mt-10 flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-x-6 opacity-0 translate-y-[30px]">
+          <div className="hero-cta mt-4 flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-x-6 opacity-0 translate-y-[30px]">
             <Button color="brand" href={primaryCta.href} className="inline-flex w-max shadow-sm">
               {primaryCta.text} <i className="fas fa-arrow-right text-xs text-gray-50" />
             </Button>

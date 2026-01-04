@@ -6,6 +6,7 @@ import SpaceHeader from "@/components/section/SpaceHeader";
 import Testimonials from "@/components/section/Testimonials";
 import ClientLogos from "@/components/section/ClientLogos";
 import CtaSection from "@/components/section/CtaSection";
+import TypoExample from "@/components/section/TypoExample";
 
 // Datos del contenido (podrían venir de un CMS, API, o archivo de constantes)
 
@@ -222,7 +223,7 @@ const homeContent = {
       href: "https://wa.me/521234567890",
     },
     image: {
-      src: "https://tailwindcss.com/plus-assets/img/component-images/dark-project-app-screenshot.png",
+      src: "https://cdn.zupernova.dev/cefortte/webp/card-bg_cta_01_2400x1420.jpg",
       alt: "Plataforma de capacitación Cefortte",
     },
   },
@@ -232,7 +233,6 @@ export default function Home() {
   return (
     <main id="content">
       <SpaceHeader />
-
       <HeroInicio
         title={homeContent.hero.title}
         description={homeContent.hero.description}
@@ -240,14 +240,12 @@ export default function Home() {
         secondaryCta={homeContent.hero.secondaryCta}
         video={homeContent.hero.video}
       />
-
       <GalleryCards
         title={homeContent.gallery.title}
         subtitle={homeContent.gallery.subtitle}
         cta={homeContent.gallery.cta}
         cards={homeContent.gallery.cards}
       />
-
       <FeatureGrid header={homeContent.features.header} features={homeContent.features.items} />
 
       <ProcessTimeline
