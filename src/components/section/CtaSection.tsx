@@ -70,9 +70,10 @@ export default function CtaSection({
           >
             <p className="text-display-lg uppercase text-brand-50">{title}</p>
             <p className="text-body-lg mt-4 text-brand-100">{subtitle}</p>
-            <div className="mt-10 flex items-center justify-center gap-x-6 lg:justify-start">
+
+            <div className="mt-4 flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-x-6 lg:justify-start">
               <Button color="white" href={primaryCta.href} className="inline-flex w-max text-brand-50">
-                {primaryCta.text} <i className="fas fa-arrow-right text-xs brand-800" />
+                {primaryCta.text} <i className="fas fa-arrow-right text-xs text-brand-800" />
               </Button>
               {secondaryCta && (
                 <Link href={secondaryCta.href} className="group inline-flex items-center gap-2 transition-colors">

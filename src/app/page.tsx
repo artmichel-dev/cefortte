@@ -173,7 +173,7 @@ const homeContent = {
     title: "Empresas que Confían en Nuestra Formación",
     subtitle: "Resultados reales en seguridad, cumplimiento y operación.",
     cta: {
-      text: "Ver más testimonios",
+      text: "Ver testimonios",
       href: "/testimonios",
     },
     items: [
@@ -215,12 +215,12 @@ const homeContent = {
     subtitle:
       "Solicita una cotización o programa anual de capacitación. Nuestro equipo te ayudará a diseñar la solución que tu operación necesita.",
     primaryCta: {
-      text: "Solicitar cotización ahora",
+      text: "Cotizar ahora",
       href: "/cotizacion",
     },
     secondaryCta: {
-      text: "Hablar por WhatsApp",
-      href: "https://wa.me/521234567890",
+      text: "Ver cursos",
+      href: "/cursos",
     },
     image: {
       src: "https://cdn.zupernova.dev/cefortte/webp/card-bg_cta_01_2400x1420.webp",
