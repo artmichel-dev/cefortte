@@ -126,8 +126,10 @@ export default function ProcessTimeline({ title, subtitle, steps, className = ""
                     isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-5"
                   }`}
                   style={{
+                    transitionProperty: "opacity, transform, background-color",
+                    transitionDuration: "0.2s",
+                    transitionTimingFunction: "ease-out",
                     transitionDelay: isVisible ? `${150 + index * 100}ms` : "0ms",
-                    transition: "opacity 0.2s ease-out, transform 0.2s ease-out, background-color 0.2s",
                   }}
                 >
                   <div className="mb-4 flex size-10 items-center justify-center rounded-lg bg-brand-700">

@@ -143,8 +143,8 @@
   overflow-y: hidden; /* ← Cambiar de visible a hidden */
   scrollbar-width: none;
   scroll-snap-type: x mandatory;
-  padding: 40px 0;
-  margin: -10px 0;
+  padding: 24px 0;
+  margin: 0px 0;
   box-sizing: border-box;
 }
 
@@ -200,7 +200,7 @@
   row-gap: 0px;
   width: fit-content;
   margin-top: 10px;
-  margin-bottom: 10px;
+  margin-bottom: -20px;
   list-style: none;
   padding: 0;
 }
@@ -316,7 +316,7 @@
 .paddlenav {
   display: flex;
   justify-content: center;
-  gap: 16px;
+  gap: 12px;
   margin-top: 20px;
   list-style: none;
 }

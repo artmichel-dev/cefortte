@@ -205,7 +205,7 @@ article {
   margin-right: auto;
   padding-left: max(24px, env(safe-area-inset-left));
   padding-right: max(24px, env(safe-area-inset-right));
-  max-width: calc(1440px + 48px);
+  max-width: calc(1400px + 48px);
 }
 
 @media (min-width: 1400px) {

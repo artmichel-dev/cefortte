@@ -135,7 +135,7 @@ export default function HeroInicio({ title, description, primaryCta, secondaryCt
   return (
     <section ref={sectionRef} className="z-10">
       <article className="!overflow-visible">
-        <div className="hero-video-container absolute px-6 w-full h-full max-w-full pointer-events-none top-0 left-0 z-0 opacity-0 translate-y-[30px]">
+        <div className="hero-video-container absolute px-3 w-full h-full max-w-full pointer-events-none top-0 left-0 z-0 opacity-0 translate-y-[30px]">
           <div className="relative h-full w-full rounded-xl overflow-hidden">
             <video
               ref={videoRef}

@@ -168,7 +168,7 @@ export default function Header() {
           <ul className="lista">
             {/* Contenido del menu interno */}
             <div className="scrollbar-hide relative grid w-full grid-rows-[auto_1fr_auto] overflow-y-auto">
-              <div className="h-12 w-full py-8"></div>
+              <div className="h-12 w-full py-4"></div>
               {/* Sección roja con enlaces */}
               <div className="max-h-max w-full py-8">
                 <div className="container mx-auto max-w-7xl">
@@ -213,14 +213,8 @@ export default function Header() {
                             </Link>
                           </li>
                           <li className="mt-6">
-                            <Button
-                              color="white"
-                              href="/cotizacion"
-                              className="transition-colors transition-transform hover:translate-x-1"
-                            >
-                              <p className="text-brand-700 font-bold text-base inline-block w-max px-2 py-1">
-                                Cotizar ahora{" "}
-                              </p>
+                            <Button color="white" href="/cotizacion" className="inline-flex w-max shadow-sm">
+                              Cotizar ahora <i className="fas fa-arrow-right text-xs text-brand-80" />
                             </Button>
                           </li>
                         </ul>
@@ -301,10 +295,8 @@ export default function Header() {
                   <div className="grid grid-cols-1 items-end justify-center gap-2 md:gap-8 md:grid-cols-[auto_auto]">
                     {/* Texto descriptivo */}
                     <div className="items-center justify-between md:justify-self-end">
-                      <strong data-text="title-sm" className="text-gray-100">
-                        Mantente actualizado
-                      </strong>
-                      <p className="max-w-lg text-gray-100">Recibe novedades sobre cursos y normativas.</p>
+                      <p className="text-title-sm text-gray-100">Mantente actualizado</p>
+                      <p className="text-body text-brand-100">Recibe novedades sobre cursos y normativas.</p>
                     </div>
                     {/* Formulario */}
                     <div className="justify-between md:justify-self-start items-center">
@@ -326,15 +318,16 @@ export default function Header() {
                           </Button>
                         </div>
                       </form>
-                      <small data-text="micro" className="text-gray-200">
-                        Protegemos tus datos. Revisa nuestro
+                      <p className="text-balance">
+                        <span className="text-micro text-brand-200 text-balance">Protegemos tus datos.</span>
+
                         <span className="inline">
-                          <Link href="/privacidad" className="text-xs text-gray-100 hover:text-white">
+                          <Link href="/privacidad" className="text-micro text-brand-200 hover:text-white text-balance">
                             {" "}
-                            aviso de privacidad.
+                            Revisa nuestro aviso de privacidad.
                           </Link>
                         </span>
-                      </small>
+                      </p>
                     </div>
                   </div>
                 </div>
