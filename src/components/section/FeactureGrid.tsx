@@ -43,11 +43,11 @@ export default function FeatureGrid({ header, features, className = "" }: Featur
             <div className="absolute inset-0 bg-gradient-to-b from-brand-900/80 via-brand-800/50 to-brand-700/50 xl:from-brand-900/80 xl:via-brand-800/50 xl:to-brand-600/0" />
 
             {/* Contenido */}
-            <div className="relative z-10 flex h-full flex-col justify-start p-8 text-center xl:text-left">
+            <div className="relative z-10 flex h-full flex-col justify-center items-center p-8 text-center">
               <p className="text-display-md uppercase text-gray-50 drop-shadow-sm">{header.title}</p>
               <p className="text-body-lg mt-4 text-gray-100 drop-shadow-sm">{header.subtitle}</p>
               {/* CTAs alineados horizontalmente */}
-              <div className="mt-4 flex flex-col sm:flex-row xl:text-left xl:justify-start justify-center gap-4 sm:gap-x-6">
+              <div className="mt-4 flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-x-6">
                 <Button color="white" href={header.primaryCta.href} className="inline-flex w-max shadow-sm">
                   {header.primaryCta.text}
                   <i className="fas fa-arrow-right text-xs text-brand-800" />
