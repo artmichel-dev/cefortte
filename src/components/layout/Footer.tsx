@@ -48,9 +48,9 @@ export default function Footer() {
             {/* Columna 2: Cursos */}
             <div className="mx-1">
               <Link href="/cursos" className="mb-6 inline-block transition-transform hover:translate-x-1">
-                <p className="mobile-nav-link text-3xl">Cursos y Capacitación</p>
+                <p className="mobile-nav-link text-title-md">Cursos y Capacitación</p>
               </Link>
-              <ul className="space-y-3">
+              <ul className="text-base space-y-3">
                 {[
                   { href: "/cursos/seguridad-operativa", label: "Seguridad Operativa" },
                   { href: "/cursos/maquinaria-equipos", label: "Maquinaria y Equipos Críticos" },
@@ -73,16 +73,12 @@ export default function Footer() {
             {/* Columna 3: Card Cotización */}
             <div className="md:col-span-2 lg:col-span-1 mx-1">
               <div className="flex h-full flex-col justify-start rounded-sm border border-white/10 hover:border-white/20 hover:bg-white/5 p-8 transition-all duration-300">
-                <h3 className="mb-6 text-gray-100">¿Necesitas una Cotización?</h3>
+                <p className="text-h3 mb-6 text-gray-100">¿Necesitas una Cotización?</p>
                 <p className="mb-6 text-base leading-relaxed text-gray-100">
                   Obtén una cotización personalizada para las necesidades específicas de tu empresa en minutos.
                 </p>
-                <Button
-                  color="white"
-                  href="/cotizacion"
-                  className="w-max transition-colors transition-transform hover:translate-x-1"
-                >
-                  <p className="text-brand-700 font-bold text-base inline-block px-2">Cotizar ahora </p>
+                <Button color="white" href="/cotizacion" className="inline-flex w-max shadow-sm">
+                  Cotizar ahora <i className="fas fa-arrow-right text-xs text-brand-80" />
                 </Button>
               </div>
             </div>
@@ -95,9 +91,7 @@ export default function Footer() {
         <div className="container grid grid-cols-1 items-center justify-items-center gap-2 lg:grid-cols-[auto_1fr_auto] lg:justify-items-start">
           {/* Copyright */}
           <div className="order-3 lg:order-1">
-            <small data-text="micro" className="text-brand-100">
-              &copy; 2026 CEFORTTE - INDUSTRIAL TRAINING
-            </small>
+            <small className="text-brand-100 text-micro">&copy; 2026 CEFORTTE - INDUSTRIAL TRAINING</small>
           </div>
 
           {/* Enlaces Legales */}

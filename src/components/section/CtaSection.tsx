@@ -64,7 +64,7 @@ export default function CtaSection({
         <div className="bg-brand-700 relative isolate overflow-hidden border border-brand-700/50 px-6 pt-16 rounded-2xl sm:rounded-3xl sm:px-16 md:pt-24 lg:flex lg:gap-x-20 lg:px-24 lg:pt-0">
           {/* Contenido */}
           <div
-            className={`mx-auto max-w-md text-center lg:mx-0 lg:flex-auto lg:py-32 lg:text-left transition-all duration-500 ease-out ${
+            className={`mx-auto max-w-md text-center lg:mx-0 lg:flex-auto lg:py-24 lg:text-left transition-all duration-500 ease-out ${
               isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-5"
             }`}
           >

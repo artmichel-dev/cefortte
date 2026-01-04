@@ -50,7 +50,7 @@ export default function ProcessTimeline({ title, subtitle, steps, className = ""
       <article>
         {/* Header */}
         <div
-          className={`container mx-auto text-left pb-12 transition-all duration-500 ease-out ${
+          className={`container mx-auto text-left transition-all duration-500 ease-out ${
             isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-5"
           }`}
         >
@@ -58,7 +58,7 @@ export default function ProcessTimeline({ title, subtitle, steps, className = ""
           <p className="text-body-lg mt-4 text-gray-800">{subtitle}</p>
 
           {/* Timeline con números arriba y cards abajo */}
-          <div className="relative mt-8">
+          <div className="relative mt-12">
             {/* Fila de números con línea conectora - Desktop */}
             <div className="hidden lg:grid lg:grid-cols-5 gap-4 mb-8 relative">
               {/* Línea conectora horizontal */}
@@ -87,7 +87,7 @@ export default function ProcessTimeline({ title, subtitle, steps, className = ""
                 {steps.map((step, index) => (
                   <div
                     key={index}
-                    className={`relative flex gap-6 transition-all duration-500 ease-out ${
+                    className={`relative flex gap-4 transition-all duration-500 ease-out ${
                       isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-5"
                     }`}
                     style={{ transitionDelay: isVisible ? `${150 + index * 100}ms` : "0ms" }}
@@ -105,12 +105,12 @@ export default function ProcessTimeline({ title, subtitle, steps, className = ""
                     </div>
 
                     {/* Card */}
-                    <div className="group flex-1 rounded-2xl bg-gray-100 p-6 hover:bg-white transition-colors">
+                    <div className="group flex-1 rounded-2xl bg-gray-100 p-4 hover:bg-white transition-colors">
                       <div className="mb-4 flex size-10 items-center justify-center rounded-lg bg-brand-700">
                         <i className={`${step.icon} text-xl text-brand-50`} />
                       </div>
-                      <p className="text-h4 text-gray-950 uppercase">{step.title}</p>
-                      <p className="text-body pt-4 text-gray-800">{step.description}</p>
+                      <p className="text-h5 text-gray-950 uppercase">{step.title}</p>
+                      <p className="text-body pt-2 text-gray-800">{step.description}</p>
                     </div>
                   </div>
                 ))}
@@ -118,11 +118,11 @@ export default function ProcessTimeline({ title, subtitle, steps, className = ""
             </div>
 
             {/* Grid de Cards - Desktop */}
-            <div className="hidden lg:grid lg:grid-cols-5 lg:gap-4 lg:auto-rows-fr">
+            <div className="hidden lg:grid lg:grid-cols-5 gap-2 xl:gap-4 lg:auto-rows-fr">
               {steps.map((step, index) => (
                 <div
                   key={index}
-                  className={`group rounded-2xl border border-gray-600/10 bg-gray-100 p-6 hover:bg-white transition-colors h-full flex flex-col ${
+                  className={`group rounded-2xl border border-gray-600/10 bg-gray-100 p-3 xl:p-6 hover:bg-white transition-colors h-full flex flex-col ${
                     isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-5"
                   }`}
                   style={{
@@ -135,8 +135,8 @@ export default function ProcessTimeline({ title, subtitle, steps, className = ""
                   <div className="mb-4 flex size-10 items-center justify-center rounded-lg bg-brand-700">
                     <i className={`${step.icon} text-xl text-brand-50`} />
                   </div>
-                  <p className="text-h4 text-gray-950 uppercase">{step.title}</p>
-                  <p className="text-body pt-4 text-gray-800 flex-grow">{step.description}</p>
+                  <p className="text-h4 text-gray-950 uppercase text-balance">{step.title}</p>
+                  <p className="text-body pt-4 text-gray-800 text-balance flex-grow">{step.description}</p>
                 </div>
               ))}
             </div>
