@@ -105,7 +105,7 @@ export default function Testimonials({ title, subtitle, testimonials, cta, class
         {/* CTA */}
         {cta && (
           <div
-            className={`mt-12 text-center transition-all duration-200 ease-out ${
+            className={`mt-8 text-center transition-all duration-200 ease-out ${
               isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-5"
             }`}
             style={{ transitionDelay: isVisible ? "600ms" : "0ms" }}
