@@ -1,5 +1,7 @@
 import type { Metadata } from "next";
 import { SITE_CONFIG, OG_IMAGE_CONFIG } from "@/lib/seo-constants";
+import SpaceHeader from "@/components/section/SpaceHeader";
+import HeroImg from "@/components/section/HeroImg";
 
 /**
  * Metadata para la página Nosotros
@@ -45,19 +47,42 @@ export const metadata: Metadata = {
 };
 
 /**
+ * Contenido de la página Nosotros
+ */
+const nosotrosContent = {
+  hero: {
+    title: "Sobre Nosotros",
+    description: "Conoce al equipo detrás de Cefortte y nuestra misión de transformar la seguridad industrial.",
+    primaryCta: {
+      text: "Contáctanos",
+      href: "/contacto",
+    },
+    secondaryCta: {
+      text: "Ver cursos",
+      href: "/cursos",
+    },
+    image: {
+      src: "https://images.unsplash.com/photo-1483389127117-b6a2102724ae?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1587&q=80", // Reemplaza con tu imagen
+      alt: "Equipo Cefortte - Capacitación en seguridad industrial",
+    },
+  },
+};
+
+/**
  * Página Nosotros
- * TODO: Implementar el contenido de la página
  */
 export default function NosotrosPage() {
   return (
-    <main id="content" className="relative w-full">
-      <div className="relative h-16 w-full bg-white"></div>
-      <div className="container mx-auto max-w-4xl space-y-4 px-4 py-8">
-        <div>
-          <h1>Nosotros</h1>
-          {/* TODO: Agregar contenido de la página */}
-        </div>
-      </div>
+    <main id="content">
+      <SpaceHeader />
+      <HeroImg
+        title={nosotrosContent.hero.title}
+        description={nosotrosContent.hero.description}
+        primaryCta={nosotrosContent.hero.primaryCta}
+        secondaryCta={nosotrosContent.hero.secondaryCta}
+        image={nosotrosContent.hero.image}
+      />
+      {/* TODO: Agregar más secciones de la página */}
     </main>
   );
 }

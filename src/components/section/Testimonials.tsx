@@ -111,8 +111,10 @@ export default function Testimonials({ title, subtitle, testimonials, cta, class
             style={{ transitionDelay: isVisible ? "600ms" : "0ms" }}
           >
             <Button color="brand" href={cta.href} className="inline-flex w-max shadow-sm">
-              {cta.text}
-              <i className="fas fa-arrow-right text-xs text-gray-50" />
+              <span className="inline-flex items-center gap-2">
+                {cta.text}
+                <i className="fas fa-arrow-right text-xs text-gray-50" />
+              </span>
             </Button>
           </div>
         )}

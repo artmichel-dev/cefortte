@@ -178,8 +178,10 @@ export default function GalleryCards({ title, subtitle, cta, cards, className = 
                             </div>
                             <div className="mt-10 flex items-center justify-center gap-x-6 flex-wrap">
                               <Button color="brand" href={card.href} className="inline-flex w-max shadow-sm">
-                                {cta.text}
-                                <i className="fas fa-graduation-cap text-gray-50 group-hover:text-gray-950 transition-colors h-4 w-4" />
+                                <span className="inline-flex items-center gap-2">
+                                  {cta.text}
+                                  <i className="fas fa-graduation-cap text-gray-50 group-hover:text-gray-950 transition-colors h-4 w-4" />
+                                </span>
                               </Button>
                             </div>
                           </div>

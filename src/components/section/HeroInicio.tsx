@@ -3,7 +3,6 @@
 import { useEffect, useRef, useState } from "react";
 import Hls from "hls.js";
 import { Button } from "@/components/ui/button";
-import { Link } from "@/components/ui/link";
 import "../../styles/hero-inicio.css";
 
 // Tipos para las props
@@ -159,10 +158,12 @@ export default function HeroInicio({ title, description, primaryCta, secondaryCt
           </p>
           <div className="hero-cta mt-4 flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-x-6 opacity-0 translate-y-[30px]">
             <Button color="brand" href={primaryCta.href} className="inline-flex w-max shadow-sm">
-              {primaryCta.text} <i className="fas fa-arrow-right text-xs text-gray-50" />
+              <span className="inline-flex items-center gap-2">
+                {primaryCta.text} <i className="fas fa-arrow-right text-xs text-gray-50" />
+              </span>
             </Button>
             {secondaryCta && (
-              <Link
+              <a
                 href={secondaryCta.href}
                 className="group inline-flex items-center gap-2 transition-colors drop-shadow-sm"
               >
@@ -170,7 +171,7 @@ export default function HeroInicio({ title, description, primaryCta, secondaryCt
                   {secondaryCta.text}
                 </span>
                 <i className="fas fa-graduation-cap text-gray-50 group-hover:text-white transition-colors h-4 w-4" />
-              </Link>
+              </a>
             )}
           </div>
         </div>

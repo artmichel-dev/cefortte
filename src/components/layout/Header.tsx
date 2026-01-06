@@ -131,31 +131,41 @@ export default function Header() {
                   <ul className="flex h-16 items-center md:space-x-3 lg:space-x-4 xl:space-x-6">
                     <li className="flex h-full items-center">
                       <Link href="/nosotros" className="group nav-link">
-                        <span className="nav-link text-base">Nosotros</span>
-                        <span className="nav-link-underline"></span>
+                        <span className="flex flex-col h-full">
+                          <span className="nav-link text-base">Nosotros</span>
+                          <span className="nav-link-underline"></span>
+                        </span>
                       </Link>
                     </li>
                     <li className="flex h-full items-center">
                       <Link href="/cursos" className="group nav-link">
-                        <span className="nav-link text-base">Cursos</span>
-                        <span className="nav-link-underline"></span>
+                        <span className="flex flex-col h-full">
+                          <span className="nav-link text-base">Cursos</span>
+                          <span className="nav-link-underline"></span>
+                        </span>
                       </Link>
                     </li>
                     <li className="flex h-full items-center">
                       <Link href="/empresas" className="group nav-link">
-                        <span className="nav-link text-base">Empresas</span>
-                        <span className="nav-link-underline"></span>
+                        <span className="flex flex-col h-full">
+                          <span className="nav-link text-base">Empresas</span>
+                          <span className="nav-link-underline"></span>
+                        </span>
                       </Link>
                     </li>
                     <li className="flex h-full items-center">
                       <Link href="/blog" className="group nav-link">
-                        <span className="nav-link text-base">Blog</span>
-                        <span className="nav-link-underline"></span>
+                        <span className="flex flex-col h-full">
+                          <span className="nav-link text-base">Blog</span>
+                          <span className="nav-link-underline"></span>
+                        </span>
                       </Link>
                     </li>
                     <li className="flex h-full items-center">
                       <Button color="brand" href="/cotizacion" className="inline-flex w-max">
-                        Cotizar ahora <i className="fas fa-arrow-right text-xs text-gray-50"></i>
+                        <span className="inline-flex items-center gap-2">
+                          Cotizar ahora <i className="fas fa-arrow-right text-xs text-gray-50"></i>
+                        </span>
                       </Button>
                     </li>
                   </ul>
@@ -214,7 +224,9 @@ export default function Header() {
                           </li>
                           <li className="mt-6">
                             <Button color="white" href="/cotizacion" className="inline-flex w-max shadow-sm">
-                              Cotizar ahora <i className="fas fa-arrow-right text-xs text-brand-80" />
+                              <span className="inline-flex items-center gap-2">
+                                Cotizar ahora <i className="fas fa-arrow-right text-xs text-brand-80" />
+                              </span>
                             </Button>
                           </li>
                         </ul>

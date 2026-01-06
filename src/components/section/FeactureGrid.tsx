@@ -1,7 +1,6 @@
 "use client";
 
 import { Button } from "@/components/ui/button";
-import { Link } from "@/components/ui/link";
 
 // Tipos para las props
 interface FeatureItem {
@@ -49,11 +48,13 @@ export default function FeatureGrid({ header, features, className = "" }: Featur
               {/* CTAs alineados horizontalmente */}
               <div className="mt-4 flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-x-6">
                 <Button color="white" href={header.primaryCta.href} className="inline-flex w-max shadow-sm">
-                  {header.primaryCta.text}
-                  <i className="fas fa-arrow-right text-xs text-brand-800" />
+                  <span className="inline-flex items-center gap-2">
+                    {header.primaryCta.text}
+                    <i className="fas fa-arrow-right text-xs text-brand-800" />
+                  </span>
                 </Button>
                 {header.secondaryCta && (
-                  <Link
+                  <a
                     href={header.secondaryCta.href}
                     className="group inline-flex items-center gap-2 transition-colors drop-shadow-xl"
                   >
@@ -61,7 +62,7 @@ export default function FeatureGrid({ header, features, className = "" }: Featur
                       {header.secondaryCta.text}
                     </span>
                     <i className="fas fa-graduation-cap h-4 w-4 text-gray-50 transition-colors group-hover:text-white" />
-                  </Link>
+                  </a>
                 )}
               </div>
             </div>

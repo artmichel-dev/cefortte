@@ -2,7 +2,6 @@
 
 import { useRef, useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
-import { Link } from "@/components/ui/link";
 
 // Tipos para las props
 interface CtaButton {
@@ -73,15 +72,17 @@ export default function CtaSection({
 
             <div className="mt-4 flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-x-6 lg:justify-start">
               <Button color="white" href={primaryCta.href} className="inline-flex w-max text-brand-50">
-                {primaryCta.text} <i className="fas fa-arrow-right text-xs text-brand-800" />
+                <span className="inline-flex items-center gap-2">
+                  {primaryCta.text} <i className="fas fa-arrow-right text-xs text-brand-800" />
+                </span>
               </Button>
               {secondaryCta && (
-                <Link href={secondaryCta.href} className="group inline-flex items-center gap-2 transition-colors">
+                <a href={secondaryCta.href} className="group inline-flex items-center gap-2 transition-colors">
                   <span className="text-base font-medium text-gray-50 group-hover:text-white transition-colors">
                     {secondaryCta.text}
                   </span>
                   <i className="fas fa-graduation-cap text-gray-50 group-hover:text-white transition-colors h-4 w-4" />
-                </Link>
+                </a>
               )}
             </div>
           </div>

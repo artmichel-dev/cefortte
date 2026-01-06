@@ -103,7 +103,7 @@ export const metadata: Metadata = {
   },
 
   // Íconos y manifest (el favicon vuelve a la configuración automática de Next; solo se mantiene el manifest)
-  manifest: "/site.webmanifest",
+  manifest: "/manifest.json",
 
   // Verificaciones (agregar cuando tengas las cuentas)
   verification: {

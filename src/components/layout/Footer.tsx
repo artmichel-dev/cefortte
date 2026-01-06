@@ -1,6 +1,6 @@
 import { Button } from "@/components/ui/button";
-import { Link } from "@/components/ui/link";
 import Image from "next/image";
+import Link from "next/link";
 
 export default function Footer() {
   return (
@@ -78,7 +78,9 @@ export default function Footer() {
                   Obtén una cotización personalizada para las necesidades específicas de tu empresa en minutos.
                 </p>
                 <Button color="white" href="/cotizacion" className="mx-auto lg:mx-0 inline-flex w-max shadow-sm">
-                  Cotizar ahora <i className="fas fa-arrow-right text-xs text-brand-80" />
+                  <span className="inline-flex items-center gap-2">
+                    Cotizar ahora <i className="fas fa-arrow-right text-xs text-brand-80" />
+                  </span>
                 </Button>
               </div>
             </div>
@@ -129,9 +131,9 @@ export default function Footer() {
                 { icon: "fa-linkedin-in icon-link", label: "LinkedIn", href: "#" },
               ].map(({ icon, label, href }) => (
                 <li key={label}>
-                  <Link href={href} aria-label={label}>
+                  <a href={href} aria-label={label}>
                     <i className={`fab ${icon} text-3xl`} />
-                  </Link>
+                  </a>
                 </li>
               ))}
             </ul>

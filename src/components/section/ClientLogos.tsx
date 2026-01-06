@@ -1,6 +1,7 @@
 "use client";
 
 import { useRef, useState, useEffect } from "react";
+import Image from "next/image";
 
 // Tipos para las props
 interface ClientLogo {
@@ -70,7 +71,7 @@ export default function ClientLogos({ title, subtitle, logos, className = "" }: 
                 }`}
                 style={{ transitionDelay: isVisible ? `${150 + index * 80}ms` : "0ms" }}
               >
-                <img
+                <Image
                   src={logo.src}
                   alt={logo.alt}
                   width={logo.width || 140}
