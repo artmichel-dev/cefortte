@@ -1,7 +1,8 @@
 import type { Metadata } from "next";
 import { SITE_CONFIG, OG_IMAGE_CONFIG } from "@/lib/seo-constants";
 import SpaceHeader from "@/components/section/SpaceHeader";
-import HeroImg from "@/components/section/HeroImg";
+import ContentModuleText from "@/components/section/ContentModuleText";
+import TypoExample from "@/components/section/TypoExample";
 
 /**
  * Metadata para la página Nosotros
@@ -50,20 +51,25 @@ export const metadata: Metadata = {
  * Contenido de la página Nosotros
  */
 const nosotrosContent = {
-  hero: {
-    title: "Sobre Nosotros",
-    description: "Conoce al equipo detrás de Cefortte y nuestra misión de transformar la seguridad industrial.",
-    primaryCta: {
-      text: "Contáctanos",
-      href: "/contacto",
+  contentModule: {
+    icon: {
+      src: "/svg/icon-sm-cefortte-red.svg",
+      alt: "Logo Cefortte",
+      width: 120,
+      height: 120,
     },
-    secondaryCta: {
-      text: "Ver cursos",
-      href: "/cursos",
+    text: "Somos el Centro de Capacitación que Impulsa la Seguridad Industrial en México",
+    mobileImage: {
+      src: "/img_b.jpg",
+      alt: "Cefortte capacitación móvil",
+      width: 2048,
+      height: 2048,
     },
-    image: {
-      src: "https://images.unsplash.com/photo-1483389127117-b6a2102724ae?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1587&q=80", // Reemplaza con tu imagen
-      alt: "Equipo Cefortte - Capacitación en seguridad industrial",
+    desktopImage: {
+      src: "/img_a.jpg",
+      alt: "Cefortte capacitación",
+      width: 1440,
+      height: 700,
     },
   },
 };
@@ -75,14 +81,15 @@ export default function NosotrosPage() {
   return (
     <main id="content">
       <SpaceHeader />
-      <HeroImg
-        title={nosotrosContent.hero.title}
-        description={nosotrosContent.hero.description}
-        primaryCta={nosotrosContent.hero.primaryCta}
-        secondaryCta={nosotrosContent.hero.secondaryCta}
-        image={nosotrosContent.hero.image}
+
+      <ContentModuleText
+        icon={nosotrosContent.contentModule.icon}
+        text={nosotrosContent.contentModule.text}
+        mobileImage={nosotrosContent.contentModule.mobileImage}
+        desktopImage={nosotrosContent.contentModule.desktopImage}
       />
-      {/* TODO: Agregar más secciones de la página */}
+
+      <TypoExample />
     </main>
   );
 }
