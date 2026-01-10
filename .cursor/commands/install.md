@@ -1,0 +1,1 @@
+Primero cambia al directorio del proyecto `cd "C:\02_Projects\Cefortte - front-end\04_dev\frontend\cefortte"`, luego instala o actualiza las dependencias usando `pnpm install`

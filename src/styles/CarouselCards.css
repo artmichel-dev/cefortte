@@ -1,11 +1,11 @@
 /* =============================================
-   GalleryCards.css - Estilos del carrusel gallery
+   GalleryCards.css - Estilos del carrusel carousel
    =============================================
    
    IMPORTANTE: Este componente está aislado del CSS global
    para evitar conflictos con los estilos de section, main, etc.
    
-   - Usa .gallery-cards-section en lugar de .section
+   - Usa .carousel-cards-section en lugar de .section
    - Usa overflow: visible para permitir scroll horizontal
    - Anula el comportamiento grid del main padre
    
@@ -27,20 +27,20 @@
 }
 
 /* === Estados de animación === */
-.gallery-header {
+.carousel-header {
   opacity: 0;
 }
 
-.gallery-header.animate {
+.carousel-header.animate {
   animation: fadeInUp 0.45s ease-out forwards;
 }
 
-.gallery-item {
+.carousel-item {
   opacity: 0;
   /* NO usar transform aquí para que ocupe su espacio */
 }
 
-.gallery-item.animate {
+.carousel-item.animate {
   animation: fadeInUp 0.45s ease-out forwards;
 }
 
@@ -59,8 +59,8 @@
   --global-card-padding: 32px;
   /* --global-section-padding: 150px; */
   --global-viewport-content-responsive: 96vw;
-  --gallery-column-gap: 20px;
-  --gallery-side-padding: calc(50vw - min(1440px, var(--global-viewport-content-responsive)) / 2);
+  --carousel-column-gap: 20px;
+  --carousel-side-padding: calc(50vw - min(1440px, var(--global-viewport-content-responsive)) / 2);
 
   /* Card dimensions */
   --card-width: 400px;
@@ -94,7 +94,7 @@
 }
 
 /* === Section === */
-.gallery-cards-section {
+.carousel-cards-section {
   position: relative;
   width: 100%;
   max-width: none; /* ← Cambiar */
@@ -111,7 +111,7 @@
 }
 
 /* === Gallery === */
-.gallery-cards-wrapper {
+.carousel-cards-wrapper {
   position: relative;
   width: 100vw; /* ← Mover el 100vw aquí */
   margin-left: calc(-50vw + 50%);
@@ -121,7 +121,7 @@
   isolation: isolate;
 }
 
-.gallery {
+.carousel {
   position: relative;
   margin-top: 0;
   /* padding-bottom: 83px; */
@@ -129,7 +129,7 @@
   width: 100%;
 }
 
-.gallery ::-webkit-scrollbar {
+.carousel ::-webkit-scrollbar {
   width: 0px;
   height: 0px;
   background: transparent;
@@ -152,51 +152,51 @@
   display: none;
 }
 
-.gallery.gallery-align-start .scroll-container {
-  scroll-padding: var(--gallery-side-padding);
+.carousel.carousel-align-start .scroll-container {
+  scroll-padding: var(--carousel-side-padding);
 }
 
 /* === Item Container === */
-.gallery .item-container {
+.carousel .item-container {
   display: grid;
   grid-template-rows: repeat(1, auto);
   grid-template-columns: max-content;
   grid-auto-flow: column;
-  column-gap: var(--gallery-column-gap);
+  column-gap: var(--carousel-column-gap);
   row-gap: 0px;
   width: fit-content;
   min-width: 100%;
 }
 
-.gallery.gallery-align-start .item-container {
-  padding: 0 var(--gallery-side-padding);
+.carousel.carousel-align-start .item-container {
+  padding: 0 var(--carousel-side-padding);
 }
 
 @media (min-width: 1441px) {
-  .gallery .item-container {
+  .carousel .item-container {
     column-gap: 72px;
   }
 }
 
 @media (max-width: 1024px) {
-  .gallery .item-container {
+  .carousel .item-container {
     column-gap: 72px;
   }
 }
 
 @media (max-width: 768px) {
-  .gallery .item-container {
+  .carousel .item-container {
     column-gap: 45px;
   }
 }
 
 /* === Card Set === */
-.gallery .card-set {
+.carousel .card-set {
   display: grid;
   grid-template-rows: repeat(1, auto);
   grid-template-columns: max-content;
   grid-auto-flow: column;
-  column-gap: var(--gallery-column-gap);
+  column-gap: var(--carousel-column-gap);
   row-gap: 0px;
   width: fit-content;
   margin-top: 10px;
@@ -205,13 +205,13 @@
   padding: 0;
 }
 
-.gallery .card-set .card,
-.gallery .card-set .card-container {
+.carousel .card-set .card,
+.carousel .card-set .card-container {
   height: 100%;
 }
 
 /* === Gallery Item === */
-.gallery-item {
+.carousel-item {
   scroll-snap-align: start;
 }
 
@@ -308,8 +308,8 @@
 }
 
 /* === Section Consider Override === */
-.section-consider .gallery .item-container {
-  --gallery-column-gap: 12px;
+.section-consider .carousel .item-container {
+  --carousel-column-gap: 12px;
 }
 
 /* === Paddlenav === */

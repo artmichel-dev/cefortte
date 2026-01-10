@@ -1,0 +1,1 @@
+Primero cambia al directorio del proyecto `cd "C:\02_Projects\Cefortte - front-end\04_dev\frontend\cefortte"`, luego deshace el último commit pero mantiene los cambios en el staging area usando `git reset --soft HEAD~1`

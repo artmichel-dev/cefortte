@@ -9,14 +9,14 @@ interface ProcessStep {
   description: string;
 }
 
-interface ProcessTimelineProps {
+interface StepsTimelineProps {
   title: string;
   subtitle: string;
   steps: ProcessStep[];
   className?: string;
 }
 
-export default function ProcessTimeline({ title, subtitle, steps, className = "" }: ProcessTimelineProps) {
+export default function StepsTimeline({ title, subtitle, steps, className = "" }: StepsTimelineProps) {
   const sectionRef = useRef<HTMLElement>(null);
   const [isVisible, setIsVisible] = useState(false);
 

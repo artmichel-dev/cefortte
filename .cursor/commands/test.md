@@ -1,0 +1,1 @@
+Primero cambia al directorio del proyecto `cd "C:\02_Projects\Cefortte - front-end\04_dev\frontend\cefortte"`. Luego ejecuta los tests usando `pnpm test`. Si no existe un script de test, sugiere configurar un framework de testing como Jest o Vitest

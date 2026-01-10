@@ -162,10 +162,13 @@ export default function Header() {
                       </Link>
                     </li>
                     <li className="flex h-full items-center">
-                      <Button color="brand" href="/cotizacion" className="inline-flex w-max">
-                        <span className="inline-flex items-center gap-2">
-                          Cotizar ahora <i className="fas fa-arrow-right text-xs text-gray-50"></i>
-                        </span>
+                      <Button
+                        color="brand"
+                        href="/cotizacion"
+                        type="submit"
+                        className="!flex-none px-6 inline-flex w-max"
+                      >
+                        Cotizar ahora <i className="fas fa-arrow-right text-xs text-gray-50" />
                       </Button>
                     </li>
                   </ul>
@@ -189,7 +192,7 @@ export default function Header() {
                         <ul className="space-y-4 ml-1">
                           <li>
                             <Link href="/">
-                              <p className="mobile-nav-link text-3xl">Inicio</p>
+                              <p className="mobile-nav-link text-h3">Inicio</p>
                             </Link>
                           </li>
                           <li>
@@ -223,10 +226,8 @@ export default function Header() {
                             </Link>
                           </li>
                           <li className="mt-6">
-                            <Button color="white" href="/cotizacion" className="inline-flex w-max shadow-sm">
-                              <span className="inline-flex items-center gap-2">
-                                Cotizar ahora <i className="fas fa-arrow-right text-xs text-brand-80" />
-                              </span>
+                            <Button color="white" href="/cotizacion" type="submit" className="!w-fit !flex-none px-6">
+                              Cotizar ahora <i className="fas fa-arrow-right text-xs text-brand-80" />
                             </Button>
                           </li>
                         </ul>

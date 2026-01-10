@@ -1,0 +1,1 @@
+Primero cambia al directorio del proyecto `cd "C:\02_Projects\Cefortte - front-end\04_dev\frontend\cefortte"`. Luego crea una nueva rama de trabajo: pregunta el nombre de la rama y ejecuta `git checkout -b <nombre-rama>`

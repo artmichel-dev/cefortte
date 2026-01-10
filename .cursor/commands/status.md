@@ -1,0 +1,1 @@
+Primero cambia al directorio del proyecto `cd "C:\02_Projects\Cefortte - front-end\04_dev\frontend\cefortte"`, luego muestra el estado actual de git con `git status` para ver archivos modificados, la rama actual y cambios pendientes

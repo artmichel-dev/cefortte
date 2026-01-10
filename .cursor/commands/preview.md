@@ -1,0 +1,1 @@
+Primero cambia al directorio del proyecto `cd "C:\02_Projects\Cefortte - front-end\04_dev\frontend\cefortte"`. Luego previsualiza el build de producción localmente: ejecuta `pnpm run build` si no existe un build, después inicia el servidor con `pnpm start`

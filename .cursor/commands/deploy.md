@@ -1,0 +1,1 @@
+Primero cambia al directorio del proyecto `cd "C:\02_Projects\Cefortte - front-end\04_dev\frontend\cefortte"`. Luego despliega la aplicación a producción: si usas Vercel, ejecuta `vercel --prod`. Si usas otro servicio, ejecuta el comando de deploy correspondiente configurado en el proyecto

@@ -1,0 +1,1 @@
+Primero cambia al directorio del proyecto `cd "C:\02_Projects\Cefortte - front-end\04_dev\frontend\cefortte"`, luego sube los commits locales al repositorio de GitHub en la rama actual usando `git push origin <rama-actual>`

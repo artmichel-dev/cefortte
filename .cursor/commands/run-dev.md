@@ -1,0 +1,1 @@
+Primero cambia al directorio del proyecto `cd "C:\02_Projects\Cefortte - front-end\04_dev\frontend\cefortte"`, luego ejecuta el proyecto en modo desarrollo usando `pnpm run dev`

@@ -1,5 +1,4 @@
 /* GLOBALS.CSS - SISTEMA DE DISEÑO
-   ESTRUCTURA:
    1. Imports
    2. @theme (tokens y configuración)
    3. CSS puro (container, fuera de layers)
@@ -9,13 +8,11 @@
 */
 
 /* 1. IMPORTS */
-
 @import "tailwindcss";
 @import "../styles/catalyst.css";
 @import "../styles/navigation.css";
 
 /* 2. @THEME - TOKENS Y CONFIGURACIÓN */
-
 @theme {
   /* BREAKPOINTS */
   --breakpoint-xs: 360px;
@@ -26,8 +23,7 @@
   --breakpoint-2xl: 1536px;
 
   /* FONT FAMILY (font/family/) */
-  --font-sans: "Inter", system-ui, sans-serif, ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji",
-    "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  --font-sans: "Inter", system-ui, sans-serif, ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   --font-heading: "Oswald", "Arial", "Helvetica Neue", ui-sans-serif, system-ui, sans-serif;
   --font-mono: "Fira Code", ui-monospace, monospace;
 
@@ -63,7 +59,6 @@
   --text-h1: 2.5rem; /* 40px */
 
   /* TIPOGRAFÍA - SISTEMA EDITORIAL (Marketing)
-  (alineado a Figma: type/editorial/)
   Mobile-first + override Desktop */
 
   /* Mobile */
@@ -72,11 +67,9 @@
   --text-display-lg-mobile: 2rem; /* 32px */
   --text-display-md-mobile: 1.75rem; /* 28px */
   --text-display-sm-mobile: 1.5rem; /* 24px */
-
   --text-title-lg-mobile: 1.5rem; /* 24px */
   --text-title-md-mobile: 1.25rem; /* 20px */
   --text-title-sm-mobile: 1.125rem; /* 18px */
-
   --text-lead-mobile: 1.125rem; /* 18px */
   --text-highlight-mobile: 1rem; /* 16px */
 
@@ -86,11 +79,9 @@
   --text-display-lg: 3.5rem; /* 56px */
   --text-display-md: 3rem; /* 48px */
   --text-display-sm: 2.5rem; /* 40px */
-
   --text-title-lg: 2rem; /* 32px */
   --text-title-md: 1.75rem; /* 28px */
   --text-title-sm: 1.5rem; /* 24px */
-
   --text-lead: 1.25rem; /* 20px */
   --text-highlight: 1.125rem; /* 18px */
 
@@ -223,6 +214,7 @@ article {
   padding-right: max(12px, env(safe-area-inset-right));
   max-width: calc(1400px + 48px);
 }
+
 @media (min-width: 1400px) {
   .hero-container {
     max-width: calc(1400px + 48px);
@@ -264,7 +256,7 @@ article {
   }
 
   body {
-    @apply m-0 p-0 min-h-dvh bg-gray-100 text-balance text-gray-950 antialiased grid grid-rows-[auto_1fr_auto];
+    @apply m-0 p-0 min-h-dvh bg-white text-balance text-gray-950 antialiased grid grid-rows-[auto_1fr_auto];
     font-size: var(--text-body);
     font-weight: var(--font-weight-regular);
     line-height: var(--line-height-relaxed);
@@ -273,7 +265,7 @@ article {
 
   /* ESTRUCTURA PRINCIPAL */
   main {
-    @apply relative grid w-full bg-gray-50 gap-3;
+    @apply relative grid w-full bg-white gap-3;
   }
 
   section {
@@ -285,7 +277,6 @@ article {
   }
 
   /* HEADINGS (Sistema Base) */
-
   h1,
   h2,
   h3,
@@ -440,7 +431,6 @@ article {
 }
 
 /* 5. @LAYER COMPONENTS - CLASES REUTILIZABLES */
-
 @layer components {
   /* NAVEGACIÓN */
   .nav-link {
@@ -470,8 +460,8 @@ article {
 }
 
 /* 6. @LAYER UTILITIES - UTILIDADES */
-
 @layer utilities {
+
   /* Core UI (Sistema Base) */
   .text-h1 {
     font-family: var(--font-heading);
@@ -480,6 +470,7 @@ article {
     line-height: var(--line-height-tight);
     letter-spacing: var(--letter-spacing-tight);
   }
+
   .text-h2 {
     font-family: var(--font-heading);
     font-size: var(--text-h2);
@@ -487,6 +478,7 @@ article {
     line-height: var(--line-height-snug);
     letter-spacing: var(--letter-spacing-tight);
   }
+
   .text-h3 {
     font-family: var(--font-heading);
     font-size: var(--text-h3);
@@ -502,6 +494,7 @@ article {
     line-height: var(--line-height-snug);
     letter-spacing: var(--letter-spacing-normal);
   }
+
   .text-h5 {
     font-family: var(--font-heading);
     font-size: var(--text-h5);
@@ -509,6 +502,7 @@ article {
     line-height: var(--line-height-normal);
     letter-spacing: var(--letter-spacing-normal);
   }
+
   .text-h6 {
     font-family: var(--font-heading);
     font-size: var(--text-h6);
@@ -524,6 +518,7 @@ article {
     line-height: var(--line-height-relaxed);
     letter-spacing: var(--letter-spacing-normal);
   }
+
   .text-body {
     font-family: var(--font-sans);
     font-size: var(--text-body);
@@ -531,6 +526,7 @@ article {
     line-height: var(--line-height-relaxed);
     letter-spacing: var(--letter-spacing-normal);
   }
+
   .text-small {
     font-family: var(--font-sans);
     font-size: var(--text-small);
@@ -571,16 +567,20 @@ article {
   .text-display-xxl {
     font-size: var(--text-display-xxl-mobile);
   }
+
   .text-display-xl {
     font-size: var(--text-display-xl-mobile);
   }
+
   .text-display-lg {
     font-size: var(--text-display-lg-mobile);
   }
+
   .text-display-md {
     font-size: var(--text-display-md-mobile);
     line-height: var(--line-height-snug);
   }
+
   .text-display-sm {
     font-size: var(--text-display-sm-mobile);
     line-height: var(--line-height-snug);
@@ -598,9 +598,11 @@ article {
   .text-title-lg {
     font-size: var(--text-title-lg-mobile);
   }
+
   .text-title-md {
     font-size: var(--text-title-md-mobile);
   }
+
   .text-title-sm {
     font-size: var(--text-title-sm-mobile);
   }
@@ -625,30 +627,39 @@ article {
     .text-display-xxl {
       font-size: var(--text-display-xxl);
     }
+
     .text-display-xl {
       font-size: var(--text-display-xl);
     }
+
     .text-display-lg {
       font-size: var(--text-display-lg);
     }
+
     .text-display-md {
       font-size: var(--text-display-md);
     }
+
     .text-display-sm {
       font-size: var(--text-display-sm);
     }
+
     .text-title-lg {
       font-size: var(--text-title-lg);
     }
+
     .text-title-md {
       font-size: var(--text-title-md);
     }
+
     .text-title-sm {
       font-size: var(--text-title-sm);
     }
+
     .text-lead {
       font-size: var(--text-lead);
     }
+
     .text-highlight {
       font-size: var(--text-highlight);
     }
@@ -658,15 +669,19 @@ article {
   .section-sm {
     padding-block: var(--space-editorial-sm);
   }
+
   .section-md {
     padding-block: var(--space-editorial-md);
   }
+
   .section-lg {
     padding-block: var(--space-editorial-lg);
   }
+
   .section-xl {
     padding-block: var(--space-editorial-xl);
   }
+
   .section-2xl {
     padding-block: var(--space-editorial-2xl);
   }
@@ -675,15 +690,19 @@ article {
   .stack-xs {
     gap: var(--space-ui-xs);
   }
+
   .stack-sm {
     gap: var(--space-ui-sm);
   }
+
   .stack-md {
     gap: var(--space-ui-md);
   }
+
   .stack-lg {
     gap: var(--space-ui-lg);
   }
+
   .stack-xl {
     gap: var(--space-ui-xl);
   }

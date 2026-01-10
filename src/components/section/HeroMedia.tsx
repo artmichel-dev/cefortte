@@ -3,7 +3,7 @@
 import { useEffect, useRef, useState } from "react";
 import Hls from "hls.js";
 import { Button } from "@/components/ui/button";
-import "../../styles/hero-inicio.css";
+import "../../styles/HeroMedia.css";
 
 // Tipos para las props
 interface HeroCtaButton {
@@ -15,8 +15,7 @@ interface HeroVideo {
   src: string;
   poster: string;
 }
-
-interface HeroInicioProps {
+interface HeroMediaProps {
   title: string;
   description: string;
   primaryCta: HeroCtaButton;
@@ -73,7 +72,7 @@ function useHlsVideo(videoRef: React.RefObject<HTMLVideoElement | null>, src: st
   }, [videoRef, src]);
 }
 
-export default function HeroInicio({ title, description, primaryCta, secondaryCta, video }: HeroInicioProps) {
+export default function HeroMedia({ title, description, primaryCta, secondaryCta, video }: HeroMediaProps) {
   const videoRef = useRef<HTMLVideoElement>(null);
   const sectionRef = useRef<HTMLElement>(null);
   const [isVisible, setIsVisible] = useState(false);

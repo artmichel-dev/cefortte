@@ -1,0 +1,1 @@
+Primero cambia al directorio del proyecto `cd "C:\02_Projects\Cefortte - front-end\04_dev\frontend\cefortte"`. Luego haz commit de todos los cambios actuales en git: revisa el status con `git status`, añade todos los archivos modificados con `git add .`, y finalmente crea un commit con un mensaje descriptivo basado en los cambios realizados.

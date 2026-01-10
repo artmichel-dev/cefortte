@@ -1,0 +1,1 @@
+Primero cambia al directorio del proyecto `cd "C:\02_Projects\Cefortte - front-end\04_dev\frontend\cefortte"`. Luego limpia la carpeta node_modules y el cache de pnpm, y reinstala todas las dependencias desde cero: ejecuta `rmdir /s /q node_modules && del pnpm-lock.yaml` (o `rm -rf node_modules pnpm-lock.yaml` en Linux/Mac) seguido de `pnpm install`

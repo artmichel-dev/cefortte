@@ -1,0 +1,1 @@
+Primero cambia al directorio del proyecto `cd "C:\02_Projects\Cefortte - front-end\04_dev\frontend\cefortte"`. Luego formatea el código automáticamente: si existe Prettier en el proyecto, ejecuta `pnpm exec prettier --write .`, de lo contrario sugiere instalarlo o usar el formateador del editor

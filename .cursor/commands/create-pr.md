@@ -1,0 +1,1 @@
+Primero cambia al directorio del proyecto `cd "C:\02_Projects\Cefortte - front-end\04_dev\frontend\cefortte"`. Luego crea un pull request en GitHub: usa `gh pr create` si tienes GitHub CLI instalado, o proporciona instrucciones para crear el PR manualmente mostrando la URL correspondiente

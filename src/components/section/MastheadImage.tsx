@@ -14,12 +14,12 @@ interface HeroImage {
   alt: string;
 }
 
-interface HeroImgProps {
+interface MastheadImageProps {
   description: string;
   image: HeroImage;
 }
 
-export default function HeroImg({ description, image }: HeroImgProps) {
+export default function MastheadImage({ description, image }: MastheadImageProps) {
   const sectionRef = useRef<HTMLElement>(null);
   const [isVisible, setIsVisible] = useState(false);
 

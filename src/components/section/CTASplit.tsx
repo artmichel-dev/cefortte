@@ -9,7 +9,7 @@ interface CtaButton {
   href: string;
 }
 
-interface CtaSectionProps {
+interface CTASplitProps {
   title: string;
   subtitle: string;
   primaryCta: CtaButton;
@@ -21,14 +21,7 @@ interface CtaSectionProps {
   className?: string;
 }
 
-export default function CtaSection({
-  title,
-  subtitle,
-  primaryCta,
-  secondaryCta,
-  image,
-  className = "",
-}: CtaSectionProps) {
+export default function CTASplit({ title, subtitle, primaryCta, secondaryCta, image, className = "" }: CTASplitProps) {
   const sectionRef = useRef<HTMLElement>(null);
   const [isVisible, setIsVisible] = useState(false);
 

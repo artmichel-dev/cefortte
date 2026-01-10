@@ -11,14 +11,14 @@ interface ClientLogo {
   height?: number;
 }
 
-interface ClientLogosProps {
+interface LogoCloudProps {
   title: string;
   subtitle: string;
   logos: ClientLogo[];
   className?: string;
 }
 
-export default function ClientLogos({ title, subtitle, logos, className = "" }: ClientLogosProps) {
+export default function LogoCloud({ title, subtitle, logos, className = "" }: LogoCloudProps) {
   const sectionRef = useRef<HTMLElement>(null);
   const [isVisible, setIsVisible] = useState(false);
 

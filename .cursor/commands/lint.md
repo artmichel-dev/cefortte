@@ -1,0 +1,1 @@
+Primero cambia al directorio del proyecto `cd "C:\02_Projects\Cefortte - front-end\04_dev\frontend\cefortte"`, luego revisa el código con ESLint para detectar errores y problemas de estilo usando `pnpm run lint`

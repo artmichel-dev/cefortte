@@ -2,29 +2,29 @@
 
 import { useRef, useState, useEffect, useCallback } from "react";
 import { Button } from "@/components/ui/button";
-import "../../styles/gallery-cards.css";
+import "../../styles/CarouselCards.css";
 
 // Tipos para las props
-interface GalleryCard {
+interface CarouselCards {
   title: string;
   href: string;
   image: string;
 }
 
-interface GalleryCta {
+interface CarouselCta {
   text: string;
   href: string;
 }
 
-interface GalleryCardsProps {
+interface CarouselCardsProps {
   title: string;
   subtitle: string | React.ReactNode;
-  cta: GalleryCta;
-  cards: GalleryCard[];
+  cta: CarouselCta;
+  cards: CarouselCards[];
   className?: string;
 }
 
-export default function GalleryCards({ title, subtitle, cta, cards, className = "" }: GalleryCardsProps) {
+export default function CarouselCards({ title, subtitle, cta, cards, className = "" }: CarouselCardsProps) {
   const scrollContainerRef = useRef<HTMLDivElement>(null);
   const sectionRef = useRef<HTMLElement>(null);
   const [prevDisabled, setPrevDisabled] = useState(true);
@@ -35,7 +35,7 @@ export default function GalleryCards({ title, subtitle, cta, cards, className = 
     const scrollContainer = scrollContainerRef.current;
     if (!scrollContainer) return 0;
 
-    const items = scrollContainer.querySelectorAll(".gallery-item");
+    const items = scrollContainer.querySelectorAll(".carousel-item");
     if (items.length === 0) return 0;
 
     const item = items[0] as HTMLElement;
@@ -72,7 +72,7 @@ export default function GalleryCards({ title, subtitle, cta, cards, className = 
       const scrollContainer = scrollContainerRef.current;
       if (!scrollContainer) return;
 
-      const items = scrollContainer.querySelectorAll(".gallery-item");
+      const items = scrollContainer.querySelectorAll(".carousel-item");
       let targetIndex = index;
       if (targetIndex < 0) targetIndex = 0;
       if (targetIndex >= items.length) targetIndex = items.length - 1;
@@ -122,12 +122,12 @@ export default function GalleryCards({ title, subtitle, cta, cards, className = 
           if (entry.isIntersecting && !isVisible) {
             setIsVisible(true);
 
-            const header = section.querySelector(".gallery-header");
+            const header = section.querySelector(".carousel-header");
             if (header) {
               header.classList.add("animate");
             }
 
-            const items = section.querySelectorAll(".gallery-item");
+            const items = section.querySelectorAll(".carousel-item");
             items.forEach((item, index) => {
               setTimeout(() => {
                 item.classList.add("animate");
@@ -157,19 +157,19 @@ export default function GalleryCards({ title, subtitle, cta, cards, className = 
   }, [isVisible]);
 
   return (
-    <section ref={sectionRef} className={`gallery-cards-section section-consider bg-gray-200 ${className}`}>
+    <section ref={sectionRef} className={`carousel-cards-section section-consider bg-gray-200 ${className}`}>
       <article>
-        <div className="gallery-header text-left">
+        <div className="carousel-header text-left">
           <p className="text-display-lg uppercase text-gray-950">{title}</p>
           <p className="text-body-lg mt-4 text-gray-800">{subtitle}</p>
         </div>
-        <div className="gallery-cards-wrapper">
-          <div className="gallery gallery-align-start gallery-feature-cards">
+        <div className="carousel-cards-wrapper">
+          <div className="carousel carousel-align-start carousel-feature-cards">
             <div className="scroll-container" ref={scrollContainerRef}>
               <div className="item-container">
                 <ul className="card-set">
                   {cards.map((card, index) => (
-                    <li key={index} className="gallery-item grid-item">
+                    <li key={index} className="carousel-item grid-item">
                       <div className="feature-card card-container">
                         <div className="card">
                           <div className="card-modifier" style={{ backgroundImage: `url('${card.image}')` }}>
@@ -193,7 +193,7 @@ export default function GalleryCards({ title, subtitle, cta, cards, className = 
               </div>
             </div>
 
-            <nav className="paddlenav" aria-label="Gallery navigation">
+            <nav className="paddlenav" aria-label="Carousel navigation">
               <button
                 className="paddlenav-arrow paddlenav-arrow-previous bg-gray-950"
                 aria-label="Previous"

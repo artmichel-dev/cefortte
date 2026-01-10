@@ -1,0 +1,1 @@
+Primero cambia al directorio del proyecto `cd "C:\02_Projects\Cefortte - front-end\04_dev\frontend\cefortte"`. Luego ejecuta los tests en modo watch para re-ejecutarlos automáticamente al hacer cambios usando `pnpm test -- --watch` o `pnpm test:watch` si existe el script

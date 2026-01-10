@@ -1,0 +1,1 @@
+Primero cambia al directorio del proyecto `cd "C:\02_Projects\Cefortte - front-end\04_dev\frontend\cefortte"`. Luego cambia entre ramas: muestra las ramas disponibles con `git branch -a`, pregunta a cuál cambiar y ejecuta `git checkout <nombre-rama>`

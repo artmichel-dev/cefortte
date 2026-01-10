@@ -19,7 +19,7 @@ interface OrganizationSchemaProps {
 export function OrganizationSchema({
   name = "Cefortte",
   url = "https://cefforte.com.mx",
-  logo = "https://cefforte.com.mx/logo.png",
+  logo = "https://assets.zupernova.dev/cefortte/png/favicon-96x96.png",
   description = "Centro especializado en capacitación en seguridad industrial con cursos certificados NOM-STPS, OSHA, NFPA e ISO 45001",
 }: OrganizationSchemaProps) {
   const schema = {
@@ -89,7 +89,7 @@ export function CourseSchema({
   description,
   provider = "Cefortte",
   url,
-  image = "https://cefforte.com.mx/og-image.jpg",
+  image = "https://assets.zupernova.dev/cefortte/jpg/og-image.jpg",
   price,
   currency = "MXN",
   duration,
@@ -161,7 +161,7 @@ export function LocalBusinessSchema({
     "@id": "https://cefforte.com.mx",
     name,
     description,
-    image: "https://cefforte.com.mx/logo.png",
+    image: "https://assets.zupernova.dev/cefortte/png/favicon-96x96.png",
     url: "https://cefforte.com.mx",
     telephone,
     priceRange,
@@ -264,11 +264,7 @@ export function FAQSchema({ faqs }: FAQSchemaProps) {
   };
 
   return (
-    <Script
-      id="faq-schema"
-      type="application/ld+json"
-      dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
-    />
+    <Script id="faq-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }} />
   );
 }
 
@@ -313,7 +309,7 @@ export function ArticleSchema({
       name: "Cefortte",
       logo: {
         "@type": "ImageObject",
-        url: "https://cefforte.com.mx/logo.png",
+        url: "https://assets.zupernova.dev/cefortte/png/favicon-96x96.png",
       },
     },
     mainEntityOfPage: {

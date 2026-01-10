@@ -1,0 +1,1 @@
+Primero cambia al directorio del proyecto `cd "C:\02_Projects\Cefortte - front-end\04_dev\frontend\cefortte"`. Luego hace merge de una rama a la rama actual: muestra las ramas disponibles con `git branch -a`, pregunta cuál rama mergear y ejecuta `git merge <nombre-rama>`

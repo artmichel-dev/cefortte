@@ -1,11 +1,11 @@
-import HeroInicio from "@/components/section/HeroInicio";
-import GalleryCards from "@/components/section/GalleryCards";
+import HeroMedia from "@/components/section/HeroMedia";
+import CarouselCards from "@/components/section/CarouselCards";
 import FeatureGrid from "@/components/section/FeactureGrid";
-import ProcessTimeline from "@/components/section/ProcessTimeline";
+import StepsTimeline from "@/components/section/StepsTimeline";
 import SpaceHeader from "@/components/section/SpaceHeader";
-import Testimonials from "@/components/section/Testimonials";
-import ClientLogos from "@/components/section/ClientLogos";
-import CtaSection from "@/components/section/CtaSection";
+import Quotes from "@/components/section/Quotes";
+import LogoCloud from "@/components/section/LogoCloud";
+import CTASplit from "@/components/section/CTASplit";
 import TypoExample from "@/components/section/TypoExample";
 
 // Datos del contenido (podrían venir de un CMS, API, o archivo de constantes)
@@ -24,10 +24,10 @@ const homeContent = {
     },
     video: {
       src: "https://cdn.zupernova.dev/cefortte/hls/hero-color.playlist.m3u8",
-      poster: "https://cdn.zupernova.dev/cefortte/jpg/hero-poster.jpg",
+      poster: "https://assets.zupernova.dev/cefortte/jpg/hero-poster.jpg",
     },
   },
-  gallery: {
+  carousel: {
     title: "Cursos especializados",
     subtitle: (
       <>
@@ -45,42 +45,42 @@ const homeContent = {
       {
         title: "Seguridad operativa",
         href: "/cursos/seguridad-operativa",
-        image: "https://cdn.zupernova.dev/cefortte/webp/card-bg_courses_safety-operational_400x500.webp",
+        image: "https://assets.zupernova.dev/cefortte/webp/card-bg_courses_safety-operational_400x500.webp",
       },
       {
         title: "Maquinaria y equipos críticos",
         href: "/cursos/maquinaria-equipos",
-        image: "https://cdn.zupernova.dev/cefortte/webp/card-bg_courses_critical-machinery_400x500.webp",
+        image: "https://assets.zupernova.dev/cefortte/webp/card-bg_courses_critical-machinery_400x500.webp",
       },
       {
         title: "Sustancias Químicas y Atmósferas peligrosas",
         href: "/cursos/sustancias-quimicas",
-        image: "https://cdn.zupernova.dev/cefortte/webp/card-bg_courses_chemical-atmospheres_400x500.webp",
+        image: "https://assets.zupernova.dev/cefortte/webp/card-bg_courses_chemical-atmospheres_400x500.webp",
       },
       {
         title: "Brigadas y Protección civil",
         href: "/cursos/brigadas-proteccion-civil",
-        image: "https://cdn.zupernova.dev/cefortte/webp/card-bg_courses_emergency-response_400x500.webp",
+        image: "https://assets.zupernova.dev/cefortte/webp/card-bg_courses_emergency-response_400x500.webp",
       },
       {
         title: "Cursos basados en normas NOM-STPS",
         href: "/cursos/normas-stps",
-        image: "https://cdn.zupernova.dev/cefortte/webp/card-bg_courses_nom-stps_400x500.webp",
+        image: "https://assets.zupernova.dev/cefortte/webp/card-bg_courses_nom-stps_400x500.webp",
       },
       {
         title: "Gestión y Cultura de Seguridad",
         href: "/cursos/gestion-cultura",
-        image: "https://cdn.zupernova.dev/cefortte/webp/card-bg_courses_safety-culture_400x500.webp",
+        image: "https://assets.zupernova.dev/cefortte/webp/card-bg_courses_safety-culture_400x500.webp",
       },
       {
         title: "Logística y Almacenes",
         href: "/cursos/logistica-almacenes",
-        image: "https://cdn.zupernova.dev/cefortte/webp/card-bg_courses_logistics-warehouse_400x500.webp",
+        image: "https://assets.zupernova.dev/cefortte/webp/card-bg_courses_logistics-warehouse_400x500.webp",
       },
       {
         title: "Construcción",
         href: "/cursos/construccion",
-        image: "https://cdn.zupernova.dev/cefortte/webp/card-bg_courses_construction_400x500.webp",
+        image: "https://assets.zupernova.dev/cefortte/webp/card-bg_courses_construction_400x500.webp",
       },
     ],
   },
@@ -89,7 +89,7 @@ const homeContent = {
       title: "¿Por Qué las Empresas eligen Capacitarse con Nosotros?",
       subtitle:
         "Ofrecemos soluciones integrales de capacitación diseñadas para mejorar la seguridad, cumplir normativas y elevar el desempeño operativo de tu empresa.",
-      backgroundImage: "https://cdn.zupernova.dev/cefortte/webp/card-bg_benefits_640x800.webp",
+      backgroundImage: "https://assets.zupernova.dev/cefortte/webp/card-bg_benefits_640x800.webp",
       primaryCta: {
         text: "Cotizar ahora",
         href: "/cotizacion",
@@ -169,7 +169,7 @@ const homeContent = {
       },
     ],
   },
-  Testimonials: {
+  Quotes: {
     title: "Empresas que Confían en Nuestra Formación",
     subtitle: "Resultados reales en seguridad, cumplimiento y operación.",
     cta: {
@@ -210,7 +210,7 @@ const homeContent = {
       { src: "https://tailwindcss.com/plus-assets/img/logos/statamic-logo-gray-900.svg", alt: "Cliente 6" },
     ],
   },
-  CtaSection: {
+  CTASplit: {
     title: "Fortalece la Seguridad y el Cumplimiento de tu Empresa",
     subtitle:
       "Solicita una cotización o programa anual de capacitación. Nuestro equipo te ayudará a diseñar la solución que tu operación necesita.",
@@ -223,7 +223,7 @@ const homeContent = {
       href: "/cursos",
     },
     image: {
-      src: "https://cdn.zupernova.dev/cefortte/webp/card-bg_cta_01_2400x1420.webp",
+      src: "https://assets.zupernova.dev/cefortte/webp/card-bg_cta_01_2400x1420.webp",
       alt: "Plataforma de capacitación Cefortte",
     },
   },
@@ -233,46 +233,47 @@ export default function Home() {
   return (
     <main id="content">
       <SpaceHeader />
-      <HeroInicio
+
+      <HeroMedia
         title={homeContent.hero.title}
         description={homeContent.hero.description}
         primaryCta={homeContent.hero.primaryCta}
         secondaryCta={homeContent.hero.secondaryCta}
         video={homeContent.hero.video}
       />
-      <GalleryCards
-        title={homeContent.gallery.title}
-        subtitle={homeContent.gallery.subtitle}
-        cta={homeContent.gallery.cta}
-        cards={homeContent.gallery.cards}
+      <CarouselCards
+        title={homeContent.carousel.title}
+        subtitle={homeContent.carousel.subtitle}
+        cta={homeContent.carousel.cta}
+        cards={homeContent.carousel.cards}
       />
       <FeatureGrid header={homeContent.features.header} features={homeContent.features.items} />
 
-      <ProcessTimeline
+      <StepsTimeline
         title={homeContent.process.title}
         subtitle={homeContent.process.subtitle}
         steps={homeContent.process.steps}
       />
 
-      <Testimonials
-        title={homeContent.Testimonials.title}
-        subtitle={homeContent.Testimonials.subtitle}
-        testimonials={homeContent.Testimonials.items}
-        cta={homeContent.Testimonials.cta}
+      <Quotes
+        title={homeContent.Quotes.title}
+        subtitle={homeContent.Quotes.subtitle}
+        testimonials={homeContent.Quotes.items}
+        cta={homeContent.Quotes.cta}
       />
 
-      <ClientLogos
+      <LogoCloud
         title={homeContent.clientLogos.title}
         subtitle={homeContent.clientLogos.subtitle}
         logos={homeContent.clientLogos.logos}
       />
 
-      <CtaSection
-        title={homeContent.CtaSection.title}
-        subtitle={homeContent.CtaSection.subtitle}
-        primaryCta={homeContent.CtaSection.primaryCta}
-        secondaryCta={homeContent.CtaSection.secondaryCta}
-        image={homeContent.CtaSection.image}
+      <CTASplit
+        title={homeContent.CTASplit.title}
+        subtitle={homeContent.CTASplit.subtitle}
+        primaryCta={homeContent.CTASplit.primaryCta}
+        secondaryCta={homeContent.CTASplit.secondaryCta}
+        image={homeContent.CTASplit.image}
       />
     </main>
   );

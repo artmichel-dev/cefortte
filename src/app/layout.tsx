@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { Inter, Oswald, Fira_Code } from "next/font/google";
 import Script from "next/script";
 import "./globals.css";
-import "@/styles/gallery-cards.css";
+import "@/styles/CarouselCards.css";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
 import DisableContextMenu from "./disable-context-menu";
@@ -14,7 +14,7 @@ const siteConfig = {
   description:
     "Centro especializado en capacitación en seguridad industrial. Cursos certificados NOM-STPS, OSHA, NFPA e ISO 45001. Formación premium para empresas en México.",
   url: "https://cefforte.com.mx",
-  ogImage: "https://cefforte.com.mx/og-image.jpg", // Imagen 1200x630px
+  ogImage: "https://assets.zupernova.dev/cefortte/jpg/og-image.jpg", // Imagen 1200x630px
   keywords: [
     "capacitación seguridad industrial",
     "cursos seguridad industrial México",
@@ -30,7 +30,7 @@ const siteConfig = {
     "brigadas emergencia",
     "protección civil empresas",
   ],
-  author: "Cefortte",
+  author: "https://github.com/artmichel-dev",
   locale: "es_MX",
   type: "website",
 };
@@ -103,7 +103,7 @@ export const metadata: Metadata = {
   },
 
   // Íconos y manifest (el favicon vuelve a la configuración automática de Next; solo se mantiene el manifest)
-  manifest: "/manifest.json",
+  manifest: "https://assets.zupernova.dev/cefortte/json/manifest.json",
 
   // Verificaciones (agregar cuando tengas las cuentas)
   verification: {
@@ -126,7 +126,7 @@ export const metadata: Metadata = {
     "apple-mobile-web-app-status-bar-style": "black-translucent",
     "apple-mobile-web-app-title": siteConfig.name,
     "application-name": siteConfig.name,
-    "msapplication-TileColor": "#2563eb", // Actualizar con tu color principal
+    "msapplication-TileColor": "#c42a2a", // Actualizar con tu color principal
     "theme-color": "#ffffff",
   },
 };
@@ -189,7 +189,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         {/* Google Analytics */}
         {/* <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script> */}
 
-        <Script src="https://cdn.vinonuevo.com/vercel/nav.js" strategy="afterInteractive" />
+        <Script src="https://assets.zupernova.dev/cefortte/js/nav.js" strategy="afterInteractive" />
       </body>
     </html>
   );

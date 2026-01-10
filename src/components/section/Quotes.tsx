@@ -16,7 +16,7 @@ interface TestimonialCta {
   href: string;
 }
 
-interface TestimonialsProps {
+interface QuotesProps {
   title: string;
   subtitle: string;
   testimonials: TestimonialItem[];
@@ -24,7 +24,7 @@ interface TestimonialsProps {
   className?: string;
 }
 
-export default function Testimonials({ title, subtitle, testimonials, cta, className = "" }: TestimonialsProps) {
+export default function Quotes({ title, subtitle, testimonials, cta, className = "" }: QuotesProps) {
   const sectionRef = useRef<HTMLElement>(null);
   const [isVisible, setIsVisible] = useState(false);
 

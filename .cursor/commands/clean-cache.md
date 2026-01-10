@@ -1,0 +1,1 @@
+Primero cambia al directorio del proyecto `cd "C:\02_Projects\Cefortte - front-end\04_dev\frontend\cefortte"`. Luego limpia el caché del proyecto: para Next.js elimina la carpeta `.next` con `rmdir /s /q .next` (o `rm -rf .next` en Linux/Mac), y para cache de pnpm ejecuta `pnpm store prune`

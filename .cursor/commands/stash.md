@@ -1,0 +1,1 @@
+Primero cambia al directorio del proyecto `cd "C:\02_Projects\Cefortte - front-end\04_dev\frontend\cefortte"`. Luego guarda los cambios actuales temporalmente sin hacer commit usando `git stash`. Si hay stashes guardados, ofrece también la opción de aplicarlos con `git stash pop`
