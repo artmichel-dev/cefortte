@@ -23,7 +23,8 @@
   --breakpoint-2xl: 1536px;
 
   /* FONT FAMILY (font/family/) */
-  --font-sans: "Inter", system-ui, sans-serif, ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  --font-sans: "Inter", system-ui, sans-serif, ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji",
+    "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   --font-heading: "Oswald", "Arial", "Helvetica Neue", ui-sans-serif, system-ui, sans-serif;
   --font-mono: "Fira Code", ui-monospace, monospace;
 
@@ -246,6 +247,35 @@ article {
   -ms-user-select: text !important;
 }
 
+/* === Animaciones escala === */
+
+.lift {
+  transition: box-shadow 0.14s ease-in-out, transform 0.14s ease-in-out !important;
+}
+
+.lift:hover {
+  transform: translateY(-4px) !important;
+  box-shadow: 0 3px 2px rgba(55, 65, 81, 0.06) !important;
+}
+
+@keyframes flowDotsRight {
+  0% {
+    background-position: 0% 0%;
+  }
+  100% {
+    background-position: 100% 0%;
+  }
+}
+
+@keyframes flowDotsDown {
+  0% {
+    background-position: 0% 0%;
+  }
+  100% {
+    background-position: 0% 100%;
+  }
+}
+
 /* 4. @LAYER BASE - ELEMENTOS HTML */
 
 @layer base {
@@ -461,7 +491,6 @@ article {
 
 /* 6. @LAYER UTILITIES - UTILIDADES */
 @layer utilities {
-
   /* Core UI (Sistema Base) */
   .text-h1 {
     font-family: var(--font-heading);
@@ -558,7 +587,6 @@ article {
   .text-display-lg,
   .text-display-md,
   .text-display-sm {
-    font-family: var(--font-heading);
     font-weight: var(--font-weight-bold);
     letter-spacing: var(--letter-spacing-tight);
     line-height: var(--line-height-tight);
@@ -589,7 +617,6 @@ article {
   .text-title-lg,
   .text-title-md,
   .text-title-sm {
-    font-family: var(--font-heading);
     font-weight: var(--font-weight-semibold);
     letter-spacing: var(--letter-spacing-tight);
     line-height: var(--line-height-snug);

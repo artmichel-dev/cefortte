@@ -132,7 +132,7 @@ export default function Header() {
                     <li className="flex h-full items-center">
                       <Link href="/nosotros" className="group nav-link">
                         <span className="flex flex-col h-full">
-                          <span className="nav-link text-base">Nosotros</span>
+                          <span className="nav-link text-h6">Nosotros</span>
                           <span className="nav-link-underline"></span>
                         </span>
                       </Link>
@@ -140,7 +140,7 @@ export default function Header() {
                     <li className="flex h-full items-center">
                       <Link href="/cursos" className="group nav-link">
                         <span className="flex flex-col h-full">
-                          <span className="nav-link text-base">Cursos</span>
+                          <span className="nav-link text-h6">Cursos</span>
                           <span className="nav-link-underline"></span>
                         </span>
                       </Link>
@@ -148,7 +148,7 @@ export default function Header() {
                     <li className="flex h-full items-center">
                       <Link href="/empresas" className="group nav-link">
                         <span className="flex flex-col h-full">
-                          <span className="nav-link text-base">Empresas</span>
+                          <span className="nav-link text-h6">Empresas</span>
                           <span className="nav-link-underline"></span>
                         </span>
                       </Link>
@@ -156,7 +156,7 @@ export default function Header() {
                     <li className="flex h-full items-center">
                       <Link href="/blog" className="group nav-link">
                         <span className="flex flex-col h-full">
-                          <span className="nav-link text-base">Blog</span>
+                          <span className="nav-link text-h6">Blog</span>
                           <span className="nav-link-underline"></span>
                         </span>
                       </Link>
@@ -192,7 +192,7 @@ export default function Header() {
                         <ul className="space-y-4 ml-1">
                           <li>
                             <Link href="/">
-                              <p className="mobile-nav-link text-h3">Inicio</p>
+                              <p className="mobile-nav-link text-3xl">Inicio</p>
                             </Link>
                           </li>
                           <li>

@@ -157,11 +157,11 @@ export default function CarouselCards({ title, subtitle, cta, cards, className =
   }, [isVisible]);
 
   return (
-    <section ref={sectionRef} className={`carousel-cards-section section-consider bg-gray-200 ${className}`}>
+    <section ref={sectionRef} className={`carousel-cards-section section-consider bg-gray-100 ${className}`}>
       <article>
         <div className="carousel-header text-left">
-          <p className="text-display-lg uppercase text-gray-950">{title}</p>
-          <p className="text-body-lg mt-4 text-gray-800">{subtitle}</p>
+          <p className="text-display-md font-heading uppercase text-gray-950">{title}</p>
+          <p className="text-body mt-4 text-gray-800">{subtitle}</p>
         </div>
         <div className="carousel-cards-wrapper">
           <div className="carousel carousel-align-start carousel-feature-cards">
@@ -174,7 +174,7 @@ export default function CarouselCards({ title, subtitle, cta, cards, className =
                         <div className="card">
                           <div className="card-modifier" style={{ backgroundImage: `url('${card.image}')` }}>
                             <div className="card-content">
-                              <p className="text-title-sm uppercase text-gray-950">{card.title}</p>
+                              <p className="text-title-sm text-gray-950">{card.title}</p>
                             </div>
                             <div className="mt-10 flex items-center justify-center gap-x-6 flex-wrap">
                               <Button color="brand" href={card.href} className="inline-flex w-max shadow-sm">
@@ -204,7 +204,7 @@ export default function CarouselCards({ title, subtitle, cta, cards, className =
                   viewBox="0 0 24 24"
                   fill="none"
                   stroke="currentColor"
-                  strokeWidth="2"
+                  strokeWidth="3"
                   strokeLinecap="round"
                   strokeLinejoin="round"
                 >
@@ -221,7 +221,7 @@ export default function CarouselCards({ title, subtitle, cta, cards, className =
                   viewBox="0 0 24 24"
                   fill="none"
                   stroke="currentColor"
-                  strokeWidth="2"
+                  strokeWidth="3"
                   strokeLinecap="round"
                   strokeLinejoin="round"
                 >

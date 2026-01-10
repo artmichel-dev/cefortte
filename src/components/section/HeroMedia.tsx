@@ -15,6 +15,7 @@ interface HeroVideo {
   src: string;
   poster: string;
 }
+
 interface HeroMediaProps {
   title: string;
   description: string;
@@ -23,6 +24,7 @@ interface HeroMediaProps {
   video: HeroVideo;
 }
 
+// Funciones para el video
 function useHlsVideo(videoRef: React.RefObject<HTMLVideoElement | null>, src: string) {
   useEffect(() => {
     const video = videoRef.current;
@@ -149,7 +151,7 @@ export default function HeroMedia({ title, description, primaryCta, secondaryCta
         </div>
 
         <div className="mx-auto max-w-sm md:max-w-md lg:max-w-4xl text-center z-10">
-          <p className="hero-title text-display-lg uppercase text-white drop-shadow-sm opacity-0 translate-y-[30px]">
+          <p className="hero-title text-display-lg !font-heading uppercase text-white drop-shadow-sm opacity-0 translate-y-[30px]">
             {title}
           </p>
           <p className="hero-description text-body-lg text-white drop-shadow-sm mt-4 opacity-0 translate-y-[30px]">

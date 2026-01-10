@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { SITE_CONFIG, OG_IMAGE_CONFIG } from "@/lib/seo-constants";
 import SpaceHeader from "@/components/section/SpaceHeader";
-import ContentModuleText from "@/components/section/ContentModuleText";
+import MastheadImage from "@/components/section/MastheadImage";
 import TypoExample from "@/components/section/TypoExample";
 
 /**
@@ -48,29 +48,27 @@ export const metadata: Metadata = {
 };
 
 /**
- * Contenido de la página Nosotros
+ * Contenido del Masthead - Configuración reutilizable
  */
-const nosotrosContent = {
-  contentModule: {
-    icon: {
-      src: "/svg/icon-sm-cefortte-red.svg",
-      alt: "Logo Cefortte",
-      width: 120,
-      height: 120,
-    },
-    text: "Somos el Centro de Capacitación que Impulsa la Seguridad Industrial en México",
-    mobileImage: {
-      src: "/img_b.jpg",
-      alt: "Cefortte capacitación móvil",
-      width: 2048,
-      height: 2048,
-    },
-    desktopImage: {
-      src: "/img_a.jpg",
-      alt: "Cefortte capacitación",
-      width: 1440,
-      height: 700,
-    },
+const mastheadContent = {
+  icon: {
+    src: "/svg/icon-sm-cefortte-red.svg",
+    alt: "Logo Cefortte",
+    width: 120,
+    height: 120,
+  },
+  text: "Somos el Centro de Capacitación que Impulsa la Seguridad Industrial en México",
+  mobileImage: {
+    src: "/img_b.jpg",
+    alt: "Cefortte capacitación móvil",
+    width: 2048,
+    height: 2048,
+  },
+  desktopImage: {
+    src: "/img_a.jpg",
+    alt: "Cefortte capacitación",
+    width: 1440,
+    height: 700,
   },
 };
 
@@ -82,11 +80,11 @@ export default function NosotrosPage() {
     <main id="content">
       <SpaceHeader />
 
-      <ContentModuleText
-        icon={nosotrosContent.contentModule.icon}
-        text={nosotrosContent.contentModule.text}
-        mobileImage={nosotrosContent.contentModule.mobileImage}
-        desktopImage={nosotrosContent.contentModule.desktopImage}
+      <MastheadImage
+        icon={mastheadContent.icon}
+        text={mastheadContent.text}
+        mobileImage={mastheadContent.mobileImage}
+        desktopImage={mastheadContent.desktopImage}
       />
 
       <TypoExample />

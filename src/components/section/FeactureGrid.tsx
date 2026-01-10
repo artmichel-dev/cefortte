@@ -43,7 +43,7 @@ export default function FeatureGrid({ header, features, className = "" }: Featur
 
             {/* Contenido */}
             <div className="relative z-10 flex h-full flex-col justify-center items-center p-8 text-center">
-              <p className="text-display-md uppercase text-gray-50 drop-shadow-sm">{header.title}</p>
+              <p className="text-display-md font-heading uppercase text-gray-50 drop-shadow-sm">{header.title}</p>
               <p className="text-body-lg mt-4 text-gray-100 drop-shadow-sm">{header.subtitle}</p>
               {/* CTAs alineados horizontalmente */}
               <div className="mt-4 flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-x-6">

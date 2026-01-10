@@ -1,25 +1,82 @@
 "use client";
 
-import { useEffect, useRef, useState } from "react";
-import { Button } from "@/components/ui/button";
+import { useRef, useState, useEffect } from "react";
+import Image from "next/image";
 
-// Tipos para las props
-interface HeroCtaButton {
-  text: string;
-  href: string;
-}
+// Configuración del icono/logo
 
-interface HeroImage {
+interface IconConfig {
   src: string;
   alt: string;
+  width?: number;
+  height?: number;
 }
+
+// Configuración de imagen responsiva
+
+interface ImageConfig {
+  src: string;
+  alt: string;
+  width: number;
+  height: number;
+}
+
+// Props del componente MastheadImage
 
 interface MastheadImageProps {
-  description: string;
-  image: HeroImage;
+  /** Icono o logo opcional que aparece sobre el texto */
+  icon?: IconConfig;
+  /** Texto principal del masthead */
+  text: string;
+  /** Imagen para dispositivos móviles */
+  mobileImage: ImageConfig;
+  /** Imagen para dispositivos desktop */
+  desktopImage: ImageConfig;
+  /** Clases CSS adicionales para la sección */
+  className?: string;
+  /** Clases CSS adicionales para el texto */
+  textClassName?: string;
+  /** Ancho máximo de las imágenes */
+  maxWidth?: {
+    mobile?: string;
+    desktop?: string;
+  };
+  /** Color de fondo de la sección */
+  backgroundColor?: string;
 }
 
-export default function MastheadImage({ description, image }: MastheadImageProps) {
+/**
+ * MastheadImage - Componente hero reutilizable
+ *
+ * Muestra una sección hero con:
+ * - Icono/logo opcional
+ * - Texto descriptivo
+ * - Imágenes responsivas (diferentes para móvil y desktop)
+ * - Animación de entrada al hacer scroll
+ *
+ * @example
+ * ```tsx
+ * <MastheadImage
+ *   icon={{ src: "/logo.svg", alt: "Logo" }}
+ *   text="Tu texto aquí"
+ *   mobileImage={{ src: "/mobile.jpg", alt: "Mobile", width: 800, height: 600 }}
+ *   desktopImage={{ src: "/desktop.jpg", alt: "Desktop", width: 1440, height: 700 }}
+ * />
+ * ```
+ */
+export default function MastheadImage({
+  icon,
+  text,
+  mobileImage,
+  desktopImage,
+  className = "",
+  textClassName = "",
+  maxWidth = {
+    mobile: "500px",
+    desktop: "900px",
+  },
+  backgroundColor = "bg-white",
+}: MastheadImageProps) {
   const sectionRef = useRef<HTMLElement>(null);
   const [isVisible, setIsVisible] = useState(false);
 
@@ -32,6 +89,7 @@ export default function MastheadImage({ description, image }: MastheadImageProps
         entries.forEach((entry) => {
           if (entry.isIntersecting && !isVisible) {
             setIsVisible(true);
+            observer.unobserve(section);
           }
         });
       },
@@ -49,38 +107,54 @@ export default function MastheadImage({ description, image }: MastheadImageProps
   }, [isVisible]);
 
   return (
-    <section ref={sectionRef} className="z-10">
-      {/* Contenedor principal como Grid para superponer elementos */}
-      <div className="hero-container relative grid isolate mx-auto grid-rows-1 justify-items-center items-start h-[24rem] md:h-[28rem] bg-gray-50">
-        {/* Capa de Imagen de Fondo */}
+    <section ref={sectionRef} className={`${backgroundColor} ${className}`}>
+      <div className="hero-container mx-auto">
+        {/* Text Content */}
         <div
-          className={`col-start-1 row-start-1 w-full h-full pointer-events-none transition-all duration-[450ms] ease-out ${
-            isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-7"
+          className={`text-center mt-8 mb-3 transition-all duration-[450ms] ease-out ${
+            isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-[30px]"
           }`}
         >
-          <div className="relative h-full w-full rounded-xl overflow-hidden">
-            <img src={image.src} alt={image.alt} className="h-full w-full object-cover" />
-          </div>
+          {icon && (
+            <Image
+              src={icon.src}
+              alt={icon.alt}
+              width={icon.width || 120}
+              height={icon.height || 120}
+              className="h-16 sm:h-24 w-auto mx-auto mb-4"
+            />
+          )}
+          <p
+            className={`font-semibold mt-4 text-gray-800 text-center max-w-xl md:max-w-2xl lg:max-w-3xl mx-auto ${textClassName}`}
+          >
+            {text}
+          </p>
         </div>
 
-        {/* Capa de Contenido: Centrada sobre la imagen */}
-        <div className="col-start-1 row-start-1 z-10 mx-auto justify-start items-start text-center py-12">
-          {/* NUEVA IMAGEN AGREGADA */}
-          <img
-            src="/svg/icon-sm-cefortte-red.svg"
-            alt="Logo o Icono"
-            className={`h-24 mx-auto mb-4 transition-all duration-[450ms] ease-out ${
-              isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-7"
-            }`}
+        {/* Images - Different images for mobile and desktop */}
+        <div
+          className={`relative w-full flex justify-center transition-all duration-[450ms] ease-out delay-150 ${
+            isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-[30px]"
+          }`}
+        >
+          {/* Mobile Image */}
+          <Image
+            src={mobileImage.src}
+            alt={mobileImage.alt}
+            width={mobileImage.width}
+            height={mobileImage.height}
+            className="sm:hidden w-full h-auto object-contain"
+            style={{ maxWidth: maxWidth.mobile }}
           />
-
-          <p
-            className={`text-body-lg text-gray-950 max-w-md mx-auto mt-3 transition-all duration-[450ms] ease-out delay-300 ${
-              isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-7"
-            }`}
-          >
-            {description}
-          </p>
+          {/* Desktop Image */}
+          <Image
+            src={desktopImage.src}
+            alt={desktopImage.alt}
+            width={desktopImage.width}
+            height={desktopImage.height}
+            className="hidden sm:block w-full h-auto object-contain"
+            style={{ maxWidth: maxWidth.desktop }}
+          />
         </div>
       </div>
     </section>

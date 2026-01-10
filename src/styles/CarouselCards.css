@@ -68,11 +68,11 @@
 
   /* Paddlenav variables */
   --sk-paddlenav-diameter: 36px;
-  --sk-paddlenav-arrow-color: rgb(75 85 99); /* gray-600 */
-  --sk-paddlenav-arrow-color-hover: rgb(3 7 18); /* gray-950 */
-  --sk-paddlenav-background: rgb(243 244 246); /* gray-100 */
-  --sk-paddlenav-background-hover: rgb(255 255 255); /* white */
-  --sk-paddlenav-background-active: rgb(209 213 219); /* gray-300 (al presionar) */
+  --sk-paddlenav-arrow-color: #6b7280; /* gray-500 */
+  --sk-paddlenav-arrow-color-hover: #4b5563; /* gray-600 */
+  --sk-paddlenav-background: #e5e7eb; /* gray-200 */
+  --sk-paddlenav-background-hover: #e5e7ebb3; /* gray-200/70 */
+  --sk-paddlenav-background-active: #d1d5db; /* gray-300 (al presionar) */
 }
 
 @media (max-width: 1024px) {
@@ -235,7 +235,7 @@
 }
 
 .card .card-modifier {
-  background-color: #f3f4f6; /* bg-gray-100 */
+  background-color: #fff; /* bg-white */
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
