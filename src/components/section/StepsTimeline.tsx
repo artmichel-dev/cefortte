@@ -96,8 +96,8 @@ export default function StepsTimeline({ title, subtitle, steps, className = "" }
             isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-5"
           }`}
         >
-          <h3 className="text-display-lg uppercase text-gray-950">{title}</h3>
-          <p className="text-body-lg mt-4 text-gray-800">{subtitle}</p>
+          <p className="text-display-md font-heading uppercase text-gray-950">{title}</p>
+          <p className="text-body mt-4 text-gray-800">{subtitle}</p>
 
           {/* Timeline con números arriba y cards abajo */}
           <div className="relative mt-12">
@@ -175,11 +175,11 @@ export default function StepsTimeline({ title, subtitle, steps, className = "" }
                       </div>
                     </div>
                     {/* Card */}
-                    <div className="group rounded-2xl border border-gray-600/10 w-full bg-white p-5 xl:p-7 lift transition-colors h-full flex flex-col">
+                    <div className="group rounded-2xl border border-gray-600/10 w-full bg-white p-4 lift transition-colors h-full flex flex-col">
                       <div className="mb-4 flex size-10 items-center justify-center rounded-lg bg-brand-700">
                         <i className={`${step.icon} text-xl text-brand-50`} />
                       </div>
-                      <p className="text-h5 text-gray-950 uppercase leading-tight">{step.title}</p>
+                      <p className="text-title-sm text-gray-950 text-balance font-bold">{step.title}</p>
                       <p className="text-body pt-3 text-gray-800 leading-relaxed">{step.description}</p>
                     </div>
                   </div>
@@ -192,7 +192,7 @@ export default function StepsTimeline({ title, subtitle, steps, className = "" }
               {steps.map((step, index) => (
                 <div
                   key={index}
-                  className={`group rounded-2xl border border-gray-600/10 bg-white p-5 xl:p-7 lift transition-colors h-full flex flex-col ${
+                  className={`group rounded-2xl border border-gray-600/10 bg-white p-4 xl:p-6 lift transition-colors h-full flex flex-col ${
                     isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-5"
                   }`}
                   style={{
@@ -205,7 +205,7 @@ export default function StepsTimeline({ title, subtitle, steps, className = "" }
                   <div className="mb-5 flex size-10 items-center justify-center rounded-lg bg-brand-700">
                     <i className={`${step.icon} text-xl text-brand-50`} />
                   </div>
-                  <p className="text-h4 text-gray-950 uppercase text-balance leading-tight">{step.title}</p>
+                  <p className="text-title-sm text-gray-950 text-balance font-bold">{step.title}</p>
                   <p className="text-body pt-3 text-gray-800 text-balance flex-grow leading-relaxed">
                     {step.description}
                   </p>

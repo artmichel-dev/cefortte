@@ -69,12 +69,12 @@ export default function FeatureGrid({ header, features, className = "" }: Featur
           {features.map((feature, index) => (
             <div
               key={index}
-              className="rounded-2xl col-span-1 row-span-1 lg:col-span-4 lg:row-span-1 xl:col-span-1 xl:row-span-1 border border-brand-400/10 bg-brand-600/50 p-8 hover:bg-brand-500/40 transition-colors"
+              className="rounded-2xl lift col-span-1 row-span-1 lg:col-span-4 lg:row-span-1 xl:col-span-1 xl:row-span-1 border border-brand-400/10 bg-brand-600/50 p-8 hover:bg-brand-500/40 transition-colors"
             >
               <div className="mb-6 flex size-10 items-center justify-center rounded-lg bg-brand-800/50">
                 <i className={`${feature.icon} text-xl text-brand-100`} />
               </div>
-              <b className="text-white text-title-sm">{feature.title}</b>
+              <b className="text-title-sm text-white">{feature.title}</b>
               <p className="text-body pt-4 text-brand-50">{feature.description}</p>
             </div>
           ))}
