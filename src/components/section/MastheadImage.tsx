@@ -124,11 +124,7 @@ export default function MastheadImage({
               className="h-16 sm:h-24 w-auto mx-auto mb-4"
             />
           )}
-          <p
-            className={`font-semibold mt-4 text-gray-800 text-center max-w-xl md:max-w-2xl lg:max-w-3xl mx-auto ${textClassName}`}
-          >
-            {text}
-          </p>
+          <p className={`section-subtitle text-body-lg ${textClassName}`}>{text}</p>
         </div>
 
         {/* Images - Different images for mobile and desktop */}

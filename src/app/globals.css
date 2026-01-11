@@ -490,7 +490,7 @@ article {
   }
 
   .section-title {
-    @apply font-heading uppercase text-gray-950 text-balance text-center;
+    @apply font-heading uppercase text-gray-900 text-balance text-center;
   }
   .section-subtitle {
     @apply mt-4 text-gray-800 text-balance text-center;

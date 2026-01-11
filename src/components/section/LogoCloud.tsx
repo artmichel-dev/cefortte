@@ -48,17 +48,17 @@ export default function LogoCloud({ title, subtitle, logos, className = "" }: Lo
   }, [isVisible]);
 
   return (
-    <section ref={sectionRef} className={`bg-gray-200 ${className}`}>
+    <section ref={sectionRef} className={`bg-gray-100 ${className}`}>
       <article>
         <div className="grid grid-cols-1 items-center gap-x-8 gap-y-10 lg:grid-cols-2">
           {/* Header */}
           <div
-            className={`max-w-xl transition-all duration-500 ease-out ${
+            className={`max-w-xl transition-all mx-auto items-center justify-center duration-500 ease-out ${
               isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-5"
             }`}
           >
-            <p className="text-display-lg uppercase text-gray-950">{title}</p>
-            <p className="text-body-lg mt-4 text-gray-800">{subtitle}</p>
+            <p className="section-title text-display-md text-center lg:text-left">{title}</p>
+            <p className="section-subtitle text-body-lg text-center lg:text-left">{subtitle}</p>
           </div>
 
           {/* Logos Grid */}
