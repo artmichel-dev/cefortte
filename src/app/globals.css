@@ -195,8 +195,8 @@ article {
   width: 100%;
   margin-left: auto;
   margin-right: auto;
-  padding-left: max(24px, env(safe-area-inset-left));
-  padding-right: max(24px, env(safe-area-inset-right));
+  padding-left: max(12px, env(safe-area-inset-left));
+  padding-right: max(12px, env(safe-area-inset-right));
   max-width: calc(1400px + 48px);
 }
 

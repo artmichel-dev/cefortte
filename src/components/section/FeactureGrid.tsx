@@ -32,18 +32,18 @@ export default function FeatureGrid({ header, features, className = "" }: Featur
   return (
     <section className={`bg-brand-700 ${className}`}>
       <article>
-        <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 xl:grid-cols-5">
+        <div className="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5">
           {/* Header con imagen de fondo */}
           <div
-            className="relative overflow-hidden rounded-2xl sm:col-span-2 xl:row-span-2 bg-cover bg-center"
+            className="relative overflow-hidden rounded-2xl md:col-span-2 lg:col-span-1 lg:row-span-3 xl:col-span-2 xl:row-span-2 bg-cover bg-center"
             style={{ backgroundImage: `url('${header.backgroundImage}')` }}
           >
             {/* Overlay */}
-            <div className="absolute inset-0 bg-gradient-to-b from-brand-900/80 via-brand-800/50 to-brand-700/50 xl:from-brand-900/80 xl:via-brand-800/50 xl:to-brand-600/0" />
+            <div className="absolute inset-0 bg-gradient-to-b from-brand-900/80 via-brand-800/50 to-brand-700/50 lg:from-brand-900/80 lg:via-brand-800/50 lg:to-brand-600/0" />
 
             {/* Contenido */}
             <div className="relative z-10 flex h-full flex-col justify-center items-center p-8 text-center">
-              <p className="text-display-md font-heading uppercase text-gray-50 drop-shadow-sm">{header.title}</p>
+              <p className="text-display-sm font-heading uppercase text-gray-50 drop-shadow-sm">{header.title}</p>
               <p className="text-body-lg mt-4 text-gray-100 drop-shadow-sm">{header.subtitle}</p>
               {/* CTAs alineados horizontalmente */}
               <div className="mt-4 flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-x-6">
