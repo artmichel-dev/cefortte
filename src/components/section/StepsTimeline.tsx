@@ -96,8 +96,8 @@ export default function StepsTimeline({ title, subtitle, steps, className = "" }
             isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-5"
           }`}
         >
-          <p className="text-display-md font-heading uppercase text-gray-950">{title}</p>
-          <p className="text-body mt-4 text-gray-800">{subtitle}</p>
+          <p className="section-title text-display-md">{title}</p>
+          <p className="section-subtitle text-body-lg">{subtitle}</p>
 
           {/* Timeline con números arriba y cards abajo */}
           <div className="relative mt-12">

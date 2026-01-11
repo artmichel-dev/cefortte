@@ -480,12 +480,20 @@ article {
   .mobile-nav-link {
     @apply inline-block font-heading font-bold uppercase tracking-tight antialiased leading-tight text-balance transition-transform text-gray-100 hover:translate-x-1 hover:text-gray-50 active:text-white;
   }
+
   .mobile-nav-sublink {
     @apply inline-block tracking-tight antialiased leading-tight text-balance transition-transform text-gray-100 hover:translate-x-1 hover:text-gray-50 active:text-white;
   }
 
   .icon-link {
     @apply inline-block text-gray-100 transition-all duration-150 hover:-translate-y-0.5 hover:text-white active:text-white;
+  }
+
+  .section-title {
+    @apply font-heading uppercase text-gray-950 text-balance text-center;
+  }
+  .section-subtitle {
+    @apply mt-4 text-gray-800 text-balance text-center;
   }
 }
 

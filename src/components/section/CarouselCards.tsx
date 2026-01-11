@@ -160,8 +160,8 @@ export default function CarouselCards({ title, subtitle, cta, cards, className =
     <section ref={sectionRef} className={`carousel-cards-section section-consider bg-gray-100 ${className}`}>
       <article>
         <div className="carousel-header text-left">
-          <p className="text-display-md font-heading uppercase text-gray-950">{title}</p>
-          <p className="text-body mt-4 text-gray-800">{subtitle}</p>
+          <p className="section-title text-display-md">{title}</p>
+          <p className="section-subtitle text-body-lg">{subtitle}</p>
         </div>
         <div className="carousel-cards-wrapper">
           <div className="carousel carousel-align-start carousel-feature-cards">

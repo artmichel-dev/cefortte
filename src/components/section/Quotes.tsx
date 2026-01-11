@@ -54,7 +54,7 @@ export default function Quotes({ title, subtitle, testimonials, cta, className =
   }, [isVisible]);
 
   return (
-    <section ref={sectionRef} className={`bg-gray-50 ${className}`}>
+    <section ref={sectionRef} className={`bg-shite ${className}`}>
       <article>
         {/* Header - Alineado a la izquierda */}
         <div
@@ -62,8 +62,8 @@ export default function Quotes({ title, subtitle, testimonials, cta, className =
             isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-5"
           }`}
         >
-          <p className="text-display-lg uppercase text-gray-950">{title}</p>
-          <p className="text-body-lg mt-4 text-gray-800">{subtitle}</p>
+          <p className="section-title text-display-md">{title}</p>
+          <p className="section-subtitle text-body-lg">{subtitle}</p>
         </div>
 
         {/* Cards Grid */}
@@ -71,14 +71,14 @@ export default function Quotes({ title, subtitle, testimonials, cta, className =
           {testimonials.map((testimonial, index) => (
             <figure
               key={index}
-              className={`group relative rounded-2xl border border-gray-400/10 bg-gray-200 p-8 transition-all duration-200 ease-out hover:bg-gray-300/80 flex flex-col justify-between min-h-[280px] ${
+              className={`group relative rounded-2xl lift border border-gray-400/10 bg-gray-50 p-8 transition-all duration-200 ease-out hover:bg-gray-100/60 flex flex-col justify-between min-h-[280px] ${
                 isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-5"
               }`}
               style={{ transitionDelay: isVisible ? `${150 + index * 100}ms` : "0ms" }}
             >
               {/* Icono decorativo */}
               <div className="mb-6">
-                <div className="flex size-12 items-center justify-center rounded-xl bg-gray-50 group-hover:bg-gray-100 transition-colors">
+                <div className="flex size-12 items-center justify-center rounded-xl bg-gray-200 group-hover:bg-gray-300/70 transition-colors">
                   <i className="fa-solid fa-quote-left text-xl text-gray-800" />
                 </div>
               </div>
