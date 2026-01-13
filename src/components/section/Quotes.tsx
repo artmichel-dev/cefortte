@@ -54,7 +54,7 @@ export default function Quotes({ title, subtitle, testimonials, cta, className =
   }, [isVisible]);
 
   return (
-    <section ref={sectionRef} className={`bg-shite ${className}`}>
+    <section ref={sectionRef} className={`bg-white ${className}`}>
       <article>
         {/* Header - Alineado a la izquierda */}
         <div

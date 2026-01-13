@@ -223,7 +223,7 @@ const homeContent = {
       href: "/cursos",
     },
     image: {
-      src: "https://assets.zupernova.dev/cefortte/webp/card-bg_cta_01_2400x1420.webp",
+      src: "/webp/card-bg_cta_01_2400x1420.webp",
       alt: "Plataforma de capacitación Cefortte",
     },
   },

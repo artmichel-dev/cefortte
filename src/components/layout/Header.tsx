@@ -189,7 +189,7 @@ export default function Header() {
                     {/* Columna izquierda: Cursos y Capacitación */}
                     <div className="grid-cols-1">
                       <nav>
-                        <ul className="space-y-4 ml-1">
+                        <ul className="space-y-4 ml-4">
                           <li>
                             <Link href="/">
                               <p className="mobile-nav-link text-3xl">Inicio</p>
