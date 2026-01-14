@@ -121,3 +121,6 @@ export { Text, TextLink, Strong, Code } from "./text";
 
 // Textarea
 export { Textarea } from "./textarea";
+
+// StarGrid
+export { StarGrid } from "./StarGrid";

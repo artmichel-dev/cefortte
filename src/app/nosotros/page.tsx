@@ -5,6 +5,7 @@ import MastheadImage from "@/components/section/MastheadImage";
 import ContentSimple from "@/components/section/ContentSimple";
 import TypoExample from "@/components/section/TypoExample";
 import FeactureThreeColumns from "@/components/section/FeactureThreeColumns";
+import FeatureGrid from "@/components/section/FeactureGrid";
 import IconGrid from "@/components/section/IconGrid";
 import CTABanner from "@/components/section/CTABanner";
 
@@ -123,6 +124,60 @@ const identidadContent = {
   ],
 };
 
+const featuresContent = {
+  header: {
+    title: "¿Por Qué las Empresas eligen Capacitarse con Nosotros?",
+    subtitle:
+      "Ofrecemos soluciones integrales de capacitación diseñadas para mejorar la seguridad, cumplir normativas y elevar el desempeño operativo de tu empresa.",
+    backgroundImage: "https://assets.zupernova.dev/cefortte/webp/card-bg_benefits_640x800.webp",
+    primaryCta: {
+      text: "Cotizar ahora",
+      href: "/cotizacion",
+    },
+    secondaryCta: {
+      text: "Ver cursos",
+      href: "/cursos",
+    },
+  },
+  items: [
+    {
+      icon: "fa-solid fa-graduation-cap",
+      title: "Formación premium con enfoque práctico",
+      description:
+        "Entrenamientos reales para entornos reales. Simulaciones y ejercicios que preparan a tu equipo para situaciones críticas.",
+    },
+    {
+      icon: "fa-solid fa-shield-halved",
+      title: "Cumplimiento normativo integral",
+      description:
+        "NOM-STPS, OSHA, NFPA, ANSI, ISO 45001. Garantizamos que tu empresa cumpla con todas las regulaciones vigentes.",
+    },
+    {
+      icon: "fa-solid fa-users",
+      title: "Instructores certificados",
+      description:
+        "Especialistas con experiencia operativa y de campo. Profesionales que conocen los retos reales de tu industria.",
+    },
+    {
+      icon: "fa-solid fa-calendar-days",
+      title: "Modalidades flexibles",
+      description:
+        "Presencial, in-company, online y programas corporativos. Nos adaptamos a la operación y horarios de tu empresa.",
+    },
+    {
+      icon: "fa-solid fa-gear",
+      title: "Soluciones a la medida",
+      description:
+        "Diseñamos capacitaciones según tu giro y necesidades específicas. Cada programa es único para tu operación.",
+    },
+    {
+      icon: "fa-solid fa-chart-line",
+      title: "Reducción de incidentes",
+      description:
+        "Mejora de cultura de seguridad y disminución de riesgos críticos. Resultados medibles en tu operación.",
+    },
+  ],
+};
 const sectoresContent = {
   title: "Sectores que Atendemos",
   subtitle:
@@ -168,6 +223,8 @@ export default function NosotrosPage() {
         subtitle={identidadContent.subtitle}
         features={identidadContent.features}
       />
+
+      <FeatureGrid header={featuresContent.header} features={featuresContent.items} />
 
       <IconGrid title={sectoresContent.title} subtitle={sectoresContent.subtitle} items={sectoresContent.items} />
 
