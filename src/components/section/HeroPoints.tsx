@@ -170,9 +170,6 @@ export default function HeroPoints({
 
                       {/* Punto central */}
                       <div
-                        style={{
-                          "--duration": `${(index % 5) * 1.2 + 2}s` as any,
-                        }}
                         className={clsx(
                           {
                             "scale-[0.4] bg-white/12": !isActive && !isFeatured,
