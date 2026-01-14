@@ -27,23 +27,37 @@ interface FeactureThreeColumnsProps {
 export default function FeactureThreeColumns({ title, subtitle, features, className = "" }: FeactureThreeColumnsProps) {
   const sectionRef = useRef<HTMLElement>(null);
   const [isVisible, setIsVisible] = useState(false);
+  // Estado para controlar cuándo se activa el hover
+  const [canHover, setCanHover] = useState(false);
+
+  // CONFIGURACIÓN DE TIEMPOS
+  const ANIMATION_DURATION = 800; // Duración de la entrada (ms)
+  const STAGGER_DELAY = 200; // Retraso entre cada tarjeta (ms)
 
   useEffect(() => {
     const section = sectionRef.current;
     if (!section) return;
 
+    // Calculamos cuándo terminará la última animación para activar los hovers
+    const totalAnimationTime = ANIMATION_DURATION + features.length * STAGGER_DELAY + 100;
+
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
-            console.log("👀 Elemento visible en pantalla -> Iniciando animación");
             setIsVisible(true);
-            observer.disconnect(); // Desconecta para evitar re-renderizados innecesarios
+
+            // Activamos el hover solo después de que terminen las animaciones
+            const timer = setTimeout(() => {
+              setCanHover(true);
+            }, totalAnimationTime);
+
+            observer.disconnect();
           }
         });
       },
       {
-        threshold: 0.1, // Se activa cuando el 10% del componente es visible
+        threshold: 0.1,
       }
     );
 
@@ -52,7 +66,7 @@ export default function FeactureThreeColumns({ title, subtitle, features, classN
     return () => {
       observer.disconnect();
     };
-  }, []);
+  }, [features.length]); // Dependencia agregada para consistencia
 
   return (
     <section ref={sectionRef} className={`bg-white ${className}`}>
@@ -60,11 +74,10 @@ export default function FeactureThreeColumns({ title, subtitle, features, classN
         {(title || subtitle) && (
           <div
             className="mx-auto text-center pb-8"
-            // Animación manual para el título
             style={{
               opacity: isVisible ? 1 : 0,
               transform: isVisible ? "translateY(0)" : "translateY(20px)",
-              transition: "opacity 0.6s ease-out, transform 0.6s ease-out",
+              transition: `opacity ${ANIMATION_DURATION}ms ease-out, transform ${ANIMATION_DURATION}ms ease-out`,
             }}
           >
             <p className="section-title text-display-md">{title}</p>
@@ -72,52 +85,61 @@ export default function FeactureThreeColumns({ title, subtitle, features, classN
           </div>
         )}
 
-        <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3 px-4 mx-auto">
-          {features.map((feature, index) => (
-            <div
-              key={index}
-              // Mantenemos solo las clases estáticas de diseño aquí.
-              // Quitamos transition, opacity y translate del className.
-              className="group relative rounded-2xl lift border border-gray-400/10 bg-gray-100/40 hover:bg-gray-100/60 overflow-hidden w-full"
-              // DEFINICIÓN DE ANIMACIÓN MANUAL E INFALIBLE
-              style={{
-                // 1. Opacidad: 0 a 1
-                opacity: isVisible ? 1 : 0,
-                // 2. Movimiento: de 50px abajo a 0 (posición original)
-                transform: isVisible ? "translateY(0)" : "translateY(50px)",
-                // 3. Definición de la transición CSS pura
-                transition: "opacity 0.8s ease-out, transform 0.8s ease-out",
-                // 4. El delay escalonado
-                transitionDelay: `${index * 200}ms`,
-              }}
-            >
-              <div className="relative pb-[56.25%] overflow-hidden">
-                <Image
-                  src={feature.image.src}
-                  alt={feature.image.alt}
-                  fill
-                  className="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
-                />
-              </div>
-              <div className="p-4">
-                <div className="flex items-center mt-2">
-                  <span className="flex size-10 items-center justify-center rounded-lg bg-brand-700">
-                    <i className={`${feature.icon} text-xl text-white`}></i>
-                  </span>
-                  <span className="ml-3 text-lg text-gray-900 font-bold">{feature.title}</span>
+        <div className="grid grid-cols-1 gap-3 sm:grid-cols-2 lg:grid-cols-3 px-4 mx-auto">
+          {features.map((feature, index) => {
+            // Lógica de clases:
+            // 1. Clases base (siempre fijas)
+            const baseClasses =
+              "group relative rounded-2xl border border-gray-400/10 bg-gray-100/40 overflow-hidden w-full";
+
+            // 2. Clases de hover (solo se agregan si canHover es true)
+            // Nota: 'lift' suele ser una clase personalizada tuya, asumo que maneja el translateY
+            const hoverClasses = canHover ? "lift hover:bg-gray-100/60 transition-all duration-300" : "";
+
+            return (
+              <div
+                key={index}
+                className={`${baseClasses} ${hoverClasses}`}
+                style={{
+                  // Animación de entrada manual (Inline Styles para forzar prioridad)
+                  opacity: isVisible ? 1 : 0,
+                  transform: isVisible ? "translateY(0)" : "translateY(60px)",
+                  transition: `opacity ${ANIMATION_DURATION}ms ease-out, transform ${ANIMATION_DURATION}ms ease-out`,
+                  transitionDelay: `${index * STAGGER_DELAY}ms`,
+                }}
+              >
+                <div className="relative pb-[56.25%] overflow-hidden">
+                  <Image
+                    src={feature.image.src}
+                    alt={feature.image.alt}
+                    fill
+                    className="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                    // Eliminamos animaciones en la imagen para evitar conflictos
+                  />
                 </div>
-                <p className="mt-4 text-gray-600 text-sm leading-relaxed">{feature.description}</p>
-                {feature.cta && (
-                  <a
-                    className="inline-block mt-4 rounded-full bg-white border border-gray-300 px-4 py-2 text-sm font-medium text-gray-900 hover:bg-gray-100 transition-colors"
-                    href={feature.cta.href}
-                  >
-                    {feature.cta.text}
-                  </a>
-                )}
+                <div className="p-4">
+                  <div className="flex items-center mt-2">
+                    <span className="flex size-10 items-center justify-center rounded-lg bg-brand-700">
+                      <i className={`${feature.icon} text-xl text-white`}></i>
+                    </span>
+                    <span className="ml-3 text-lg text-gray-950 font-bold">{feature.title}</span>
+                  </div>
+                  <p
+                    className="mt-4 text-gray-800 text-body leading-relaxed"
+                    dangerouslySetInnerHTML={{ __html: feature.description }}
+                  />
+                  {feature.cta && (
+                    <a
+                      className="inline-block mt-4 rounded-full bg-white border border-gray-300 px-4 py-2 text-sm font-medium text-gray-900 hover:bg-gray-100 transition-colors"
+                      href={feature.cta.href}
+                    >
+                      {feature.cta.text}
+                    </a>
+                  )}
+                </div>
               </div>
-            </div>
-          ))}
+            );
+          })}
         </div>
       </article>
     </section>

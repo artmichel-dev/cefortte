@@ -1,7 +1,20 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-  /* config options here */
+  images: {
+    remotePatterns: [
+      {
+        protocol: "https",
+        hostname: "assets.zupernova.dev",
+        pathname: "/cefortte/**",
+      },
+      {
+        protocol: "https",
+        hostname: "cdn.zupernova.dev",
+        pathname: "/cefortte/**",
+      },
+    ],
+  },
 };
 
 export default nextConfig;

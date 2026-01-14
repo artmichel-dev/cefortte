@@ -38,26 +38,27 @@ export default function IconGrid({ title, subtitle, items, className = "" }: Ico
   }, [isVisible]);
 
   return (
-    <section ref={sectionRef} className={`px-4 py-10 md:py-12 xl:py-16 bg-white ${className}`}>
-      {/* Header */}
-      {(title || subtitle) && (
-        <div
-          className={`mx-auto text-center pb-6 md:pb-8 xl:pb-12 max-w-3xl transition-all duration-200 ease-out ${
-            isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-5"
-          }`}
-        >
-          {title && <p className="section-title text-display-md">{title}</p>}
-          {subtitle && <p className="section-subtitle text-body-lg">{subtitle}</p>}
-        </div>
-      )}
-
-      {/* Grid de cards */}
+    <section ref={sectionRef} className={`bg-gray-100 ${className}`}>
       <article>
+        {/* Header */}
+        {(title || subtitle) && (
+          <div
+            className={`mx-auto text-center pb-6 md:pb-8 xl:pb-12 max-w-3xl transition-all duration-200 ease-out ${
+              isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-5"
+            }`}
+          >
+            {title && <p className="section-title text-display-md">{title}</p>}
+            {subtitle && <p className="section-subtitle text-body-lg" dangerouslySetInnerHTML={{ __html: subtitle }} />}
+          </div>
+        )}
+
+        {/* Grid de cards */}
+
         <ul className="grid grid-cols-2 gap-4 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 px-4 sm:px-8 md:px-12 xl:px-0 max-w-7xl mx-auto">
           {items.map((item, index) => (
             <li
               key={index}
-              className={`flex flex-col items-center justify-center p-6 bg-stone-50 rounded-lg border border-stone-200 transition-all duration-200 ease-out ${
+              className={`group flex lift h-full flex-col items-center justify-center p-4 xl:p-8 bg-white rounded-2xl border border-gray-600/10 transition-all duration-200 ease-out ${
                 isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-5"
               }`}
               style={{ transitionDelay: isVisible ? `${150 + index * 50}ms` : "0ms" }}
@@ -66,7 +67,7 @@ export default function IconGrid({ title, subtitle, items, className = "" }: Ico
               <i className={`${item.icon} text-4xl text-brand-700 mb-4`}></i>
 
               {/* Título */}
-              <span className="text-sm font-medium text-gray-900 text-center">{item.title}</span>
+              <span className="section-subtitle text-body">{item.title}</span>
             </li>
           ))}
         </ul>

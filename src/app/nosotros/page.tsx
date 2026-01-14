@@ -56,20 +56,20 @@ export const metadata: Metadata = {
  */
 const mastheadContent = {
   icon: {
-    src: "/svg/icon-sm-cefortte-red.svg",
+    src: "https://assets.zupernova.dev/cefortte/svg/icon-sm-cefortte-red.svg",
     alt: "Logo Cefortte",
     width: 120,
     height: 120,
   },
   text: "Somos el Centro de Capacitación que Impulsa la Seguridad Industrial en México",
   mobileImage: {
-    src: "/webp/main-bg_about_800x500.webp",
+    src: "https://assets.zupernova.dev/cefortte/webp/main-bg_about_800x500.webp",
     alt: "Cefortte capacitación móvil",
     width: 800,
     height: 500,
   },
   desktopImage: {
-    src: "/webp/main-bg_about_1440x700.webp",
+    src: "https://assets.zupernova.dev/cefortte/webp/main-bg_about_1440x700.webp",
     alt: "Cefortte capacitación",
     width: 1440,
     height: 700,
@@ -86,49 +86,65 @@ const ContentText = {
   },
 };
 
-const sectoresItems = [
-  { icon: "fa-solid fa-industry", title: "Manufactura" },
-  { icon: "fa-solid fa-hard-hat", title: "Construcción" },
-  { icon: "fa-solid fa-boxes-stacked", title: "Logística y Almacenes" },
-  { icon: "fa-solid fa-oil-well", title: "Energía y Petróleo" },
-  { icon: "fa-solid fa-car", title: "Automotriz" },
-  { icon: "fa-solid fa-flask", title: "Químico y Farmacéutico" },
-  { icon: "fa-solid fa-utensils", title: "Alimentos y Bebidas" },
-  { icon: "fa-solid fa-concierge-bell", title: "Servicios" },
-];
+const identidadContent = {
+  title: "Nuestra Identidad",
+  subtitle: "Conoce los principios que guían nuestra labor y compromiso con la seguridad industrial.",
+  features: [
+    {
+      image: {
+        src: "https://assets.zupernova.dev/cefortte/webp/card-bg_mission_1120x680.webp",
+        alt: "Misión Cefortte",
+      },
+      icon: "fa-solid fa-bullseye",
+      title: "Misión",
+      description:
+        "Formar personal técnico y operativo altamente competente, capaz de identificar riesgos, ejecutar prácticas seguras y cumplir con los requisitos normativos que exige la industria actual.",
+    },
+    {
+      image: {
+        src: "https://assets.zupernova.dev/cefortte/webp/card-bg_vision_1120x680.webp",
+        alt: "Visión Cefortte",
+      },
+      icon: "fa-solid fa-eye",
+      title: "Visión",
+      description:
+        "Ser el centro de capacitación líder en México, reconocido por su excelencia académica, innovación y contribución al desarrollo profesional del talento industrial.",
+    },
+    {
+      image: {
+        src: "https://assets.zupernova.dev/cefortte/webp/card-bg_values_1120x680.webp",
+        alt: "Valores Cefortte",
+      },
+      icon: "fa-solid fa-heart",
+      title: "Valores",
+      description:
+        "<span class='font-medium'>Seguridad:</span> Primero la vida.<br><span class='font-medium'>Profesionalismo:</span> Rigor técnico.<br><span class='font-medium'>Innovación:</span> Metodologías modernas.<br><span class='font-medium'>Confianza:</span> Transparencia continua.<br><span class='font-medium'>Excelencia operativa:</span> Resultados medibles.",
+    },
+  ],
+};
 
-const identidadFeatures = [
-  {
-    image: {
-      src: "/webp/card-bg_cta_01_2400x1420.webp",
-      alt: "Misión Cefortte",
-    },
-    icon: "fa-solid fa-bullseye",
-    title: "Misión",
-    description:
-      "Formar personal técnico y operativo altamente competente, capaz de identificar riesgos, ejecutar prácticas seguras y cumplir con los requisitos normativos que exige la industria actual.",
-  },
-  {
-    image: {
-      src: "/webp/card-bg_cta_01_2400x1420.webp",
-      alt: "Visión Cefortte",
-    },
-    icon: "fa-solid fa-eye",
-    title: "Visión",
-    description:
-      "Ser el centro de capacitación líder en México, reconocido por su excelencia académica, innovación y contribución al desarrollo profesional del talento industrial.",
-  },
-  {
-    image: {
-      src: "/webp/card-bg_cta_01_2400x1420.webp",
-      alt: "Valores Cefortte",
-    },
-    icon: "fa-solid fa-heart",
-    title: "Valores",
-    description:
-      "Seguridad: Primero la vida. Profesionalismo: Rigor técnico. Innovación: Metodologías modernas. Confianza: Transparencia continua. Excelencia Operativa: Resultados medibles.",
-  },
-];
+const sectoresContent = {
+  title: "Sectores que Atendemos",
+  subtitle:
+    "<b>Cefortte</b> brinda capacitación especializada para diversas industrias que operan con riesgos, procesos normativos estrictos o requerimientos de formación continua.",
+  items: [
+    { icon: "fa-solid fa-industry", title: "Manufactura" },
+    { icon: "fa-solid fa-hard-hat", title: "Construcción" },
+    { icon: "fa-solid fa-boxes-stacked", title: "Logística y Almacenes" },
+    { icon: "fa-solid fa-oil-well", title: "Energía y Petróleo" },
+    { icon: "fa-solid fa-car", title: "Automotriz" },
+    { icon: "fa-solid fa-flask", title: "Químico y Farmacéutico" },
+    { icon: "fa-solid fa-utensils", title: "Alimentos y Bebidas" },
+    { icon: "fa-solid fa-concierge-bell", title: "Servicios" },
+  ],
+};
+
+const ctaBannerContent = {
+  title: "Trabaja con un aliado confiable en seguridad industrial",
+  subtitle: "Contáctanos para conocer cómo podemos fortalecer la seguridad y el desempeño de tu empresa.",
+  primaryCta: { text: "Solicitar cotización", href: "/cotizacion" },
+  secondaryCta: { text: "Contáctanos", href: "/contacto" },
+};
 
 /**
  * Página Nosotros
@@ -148,22 +164,18 @@ export default function NosotrosPage() {
       <ContentSimple title={ContentText.homeContent.title} content={ContentText.homeContent.content} />
 
       <FeactureThreeColumns
-        title="Nuestra Identidad"
-        subtitle="Conoce los principios que guían nuestra labor y compromiso con la seguridad industrial."
-        features={identidadFeatures}
+        title={identidadContent.title}
+        subtitle={identidadContent.subtitle}
+        features={identidadContent.features}
       />
 
-      <IconGrid
-        title="Sectores que Atendemos"
-        subtitle="Cefortte brinda capacitación especializada para diversas industrias que operan con riesgos, procesos normativos estrictos o requerimientos de formación continua."
-        items={sectoresItems}
-      />
+      <IconGrid title={sectoresContent.title} subtitle={sectoresContent.subtitle} items={sectoresContent.items} />
 
       <CTABanner
-        title="Trabaja con un aliado confiable en seguridad industrial"
-        subtitle="Contáctanos para conocer cómo podemos fortalecer la seguridad y el desempeño de tu empresa."
-        primaryCta={{ text: "Solicitar cotización", href: "/cotizacion" }}
-        secondaryCta={{ text: "Contáctanos", href: "/contacto" }}
+        title={ctaBannerContent.title}
+        subtitle={ctaBannerContent.subtitle}
+        primaryCta={ctaBannerContent.primaryCta}
+        secondaryCta={ctaBannerContent.secondaryCta}
       />
     </main>
   );
