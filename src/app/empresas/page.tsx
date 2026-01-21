@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import { SITE_CONFIG, OG_IMAGE_CONFIG } from "@/lib/seo-constants";
 import HeroPoints from "@/components/section/HeroPoints";
 import TwoColumnFeature from "@/components/section/TwoColumnFeature";
+import FeatureList from "@/components/section/FeatureList";
+import TwoColumnReverse from "@/components/section/TwoColumnReverse";
 import CTASplit from "@/components/section/CTASplit";
 
 /**
@@ -51,8 +53,7 @@ export const metadata: Metadata = {
 // Contenido del Hero Principal
 const heroContent = {
   title: "Soluciones Integrales de Capacitación para Empresas",
-  subtitle:
-    "Programas anuales, capacitación in-company, plataforma e-learning y diagnósticos especializados para fortalecer la seguridad, el cumplimiento y el desempeño operativo de tu organización.",
+  subtitle: "Capacitación y soluciones especializadas para mejorar seguridad, cumplimiento y desempeño.",
   primaryCta: {
     text: "Solicitar cotización",
     href: "/cotizacion",
@@ -62,7 +63,7 @@ const heroContent = {
     text: "Ver cursos",
     href: "#soluciones",
   },
-  footnote: "Diseñamos estrategias de capacitación alineadas a NOM-STPS, OSHA, NFPA, ANSI e ISO 45001.",
+  footnote: "Capacitación alineadas a NOM-STPS, OSHA, NFPA, ANSI e ISO 45001.",
   backgroundImage: {
     src: "https://assets.zupernova.dev/cefortte/webp/hero-bg_solutions_2010x1340.webp",
     alt: "Soluciones empresariales de capacitación",
@@ -81,72 +82,71 @@ const programasAnualesContent = {
   features: [
     {
       icon: "fa-solid fa-check-circle",
-      text: "Diseño de agenda anual conforme a NOM-STPS",
+      title: "Diseño de agenda anual conforme a NOM-STPS.",
+      description: "",
     },
     {
       icon: "fa-solid fa-check-circle",
-      text: "Cursos presenciales, in-company y online según tus necesidades",
+      title: "Cursos presenciales, in-company y online según tus necesidades.",
+      description: "",
     },
     {
       icon: "fa-solid fa-check-circle",
-      text: "Reportes trimestrales de avance y cumplimiento",
+      title: "Reportes trimestrales de avance y cumplimiento.",
+      description: "",
     },
     {
       icon: "fa-solid fa-check-circle",
-      text: "Constancias DC-3 (si aplica)",
+      title: "Constancias DC-3 (si aplica).",
+      description: "",
     },
     {
       icon: "fa-solid fa-check-circle",
-      text: "Acompañamiento directo de un coordinador asignado",
+      title: "Acompañamiento directo de un coordinador asignado.",
+      description: "",
     },
   ],
   cta: {
     text: "Solicitar programa anual",
     href: "/cotizacion",
   },
-  sideHighlight: {
-    icon: "fa-solid fa-calendar-check",
-    title: "Beneficio clave",
-    description: "Mantén el cumplimiento todo el año con un programa estructurado y supervisado.",
-  },
 };
 
 // Contenido Capacitaciones In-Company
 const inCompanyContent = {
   title: "Capacitaciones In-Company",
-  subtitle: "Entrenamientos presenciales en tus instalaciones, adaptados a tu operación.",
   description:
     "Nuestras capacitaciones in-company están diseñadas para que tu equipo reciba formación práctica en su propio entorno de trabajo. Cada curso se ajusta a los procesos, maquinaria, riesgos y normativas aplicables de tu empresa.",
   features: [
     {
       icon: "fa-solid fa-check-circle",
-      text: "Contenido personalizado para tus procesos",
+      title: "Contenido personalizado para tus procesos.",
+      description: "",
     },
     {
       icon: "fa-solid fa-check-circle",
-      text: "Evaluaciones prácticas en sitio",
+      title: "Evaluaciones prácticas en sitio.",
+      description: "",
     },
     {
       icon: "fa-solid fa-check-circle",
-      text: "Reducción de costos logísticos",
+      title: "Reducción de costos logísticos.",
+      description: "",
     },
     {
       icon: "fa-solid fa-check-circle",
-      text: "Formación para turnos múltiples o líneas operativas específicas",
+      title: "Formación para turnos múltiples o líneas operativas específicas.",
+      description: "",
     },
     {
       icon: "fa-solid fa-check-circle",
-      text: "Ideal para equipos grandes o con necesidades especiales",
+      title: "Ideal para equipos grandes o con necesidades especiales.",
+      description: "",
     },
   ],
   cta: {
     text: "Solicitar capacitación in-company",
     href: "/cotizacion",
-  },
-  sideHighlight: {
-    icon: "fa-solid fa-building",
-    title: "Formación en sitio",
-    description: "Capacitamos a tu equipo en su propio entorno de trabajo con casos reales.",
   },
 };
 
@@ -159,72 +159,78 @@ const eLearningContent = {
   features: [
     {
       icon: "fa-solid fa-check-circle",
-      text: "Disponibilidad 24/7 desde cualquier dispositivo",
+      title: "Disponibilidad 24/7 desde cualquier dispositivo",
+      description: "",
     },
     {
       icon: "fa-solid fa-check-circle",
-      text: "Capacitación escalable para toda la empresa",
+      title: "Capacitación escalable para toda la empresa",
+      description: "",
     },
     {
       icon: "fa-solid fa-check-circle",
-      text: "Evaluaciones automáticas y retroalimentación inmediata",
+      title: "Evaluaciones automáticas y retroalimentación inmediata",
+      description: "",
     },
     {
       icon: "fa-solid fa-check-circle",
-      text: "Reportes descargables para cumplimiento normativo",
+      title: "Reportes descargables para cumplimiento normativo",
+      description: "",
     },
     {
       icon: "fa-solid fa-check-circle",
-      text: "Integración con programas anuales",
+      title: "Integración con programas anuales",
+      description: "",
     },
   ],
   cta: {
     text: "Conocer plataforma e-learning",
     href: "/cotizacion",
   },
-  sideHighlight: {
-    icon: "fa-solid fa-laptop",
-    title: "Flexibilidad total",
-    description: "Capacita a todo tu equipo sin importar ubicación ni horarios.",
-  },
 };
 
 // Contenido Diagnóstico de Necesidades
 const diagnosticoContent = {
+  eyebrow: "Identificamos brechas, riesgos y requisitos normativos para crear un plan preciso.",
   title: "Diagnóstico de Necesidades de Capacitación",
-  subtitle: "Identificamos brechas, riesgos y requisitos normativos para crear un plan preciso.",
   description:
     "Antes de capacitar, analizamos tu operación para determinar qué requiere tu empresa en términos de seguridad, cumplimiento y competencias técnicas. Esto asegura que cada curso aporte valor real y que las inversiones de capacitación se enfoquen en lo que la empresa realmente necesita.",
   features: [
     {
       icon: "fa-solid fa-check-circle",
-      text: "Evaluación de riesgos operativos",
+      title: "Evaluación de riesgos operativos",
+      description: "",
     },
     {
       icon: "fa-solid fa-check-circle",
-      text: "Cumplimiento NOM-STPS y auditoría preliminar",
+      title: "Cumplimiento NOM-STPS y auditoría preliminar",
+      description: "",
     },
     {
       icon: "fa-solid fa-check-circle",
-      text: "Mapeo de puestos y brechas de habilidades",
+      title: "Mapeo de puestos y brechas de habilidades",
+      description: "",
     },
     {
       icon: "fa-solid fa-check-circle",
-      text: "Recomendaciones de cursos y modalidades",
+      title: "Recomendaciones de cursos y modalidades",
+      description: "",
     },
     {
       icon: "fa-solid fa-check-circle",
-      text: "Plan integral de capacitación anual",
+      title: "Plan integral de capacitación anual",
+      description: "",
     },
   ],
   cta: {
     text: "Solicitar diagnóstico",
-    href: "/contacto",
+    href: "/cotizacion",
   },
-  sideHighlight: {
-    icon: "fa-solid fa-clipboard-check",
-    title: "Análisis preciso",
-    description: "Identificamos exactamente qué necesita tu empresa antes de capacitar.",
+  image: {
+    src: "https://tailwindcss.com/plus-assets/img/component-images/project-app-screenshot.png",
+    alt: "Diagnóstico de necesidades de capacitación",
+    width: 2432,
+    height: 1442,
   },
 };
 
@@ -268,48 +274,62 @@ export default function SolucionesPage() {
 
       {/* Programas Anuales de Capacitación */}
       <TwoColumnFeature
+        eyebrow={programasAnualesContent.subtitle}
         title={programasAnualesContent.title}
-        subtitle={programasAnualesContent.subtitle}
         description={programasAnualesContent.description}
         features={programasAnualesContent.features}
         cta={programasAnualesContent.cta}
-        sideHighlight={programasAnualesContent.sideHighlight}
+        media={{
+          type: "image",
+          image: {
+            src: "https://tailwindcss.com/plus-assets/img/component-images/project-app-screenshot.png",
+            alt: "Dashboard de programas de capacitación",
+            width: 2432,
+            height: 1442,
+          },
+          showDecorations: true,
+        }}
         backgroundColor="bg-gray-100"
         id="soluciones"
       />
 
       {/* Capacitaciones In-Company */}
-      <TwoColumnFeature
+      <FeatureList
         title={inCompanyContent.title}
-        subtitle={inCompanyContent.subtitle}
         description={inCompanyContent.description}
         features={inCompanyContent.features}
         cta={inCompanyContent.cta}
-        sideHighlight={inCompanyContent.sideHighlight}
-        reverseLayout={true}
         backgroundColor="bg-white"
       />
 
       {/* Plataforma E-Learning Empresarial */}
       <TwoColumnFeature
+        eyebrow={eLearningContent.subtitle}
         title={eLearningContent.title}
-        subtitle={eLearningContent.subtitle}
         description={eLearningContent.description}
         features={eLearningContent.features}
         cta={eLearningContent.cta}
-        sideHighlight={eLearningContent.sideHighlight}
+        media={{
+          type: "image",
+          image: {
+            src: "https://tailwindcss.com/plus-assets/img/component-images/project-app-screenshot.png",
+            alt: "Plataforma e-learning empresarial",
+            width: 2432,
+            height: 1442,
+          },
+          showDecorations: true,
+        }}
         backgroundColor="bg-gray-100"
       />
 
       {/* Diagnóstico de Necesidades de Capacitación */}
-      <TwoColumnFeature
+      <TwoColumnReverse
+        eyebrow={diagnosticoContent.eyebrow}
         title={diagnosticoContent.title}
-        subtitle={diagnosticoContent.subtitle}
         description={diagnosticoContent.description}
         features={diagnosticoContent.features}
         cta={diagnosticoContent.cta}
-        sideHighlight={diagnosticoContent.sideHighlight}
-        reverseLayout={true}
+        image={diagnosticoContent.image}
         backgroundColor="bg-white"
       />
 

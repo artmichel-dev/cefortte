@@ -194,7 +194,7 @@ export default function HeroPoints({
         <div className="mx-auto max-w-4xl text-center px-8">
           {/* Logo */}
           <div
-            className={`mb-6 flex justify-center transition-all duration-500 ease-out ${
+            className={`mb-4 flex justify-center transition-all duration-500 ease-out ${
               isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-5"
             }`}
             style={{ transitionDelay: isVisible ? "50ms" : "0ms" }}
@@ -213,7 +213,7 @@ export default function HeroPoints({
 
           {/* Título */}
           <h1
-            className={`section-title text-display-lg ${titleColor} transition-all duration-500 ease-out ${
+            className={`section-title text-display-lg text-gray-50 drop-shadow-sm ${titleColor} transition-all duration-500 ease-out ${
               isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-5"
             } ${backgroundImage ? "drop-shadow-lg" : ""}`}
           >
@@ -222,7 +222,7 @@ export default function HeroPoints({
 
           {/* Subtítulo */}
           <p
-            className={`section-subtitle text-body-lg mx-auto mt-6 max-w-xl text-balance ${subtitleColor} transition-all duration-500 ease-out ${
+            className={`section-subtitle text-body-lg mx-auto text-gray-50 drop-shadow-sm mt-6 max-w-xl text-balance ${subtitleColor} transition-all duration-500 ease-out ${
               isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-5"
             } ${backgroundImage ? "drop-shadow-md" : ""}`}
             style={{ transitionDelay: isVisible ? "100ms" : "0ms" }}
@@ -232,7 +232,7 @@ export default function HeroPoints({
 
           {/* CTAs */}
           <div
-            className={`mt-10 flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-x-6 transition-all duration-500 ease-out ${
+            className={`mt-6 flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-x-6 transition-all duration-500 ease-out ${
               isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-5"
             }`}
             style={{ transitionDelay: isVisible ? "200ms" : "0ms" }}
@@ -259,7 +259,7 @@ export default function HeroPoints({
           {/* Nota al pie */}
           {footnote && (
             <p
-              className={`mt-8 text-xs ${footnoteColor} transition-all duration-500 ease-out ${
+              className={`mt-8 text-micro text-gray-50 drop-shadow-sm ${footnoteColor} transition-all duration-500 ease-out ${
                 isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-5"
               } ${backgroundImage ? "drop-shadow" : ""}`}
               style={{ transitionDelay: isVisible ? "300ms" : "0ms" }}

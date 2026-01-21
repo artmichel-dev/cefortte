@@ -13,6 +13,11 @@ const nextConfig: NextConfig = {
         hostname: "cdn.zupernova.dev",
         pathname: "/cefortte/**",
       },
+      {
+        protocol: "https",
+        hostname: "tailwindcss.com",
+        pathname: "/plus-assets/**",
+      },
     ],
   },
 };
