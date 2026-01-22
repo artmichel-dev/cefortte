@@ -87,7 +87,7 @@ const programasAnualesContent = {
     },
     {
       icon: "fa-solid fa-check-circle",
-      title: "Cursos presenciales, in-company y online según tus necesidades.",
+      title: "Cursos presenciales, in-company y online.",
       description: "",
     },
     {
@@ -102,12 +102,12 @@ const programasAnualesContent = {
     },
     {
       icon: "fa-solid fa-check-circle",
-      title: "Acompañamiento directo de un coordinador asignado.",
+      title: "Acompañamiento directo de un coordinador.",
       description: "",
     },
   ],
   cta: {
-    text: "Solicitar programa anual",
+    text: "Solicitar cotización",
     href: "/cotizacion",
   },
 };
@@ -145,7 +145,7 @@ const inCompanyContent = {
     },
   ],
   cta: {
-    text: "Solicitar capacitación in-company",
+    text: "Solicitar cotización",
     href: "/cotizacion",
   },
 };
@@ -184,7 +184,7 @@ const eLearningContent = {
     },
   ],
   cta: {
-    text: "Conocer plataforma e-learning",
+    text: "Solicitar cotización",
     href: "/cotizacion",
   },
 };
@@ -223,11 +223,11 @@ const diagnosticoContent = {
     },
   ],
   cta: {
-    text: "Solicitar diagnóstico",
+    text: "Solicitar cotización",
     href: "/cotizacion",
   },
   image: {
-    src: "https://tailwindcss.com/plus-assets/img/component-images/project-app-screenshot.png",
+    src: "https://assets.zupernova.dev/cefortte/webp/hero-bg_onsite-training_2400x1440.webp",
     alt: "Diagnóstico de necesidades de capacitación",
     width: 2432,
     height: 1442,
@@ -272,6 +272,15 @@ export default function SolucionesPage() {
         backgroundImage={heroContent.backgroundImage}
       />
 
+      {/* Capacitaciones In-Company */}
+      <FeatureList
+        title={inCompanyContent.title}
+        description={inCompanyContent.description}
+        features={inCompanyContent.features}
+        cta={inCompanyContent.cta}
+        backgroundColor="bg-white"
+      />
+
       {/* Programas Anuales de Capacitación */}
       <TwoColumnFeature
         eyebrow={programasAnualesContent.subtitle}
@@ -282,7 +291,7 @@ export default function SolucionesPage() {
         media={{
           type: "image",
           image: {
-            src: "https://tailwindcss.com/plus-assets/img/component-images/project-app-screenshot.png",
+            src: "https://assets.zupernova.dev/cefortte/png/hero-bg_annual-training_1920x1200.png",
             alt: "Dashboard de programas de capacitación",
             width: 2432,
             height: 1442,
@@ -292,13 +301,14 @@ export default function SolucionesPage() {
         backgroundColor="bg-gray-100"
         id="soluciones"
       />
-
-      {/* Capacitaciones In-Company */}
-      <FeatureList
-        title={inCompanyContent.title}
-        description={inCompanyContent.description}
-        features={inCompanyContent.features}
-        cta={inCompanyContent.cta}
+     {/* Diagnóstico de Necesidades de Capacitación */}
+     <TwoColumnReverse
+        eyebrow={diagnosticoContent.eyebrow}
+        title={diagnosticoContent.title}
+        description={diagnosticoContent.description}
+        features={diagnosticoContent.features}
+        cta={diagnosticoContent.cta}
+        image={diagnosticoContent.image}
         backgroundColor="bg-white"
       />
 
@@ -312,7 +322,7 @@ export default function SolucionesPage() {
         media={{
           type: "image",
           image: {
-            src: "https://tailwindcss.com/plus-assets/img/component-images/project-app-screenshot.png",
+            src: "https://assets.zupernova.dev/cefortte/png/hero-bg_business-seminar_1320x1160.png",
             alt: "Plataforma e-learning empresarial",
             width: 2432,
             height: 1442,
@@ -322,16 +332,7 @@ export default function SolucionesPage() {
         backgroundColor="bg-gray-100"
       />
 
-      {/* Diagnóstico de Necesidades de Capacitación */}
-      <TwoColumnReverse
-        eyebrow={diagnosticoContent.eyebrow}
-        title={diagnosticoContent.title}
-        description={diagnosticoContent.description}
-        features={diagnosticoContent.features}
-        cta={diagnosticoContent.cta}
-        image={diagnosticoContent.image}
-        backgroundColor="bg-white"
-      />
+ 
 
       {/* CTA Final */}
       <CTASplit

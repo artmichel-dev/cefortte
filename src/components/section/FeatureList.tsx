@@ -73,21 +73,21 @@ export default function FeatureList({
   }, [isVisible]);
 
   return (
-    <section ref={sectionRef} className={`${backgroundColor} py-24 sm:py-32 ${className}`} id={id}>
-      <div className="mx-auto max-w-7xl px-6 lg:px-8">
-        <div className="grid grid-cols-1 gap-x-8 gap-y-16 lg:grid-cols-2 lg:items-start">
+    <section ref={sectionRef} className={`${backgroundColor} bg-white ${className}`} id={id}>
+      <article>
+        <div className="grid grid-cols-1 gap-x-8 gap-y-8 lg:grid-cols-2 lg:items-start">
           {/* COLUMNA IZQUIERDA - Título y descripción */}
-          <div className="lg:pr-8">
-            <div className="lg:max-w-lg">
-              <h2
-                className={`text-4xl font-semibold tracking-tight text-pretty text-gray-900 sm:text-5xl transition-all duration-500 ease-out ${
+          <div className="px-6">
+            <div className="mx-auto max-w-2xl lg:mx-0 lg:max-w-lg">
+              <p
+                className={`section-title text-display-md text-left font-semibold tracking-tight text-gray-900 sm:text-5xl transition-all duration-500 ease-out ${
                   isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-5"
                 }`}
               >
                 {title}
-              </h2>
+              </p>
               <p
-                className={`mt-6 text-lg/8 text-gray-600 transition-all duration-500 ease-out ${
+                className={`mt-8 section-subtitle text-body-lg text-left text-gray-600 transition-all duration-500 ease-out ${
                   isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-5"
                 }`}
                 style={{ transitionDelay: isVisible ? "50ms" : "0ms" }}
@@ -98,14 +98,15 @@ export default function FeatureList({
               {/* CTA */}
               {cta && (
                 <div
-                  className={`mt-10 transition-all duration-500 ease-out ${
+                  className={`mt-8 transition-all duration-500 ease-out ${
                     isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-5"
                   }`}
                   style={{ transitionDelay: isVisible ? "100ms" : "0ms" }}
                 >
                   <Button color="brand" href={cta.href} className="inline-flex w-max shadow-sm">
-                    <span className="inline-flex items-center gap-2">
-                      {cta.text} <i className="fas fa-arrow-right text-xs text-white" />
+                    <span className="inline-flex font-semibold items-center gap-2">
+                      {cta.text}
+                      <i className="fas fa-arrow-right text-xs text-gray-50" />
                     </span>
                   </Button>
                 </div>
@@ -114,19 +115,19 @@ export default function FeatureList({
           </div>
 
           {/* COLUMNA DERECHA - Lista de features con cajas */}
-          <div className="lg:pl-8">
-            <dl className="space-y-3">
+          <div className="px-6">
+            <dl className="space-y-3 mx-auto max-w-2xl lg:mx-0">
               {features.map((feature, index) => (
                 <div
                   key={index}
-                  className={`rounded-xl bg-gray-50/80 px-5 py-4 transition-[opacity,transform,background-color] duration-200 ease-out lift ${
+                  className={`rounded-xl bg-gray-100 px-5 py-4 transition-[opacity,transform,background-color] duration-200 ease-out lift ${
                     isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-5"
                   }`}
                   style={{ transitionDelay: isVisible ? `${150 + index * 50}ms` : "0ms" }}
                 >
-                  <dt className="text-base font-semibold text-gray-900 flex items-center gap-3">
-                    <i className={`${feature.icon} text-brand-700 text-lg flex-shrink-0`} aria-hidden="true" />
-                    <span className="leading-relaxed">{feature.title}</span>
+                  <dt className="text-base font-semibold text-gray-800 flex items-start gap-3">
+                    <i className={`${feature.icon} text-brand-700 text-lg flex-shrink-0 mt-0.5`} aria-hidden="true" />
+                    <span className="leading-relaxed items-start">{feature.title}</span>
                   </dt>
                   {feature.description && feature.description.trim() !== "" && (
                     <dd className="mt-2 ml-8 text-sm text-gray-600 leading-relaxed">{feature.description}</dd>
@@ -136,7 +137,7 @@ export default function FeatureList({
             </dl>
           </div>
         </div>
-      </div>
+      </article>
     </section>
   );
 }

@@ -134,20 +134,11 @@ export default function TwoColumnFeature({
           {/* COLUMNA DE CONTENIDO */}
           <div className={`px-6 lg:px-0 lg:pt-4 lg:pr-4 ${reverseLayout ? "lg:order-2" : ""}`}>
             <div className="mx-auto max-w-2xl lg:mx-0 lg:max-w-lg">
-              {/* Eyebrow - EXACTO DE LA PLANTILLA */}
-              {displayEyebrow && (
-                <h2
-                  className={`text-base/7 font-semibold text-brand-700 transition-all duration-500 ease-out ${
-                    isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-5"
-                  }`}
-                >
-                  {displayEyebrow}
-                </h2>
-              )}
 
-              {/* Título - EXACTO DE LA PLANTILLA */}
+
+              {/* Título */}
               <p
-                className={`text-4xl font-semibold tracking-tight text-pretty text-gray-900 sm:text-5xl transition-all duration-500 ease-out ${
+                className={`section-title text-display-md mb-6 text-gray-950 text-left transition-all duration-500 ease-out ${
                   displayEyebrow ? "mt-2" : ""
                 } ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-5"}`}
                 style={{ transitionDelay: isVisible ? (displayEyebrow ? "50ms" : "0ms") : "0ms" }}
@@ -155,9 +146,21 @@ export default function TwoColumnFeature({
                 {title}
               </p>
 
-              {/* Descripción - EXACTO DE LA PLANTILLA */}
+              {/* Eyebrow */}
+              {displayEyebrow && (
+                <b
+                  className={`section-subtitle text-left text-gray-950 transition-all duration-500 ease-out ${
+                    isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-5"
+                  }`}
+                >
+                  {displayEyebrow}
+                </b>
+              )}
+
+
+              {/* Descripción */}
               <p
-                className={`mt-6 text-lg/8 text-gray-600 transition-all duration-500 ease-out ${
+                className={`mt-6 section-subtitle text-body-lg text-gray-800 text-left transition-all duration-500 ease-out ${
                   isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-5"
                 }`}
                 style={{ transitionDelay: isVisible ? (displayEyebrow ? "100ms" : "50ms") : "0ms" }}
@@ -172,14 +175,14 @@ export default function TwoColumnFeature({
                   return (
                     <div
                       key={index}
-                      className={`rounded-xl bg-gray-50/80 px-5 py-4 transition-[opacity,transform,background-color] duration-200 ease-out lift ${
+                      className={`rounded-xl bg-white px-5 py-4 transition-[opacity,transform,background-color] duration-200 ease-out lift ${
                         isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-5"
                       }`}
                       style={{ transitionDelay: isVisible ? `${baseDelay + index * 50}ms` : "0ms" }}
                     >
-                      <dt className="text-base font-semibold text-gray-900 flex items-center gap-3">
-                        <i className={`${feature.icon} text-brand-700 text-lg flex-shrink-0`} aria-hidden="true" />
-                        <span className="leading-relaxed">{feature.title}</span>
+                      <dt className="text-base font-semibold text-gray-800 flex items-start gap-3">
+                        <i className={`${feature.icon} text-brand-700 text-lg flex-shrink-0 mt-0.5`} aria-hidden="true" />
+                        <span className="leading-relaxed items-start">{feature.title}</span>
                       </dt>
                       {feature.description && feature.description.trim() !== "" && (
                         <dd className="mt-2 ml-8 text-sm text-gray-600 leading-relaxed">{feature.description}</dd>
@@ -188,82 +191,36 @@ export default function TwoColumnFeature({
                   );
                 })}
               </dl>
-
               {/* CTA */}
               {cta && (
-                <div
-                  className={`mt-10 transition-all duration-500 ease-out ${
-                    isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-5"
-                  }`}
-                  style={{
-                    transitionDelay: isVisible ? `${(displayEyebrow ? 150 : 100) + features.length * 50}ms` : "0ms",
-                  }}
-                >
+                <div className={`mt-8 transition-all duration-200 ease-out ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-5"}`} style={{transitionDelay: isVisible ? `${(displayEyebrow ? 150 : 100) + features.length * 50}ms` : "0ms",}}>
                   <Button color="brand" href={cta.href} className="inline-flex w-max shadow-sm">
-                    <span className="inline-flex items-center gap-2">
-                      {cta.text} <i className="fas fa-arrow-right text-xs text-white" />
+                    <span className="inline-flex font-semibold items-center gap-2">
+                      {cta.text}
+                      <i className="fas fa-arrow-right text-xs text-gray-50" />
                     </span>
                   </Button>
                 </div>
               )}
             </div>
           </div>
-
-          {/* COLUMNA DE MEDIA */}
-          <div className={`sm:px-6 lg:px-0 ${reverseLayout ? "lg:order-1" : ""}`}>
-            {/* CON IMAGEN - EXACTAMENTE COMO LA PLANTILLA */}
-            {mediaContent.type === "image" && mediaContent.image && (
-              <div
-                className={`relative isolate overflow-hidden bg-brand-700 px-6 pt-8 sm:mx-auto sm:max-w-2xl sm:rounded-3xl sm:pt-16 sm:pr-0 sm:pl-16 lg:mx-0 lg:max-w-none transition-all duration-500 ease-out ${
-                  isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-5"
-                }`}
-                style={{ transitionDelay: isVisible ? "200ms" : "0ms" }}
-              >
-                {/* Decoración de fondo con skew - EXACTAMENTE COMO LA PLANTILLA */}
-                {mediaContent.showDecorations !== false && (
-                  <div
-                    aria-hidden="true"
-                    className="absolute -inset-y-px -left-3 -z-10 w-full origin-bottom-left skew-x-[-30deg] bg-brand-100 opacity-20 ring-1 ring-white ring-inset"
-                  />
-                )}
-
-                {/* Imagen - EXACTAMENTE COMO LA PLANTILLA */}
-                <div className="mx-auto max-w-2xl sm:mx-0 sm:max-w-none">
-                  <Image
-                    alt={mediaContent.image.alt}
-                    src={mediaContent.image.src}
-                    width={mediaContent.image.width || 2432}
-                    height={mediaContent.image.height || 1442}
-                    className="-mb-12 w-[57rem] max-w-none rounded-tl-xl bg-gray-800 ring-1 ring-white/10"
-                  />
-                </div>
-
-                {/* Ring decorativo - EXACTAMENTE COMO LA PLANTILLA */}
-                {mediaContent.showDecorations !== false && (
-                  <div
-                    aria-hidden="true"
-                    className="pointer-events-none absolute inset-0 ring-1 ring-black/10 ring-inset sm:rounded-3xl"
-                  />
-                )}
-              </div>
-            )}
-
-            {/* CON HIGHLIGHT - Fallback para retrocompatibilidad */}
-            {mediaContent.type === "highlight" && mediaContent.highlight && (
-              <div
-                className={`rounded-lg bg-gray-50 p-8 lg:sticky lg:top-24 transition-all duration-500 ease-out ${
-                  isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-5"
-                }`}
-                style={{ transitionDelay: isVisible ? "200ms" : "0ms" }}
-              >
-                <div className="bg-brand-700 mx-auto flex size-16 items-center justify-center rounded-full">
-                  <i className={`${mediaContent.highlight.icon} text-3xl text-white`} />
-                </div>
-                <h4 className="mt-6 text-center text-lg font-semibold text-gray-900">{mediaContent.highlight.title}</h4>
-                <p className="mt-4 text-center section-subtitle text-body">{mediaContent.highlight.description}</p>
-              </div>
-            )}
-          </div>
+          {/* CON IMAGEN - VERSIÓN SIMPLIFICADA */}
+          {mediaContent.type === "image" && mediaContent.image && (
+            <div
+              className={`transition-all px-8 sm:px-16 lg:px-4 duration-500 ease-out ${
+                isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-5"
+              }`}
+              style={{ transitionDelay: isVisible ? "200ms" : "0ms" }}
+            >
+              <Image
+                alt={mediaContent.image.alt}
+                src={mediaContent.image.src}
+                width={mediaContent.image.width || 800}
+                height={mediaContent.image.height || 600}
+                className="w-full h-auto"
+              />
+            </div>
+          )}
         </div>
       </article>
     </section>
