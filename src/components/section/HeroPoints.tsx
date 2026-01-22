@@ -68,7 +68,7 @@ export default function HeroPoints({
   secondaryCta,
   footnote,
   className = "",
-  backgroundColor = "bg-white",
+  backgroundColor = "bg-brand-700",
   backgroundImage,
   textColor,
 }: HeroPointsProps) {
